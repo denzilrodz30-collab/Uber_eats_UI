@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uber Eats — Condition C (Full Menu)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; -webkit-tap-highlight-color: transparent; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-neutral-900 text-neutral-900 min-h-screen py-4 sm:py-8 px-2 sm:px-4 flex flex-col items-center justify-center">
+
+  <div class="mb-3 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+    <span>Condition C: Full Menu (Unassisted Baseline)</span>
+    <span class="text-neutral-500">|</span>
+    <span id="study-timer" class="font-mono text-neutral-300">00:00</span>
+  </div>
+
+  <div class="relative w-full max-w-[393px] h-[820px] bg-white rounded-[44px] overflow-hidden flex flex-col shadow-2xl border-4 border-neutral-800 select-none">
+    
+    <!-- iOS Status Bar -->
+    <div class="h-11 w-full bg-white flex items-center justify-between px-7 shrink-0 z-50">
+      <span class="text-xs font-semibold text-neutral-800">20:15</span>
+      <div class="w-24 h-5 bg-black rounded-full flex items-center justify-end px-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+      <div class="flex items-center gap-1.5 text-neutral-800 text-xs">
+        <i class="fa-solid fa-signal text-[10px]"></i>
+        <span class="text-[11px] font-bold">5G</span>
+        <i class="fa-solid fa-battery-three-quarters text-xs"></i>
+      </div>
+    </div>
+
+    <!-- MAIN SCROLLABLE CONTENT -->
+    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-6">
+      
+      <!-- ================= S1: FEED WITH SEARCH & CATALOG ================= -->
+      <div id="screen-s1" class="screen-view">
+        <div class="px-5 pt-2 pb-1 text-neutral-400 text-[11px] font-semibold border-b border-neutral-100 flex items-center justify-between">
+          <span class="text-neutral-900 font-bold">S1 Home</span>
+          <span class="text-[10px] text-neutral-400">Search Catalog</span>
+        </div>
+
+        <div class="px-4 py-2.5 flex items-center justify-between">
+          <div class="flex items-center gap-1.5 cursor-pointer">
+            <i class="fa-solid fa-location-dot text-neutral-900 text-sm"></i>
+            <span class="font-bold text-[15px] text-neutral-900 tracking-tight">Linden Court</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-neutral-600 ml-0.5"></i>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center text-neutral-800 hover:bg-neutral-100 transition">
+            <i class="fa-regular fa-bell text-base"></i>
+          </button>
+        </div>
+
+        <!-- Condition C Banner: Neutral Browse -->
+        <div class="mx-4 my-2 p-4 bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-[24px] text-white relative overflow-hidden shadow-sm">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h3 class="text-base font-black">Browse All Menus</h3>
+              <p class="text-[11px] text-neutral-300">Over 50+ local kitchens open now</p>
+            </div>
+            <div class="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center text-xl">🍽️</div>
+          </div>
+          <div onclick="goToScreen(2)" class="w-full py-2.5 px-3.5 rounded-xl bg-white text-neutral-500 text-xs flex items-center gap-2 cursor-pointer shadow-sm">
+            <i class="fa-solid fa-magnifying-glass text-neutral-400"></i>
+            <span class="font-medium">Search food, cuisines, or restaurants...</span>
+          </div>
+        </div>
+
+        <!-- 6 Neutral Unbiased Dishes -->
+        <div class="px-4 pt-3 pb-1 flex items-center justify-between">
+          <h4 class="font-bold text-sm text-neutral-900">Nearby Restaurant Dishes</h4>
+          <span class="text-xs text-neutral-500">6 available</span>
+        </div>
+
+        <div class="p-3.5 space-y-3">
+          <div onclick="selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, '🍔')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+            <div class="flex items-start gap-3">
+              <div class="w-20 h-20 rounded-xl bg-neutral-100 flex items-center justify-center text-3xl shrink-0 border border-neutral-200">🍔</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Supreme Double Smash</h4>
+                  <span class="font-black text-sm text-neutral-900">€12.99</span>
+                </div>
+                <p class="text-xs text-neutral-500 mt-0.5">Bun Box Express · Fast Food</p>
+                <p class="text-[11px] text-neutral-500 mt-1">1.6km · 18 min · €0 Delivery</p>
+              </div>
+            </div>
+            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold">Select • €12.99</button>
+          </div>
+
+          <div onclick="selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, '🍕')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+            <div class="flex items-start gap-3">
+              <div class="w-20 h-20 rounded-xl bg-neutral-100 flex items-center justify-center text-3xl shrink-0 border border-neutral-200">🍕</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Artisanal Diavola Pizza</h4>
+                  <span class="font-black text-sm text-neutral-900">€13.50</span>
+                </div>
+                <p class="text-xs text-neutral-500 mt-0.5">Mama Napoli Pizza · Italian</p>
+                <p class="text-[11px] text-neutral-500 mt-1">1.2km · 15 min · €0 Delivery</p>
+              </div>
+            </div>
+            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold">Select • €13.50</button>
+          </div>
+
+          <div onclick="selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, '🍛')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+            <div class="flex items-start gap-3">
+              <div class="w-20 h-20 rounded-xl bg-neutral-100 flex items-center justify-center text-3xl shrink-0 border border-neutral-200">🍛</div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Chicken Tikka Masala</h4>
+                  <span class="font-black text-sm text-neutral-900">€11.90</span>
+                </div>
+                <p class="text-xs text-neutral-500 mt-0.5">Spice Lane · Indian</p>
+                <p class="text-[11px] text-neutral-500 mt-1">1.4km · 22 min · €0 Delivery</p>
+              </div>
+            </div>
+            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold">Select • €11.90</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= S2: FULL MENU SEARCH ================= -->
+      <div id="screen-s2" class="screen-view hidden px-4 py-3">
+        <div class="flex items-center gap-2 mb-2.5">
+          <button onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-700">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <div class="flex-1 py-2 px-3 rounded-full bg-neutral-100 flex items-center gap-2 text-xs text-neutral-500">
+            <i class="fa-solid fa-magnifying-glass text-neutral-400"></i>
+            <span class="font-medium text-neutral-700">All 40+ restaurant menus...</span>
+          </div>
+        </div>
+
+        <div class="space-y-3 mt-3">
+          <div onclick="selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, '🍱')" class="p-3 rounded-2xl border border-neutral-200 bg-white cursor-pointer">
+            <h4 class="font-bold text-sm text-neutral-900">Crispy Karaage Bento Set</h4>
+            <p class="text-xs text-neutral-500">Tokyo Bowl · €12.20</p>
+          </div>
+          <div onclick="selectDish('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, '🥙')" class="p-3 rounded-2xl border border-neutral-200 bg-white cursor-pointer">
+            <h4 class="font-bold text-sm text-neutral-900">Mixed Doner Kebab Box</h4>
+            <p class="text-xs text-neutral-500">Harbour Kebab · €11.50</p>
+          </div>
+          <div onclick="selectDish('Special Chow Mein Wok Noodles', 'Okee Chinese', 10.50, '🍜')" class="p-3 rounded-2xl border border-neutral-200 bg-white cursor-pointer">
+            <h4 class="font-bold text-sm text-neutral-900">Special Chow Mein Noodles</h4>
+            <p class="text-xs text-neutral-500">Okee Chinese · €10.50</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= S5: CHECKOUT WITH STEPPER ================= -->
+      <div id="screen-s5" class="screen-view hidden px-4 py-3">
+        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+          <button onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <h3 class="font-extrabold text-sm text-neutral-900">Review your order</h3>
+          <button onclick="goToScreen(1)" class="text-xs font-bold text-neutral-600 underline">Change</button>
+        </div>
+
+        <div class="mt-4 p-3.5 rounded-2xl border border-neutral-200 bg-white">
+          <div class="flex items-start justify-between">
+            <div class="flex-1 pr-2">
+              <h4 id="cart-item-name" class="font-extrabold text-sm text-neutral-900">Supreme Double Smash</h4>
+              <p id="cart-item-unit-price" class="text-xs text-neutral-500 mt-0.5">€12.99 each</p>
+            </div>
+            <div class="flex items-center gap-2 bg-neutral-100 rounded-xl p-1 shrink-0 border border-neutral-200">
+              <button onclick="changeQty(-1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-minus text-[10px]"></i>
+              </button>
+              <span id="cart-qty" class="w-5 text-center font-black text-xs text-neutral-900">1</span>
+              <button onclick="changeQty(1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm">
+                <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-neutral-100 space-y-1.5 text-xs text-neutral-600">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="breakdown-subtotal" class="font-bold text-neutral-900">€12.99</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Service Fee</span>
+            <span class="font-bold text-neutral-900">€1.50</span>
+          </div>
+          <div class="flex justify-between pt-2 border-t border-neutral-200 font-extrabold text-sm text-neutral-900">
+            <span>Total</span>
+            <span id="breakdown-total">€14.49</span>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <button onclick="goToScreen(6)" class="w-full py-3.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs flex items-center justify-center gap-2">
+            <span>Place order</span>
+            <span id="btn-place-total">• €14.49</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S6: ORDER PLACED ================= -->
+      <div id="screen-s6" class="screen-view hidden px-5 py-3 flex flex-col justify-between min-h-[580px]">
+        <div>
+          <div class="flex flex-col items-center mt-6 text-center">
+            <div class="w-20 h-20 rounded-full bg-[#00C165] text-white flex items-center justify-center shadow-md mb-4">
+              <i class="fa-solid fa-check text-3xl font-extrabold"></i>
+            </div>
+            <h2 class="text-2xl font-black text-neutral-900 tracking-tight">Order placed</h2>
+            <p class="text-xs text-neutral-500 mt-1">Arriving around 7:58 pm</p>
+          </div>
+
+          <div class="mt-6 p-3.5 rounded-2xl border border-neutral-200 bg-white flex items-center gap-3.5">
+            <div class="w-14 h-14 rounded-xl bg-neutral-100 flex items-center justify-center text-2xl">
+              <span id="s6-item-emoji">🍔</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 id="s6-item-name" class="font-extrabold text-sm text-neutral-900 truncate">Supreme Double Smash</h4>
+              <p id="s6-item-sub" class="text-xs text-neutral-500 mt-0.5 truncate">Bun Box Express</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pb-2">
+          <button onclick="goToScreen(7)" class="w-full py-3.5 rounded-full bg-neutral-950 text-white font-extrabold text-sm">
+            Track order
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S7: REFLECTION SURVEY ================= -->
+      <div id="screen-s7" class="screen-view hidden px-4 py-4">
+        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+          <span class="text-neutral-400 text-xs font-semibold">Touchpoint 7: Academic Survey</span>
+          <span class="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-bold">Exp C Complete</span>
+        </div>
+
+        <div class="mt-4 text-center">
+          <div class="w-14 h-14 rounded-full bg-neutral-100 mx-auto flex items-center justify-center text-2xl shadow-sm mb-2">🍽️</div>
+          <h3 class="text-base font-black text-neutral-900">How was your ordering experience?</h3>
+          <p class="text-xs text-neutral-500 mt-0.5"><span id="s7-dish-name">Supreme Double Smash</span></p>
+        </div>
+
+        <div class="mt-6">
+          <button onclick="submitToForm()" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition shadow-lg">
+            <span>Done & Submit to Survey</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </button>
+          <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to external survey form with metrics</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Persistent Bottom Bar -->
+    <div class="w-full bg-white border-t border-neutral-200 shrink-0 z-40 relative">
+      <div class="h-14 flex items-center justify-around px-2 text-neutral-500">
+        <button onclick="goToScreen(1)" class="flex flex-col items-center gap-0.5 text-neutral-900">
+          <i class="fa-solid fa-house text-sm"></i>
+          <span class="text-[9px] font-bold">Home</span>
+        </button>
+        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
+          <i class="fa-solid fa-compass text-sm"></i>
+          <span class="text-[9px] font-medium">Browse</span>
+        </button>
+        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
+          <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          <span class="text-[9px] font-medium">Search</span>
+        </button>
+        <button onclick="goToScreen(5)" class="flex flex-col items-center gap-0.5 relative hover:text-neutral-900 transition">
+          <i class="fa-solid fa-basket-shopping text-sm"></i>
+          <span id="nav-badge-cart" class="hidden absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-600 text-white text-[8px] font-bold rounded-full flex items-center justify-center">1</span>
+          <span class="text-[9px] font-medium">Carts</span>
+        </button>
+        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
+          <i class="fa-solid fa-user text-sm"></i>
+          <span class="text-[9px] font-medium">Account</span>
+        </button>
+      </div>
+      <div class="h-4 w-full bg-white flex justify-center items-center pb-1">
+        <div class="w-32 h-1 bg-neutral-300 rounded-full"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const SURVEY_FORM_BASE_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform";
+
+    let startTime = Date.now();
+    let currentQty = 1;
+    let unitPrice = 12.99;
+    let currentItem = "Supreme Double Smash";
+    let currentRestaurant = "Bun Box Express";
+    let currentEmoji = "🍔";
+
+    setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const m = String(Math.floor(elapsed / 60)).padStart(2, '0');
+      const s = String(elapsed % 60).padStart(2, '0');
+      document.getElementById('study-timer').innerText = `${m}:${s}`;
+    }, 1000);
+
+    function goToScreen(n) {
+      for (let i = 1; i <= 7; i++) {
+        const el = document.getElementById('screen-s' + i);
+        if (el) el.classList.add('hidden');
+      }
+      const active = document.getElementById('screen-s' + n);
+      if (active) active.classList.remove('hidden');
+      document.getElementById('screen-content').scrollTop = 0;
+    }
+
+    function selectDish(title, restaurant, price, emoji) {
+      currentItem = title;
+      currentRestaurant = restaurant;
+      unitPrice = price;
+      currentEmoji = emoji;
+      currentQty = 1;
+      updateCart();
+      goToScreen(5);
+    }
+
+    function changeQty(d) {
+      currentQty = Math.max(1, currentQty + d);
+      updateCart();
+    }
+
+    function updateCart() {
+      document.getElementById('cart-item-name').innerText = currentItem;
+      document.getElementById('cart-qty').innerText = currentQty;
+      document.getElementById('cart-item-unit-price').innerText = '€' + unitPrice.toFixed(2) + ' each';
+      const subtotal = unitPrice * currentQty;
+      const total = subtotal + 1.50;
+      document.getElementById('breakdown-subtotal').innerText = '€' + subtotal.toFixed(2);
+      document.getElementById('breakdown-total').innerText = '€' + total.toFixed(2);
+      document.getElementById('btn-place-total').innerText = '• €' + total.toFixed(2);
+
+      const s6Name = document.getElementById('s6-item-name');
+      const s6Sub = document.getElementById('s6-item-sub');
+      const s6Emoji = document.getElementById('s6-item-emoji');
+      if (s6Name) s6Name.innerText = currentItem;
+      if (s6Sub) s6Sub.innerText = `${currentRestaurant} · €${total.toFixed(2)} total`;
+      if (s6Emoji) s6Emoji.innerText = currentEmoji;
+
+      const s7Dish = document.getElementById('s7-dish-name');
+      if (s7Dish) s7Dish.innerText = currentItem;
+
+      const badge = document.getElementById('nav-badge-cart');
+      if (badge) {
+        badge.innerText = currentQty;
+        badge.classList.remove('hidden');
+      }
+    }
+
+    function submitToForm() {
+      const durationSeconds = Math.floor((Date.now() - startTime) / 1000);
+      const queryParams = new URLSearchParams({
+        condition: 'C',
+        dish: currentItem,
+        restaurant: currentRestaurant,
+        price: unitPrice.toFixed(2),
+        quantity: currentQty,
+        timeToDecide: durationSeconds + 's'
+      });
+      window.location.href = `${SURVEY_FORM_BASE_URL}?${queryParams.toString()}`;
+    }
+  </script>
+</body>
+</html>

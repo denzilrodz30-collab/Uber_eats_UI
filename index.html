@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery Research Study — Participant Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="max-w-xl w-full bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+    
+    <!-- Header -->
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl">
+        <i class="fa-solid fa-utensils"></i>
+      </div>
+      <div>
+        <span class="text-[11px] font-bold text-emerald-400 tracking-wider uppercase">Research Experiment</span>
+        <h1 class="text-xl sm:text-2xl font-black text-white">Food Choice Decision Study</h1>
+      </div>
+    </div>
+
+    <!-- Study Prompt Context for Students -->
+    <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 mb-6">
+      <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wide mb-1 flex items-center gap-2">
+        <i class="fa-solid fa-stopwatch text-amber-400"></i>
+        <span>Scenario Briefing</span>
+      </h3>
+      <p class="text-sm text-slate-300 leading-relaxed italic">
+        "Imagine you have just finished a demanding 7-hour study block. It is 20:15 in the evening, you are tired, hungry, and need dinner delivered to Linden Court. Open the app, explore your options, and place an order."
+      </p>
+    </div>
+
+    <!-- Condition Assignment Buttons -->
+    <div class="space-y-3">
+      <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Select Assigned Condition:</p>
+
+      <!-- Condition A -->
+      <a href="./condition-a.html" class="group block p-4 rounded-2xl border border-slate-800 bg-slate-800/40 hover:bg-slate-800 hover:border-emerald-500/50 transition duration-200">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-sm">A</span>
+            <div>
+              <h2 class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Condition A: "Picked for You" (AI Delegation)</h2>
+              <p class="text-xs text-slate-400 mt-0.5">Curated 3-item deck, continuous shuffle, transparent reasoning</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-1 transition"></i>
+        </div>
+      </a>
+
+      <!-- Condition B -->
+      <a href="./condition-b.html" class="group block p-4 rounded-2xl border border-slate-800 bg-slate-800/40 hover:bg-slate-800 hover:border-amber-500/50 transition duration-200">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-sm">B</span>
+            <div>
+              <h2 class="text-sm font-bold text-white group-hover:text-amber-400 transition">Condition B: Popular Items (Social Proof)</h2>
+              <p class="text-xs text-slate-400 mt-0.5">6 top dishes with order counts ("10k+ ordered") directly on home feed</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-amber-400 group-hover:translate-x-1 transition"></i>
+        </div>
+      </a>
+
+      <!-- Condition C -->
+      <a href="./condition-c.html" class="group block p-4 rounded-2xl border border-slate-800 bg-slate-800/40 hover:bg-slate-800 hover:border-blue-500/50 transition duration-200">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-black text-sm">C</span>
+            <div>
+              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">Condition C: Full Menu (Unassisted Baseline)</h2>
+              <p class="text-xs text-slate-400 mt-0.5">Neutral catalog search, cuisine filters, unbiased dishes</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- Random Auto-Assignment Button -->
+    <div class="mt-6 pt-5 border-t border-slate-800 text-center">
+      <button onclick="assignRandomCondition()" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-sm transition shadow-lg flex items-center justify-center gap-2">
+        <i class="fa-solid fa-dice text-base"></i>
+        <span>Auto-Assign Random Condition (For Testing)</span>
+      </button>
+      <p class="text-[11px] text-slate-500 mt-2">
+        Or append <code class="text-slate-400 bg-slate-800 px-1 py-0.5 rounded">?cond=A</code>, <code class="text-slate-400 bg-slate-800 px-1 py-0.5 rounded">?cond=B</code>, or <code class="text-slate-400 bg-slate-800 px-1 py-0.5 rounded">?cond=C</code> to the URL.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    // URL Parameter Auto-redirect
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const cond = urlParams.get('cond');
+      if (cond) {
+        const c = cond.toUpperCase();
+        if (c === 'A') window.location.href = './condition-a.html';
+        if (c === 'B') window.location.href = './condition-b.html';
+        if (c === 'C') window.location.href = './condition-c.html';
+        if (c === 'RANDOM') assignRandomCondition();
+      }
+    });
+
+    function assignRandomCondition() {
+      const conditions = ['./condition-a.html', './condition-b.html', './condition-c.html'];
+      const chosen = conditions[Math.floor(Math.random() * conditions.length)];
+      window.location.href = chosen;
+    }
+  </script>
+</body>
+</html>

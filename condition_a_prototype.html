@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uber Eats — Condition A (Picked for You)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; -webkit-tap-highlight-color: transparent; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .snap-swipe-deck { scroll-snap-type: x mandatory; scroll-behavior: smooth; cursor: grab; }
+    .snap-swipe-deck:active { cursor: grabbing; }
+  </style>
+</head>
+<body class="bg-neutral-900 text-neutral-900 min-h-screen py-4 sm:py-8 px-2 sm:px-4 flex flex-col items-center justify-center">
+
+  <!-- Fixed Experiment Tracker Top Tag -->
+  <div class="mb-3 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    <span>Condition A: "Picked for You" (AI Delegation)</span>
+    <span class="text-neutral-500">|</span>
+    <span id="study-timer" class="font-mono text-neutral-300">00:00</span>
+  </div>
+
+  <!-- Mobile Frame Container -->
+  <div class="relative w-full max-w-[393px] h-[820px] bg-white rounded-[44px] overflow-hidden flex flex-col shadow-2xl border-4 border-neutral-800 select-none">
+    
+    <!-- iOS Status Bar & Dynamic Island -->
+    <div class="h-11 w-full bg-white flex items-center justify-between px-7 shrink-0 z-50">
+      <span class="text-xs font-semibold text-neutral-800">20:15</span>
+      <div class="w-24 h-5 bg-black rounded-full flex items-center justify-end px-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      </div>
+      <div class="flex items-center gap-1.5 text-neutral-800 text-xs">
+        <i class="fa-solid fa-signal text-[10px]"></i>
+        <span class="text-[11px] font-bold">5G</span>
+        <i class="fa-solid fa-battery-three-quarters text-xs"></i>
+      </div>
+    </div>
+
+    <!-- MAIN SCROLLABLE CONTENT AREA -->
+    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-6">
+      
+      <!-- ================= S1: FEED SCREEN ================= -->
+      <div id="screen-s1" class="screen-view">
+        <div class="px-5 pt-2 pb-1 text-neutral-400 text-[11px] font-semibold border-b border-neutral-100 flex items-center justify-between">
+          <span class="text-neutral-900 font-bold">S1 Home</span>
+          <span class="text-[10px] text-neutral-400">Feed with Pick for me entry</span>
+        </div>
+
+        <div class="px-4 py-2.5 flex items-center justify-between">
+          <div class="flex items-center gap-1.5 cursor-pointer">
+            <i class="fa-solid fa-location-dot text-neutral-900 text-sm"></i>
+            <span class="font-bold text-[15px] text-neutral-900 tracking-tight">Linden Court</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-neutral-600 ml-0.5"></i>
+          </div>
+          <button class="w-8 h-8 rounded-full flex items-center justify-center text-neutral-800 hover:bg-neutral-100 transition">
+            <i class="fa-regular fa-bell text-base"></i>
+          </button>
+        </div>
+
+        <div class="flex gap-2 px-4 py-1.5 overflow-x-auto hide-scrollbar text-xs font-semibold">
+          <button class="px-4 py-2 rounded-full bg-neutral-700 text-white shrink-0">All</button>
+          <button class="px-4 py-2 rounded-full bg-[#f3f4f6] text-neutral-800 hover:bg-neutral-200 shrink-0">Rides</button>
+          <button class="px-4 py-2 rounded-full bg-[#f3f4f6] text-neutral-800 hover:bg-neutral-200 shrink-0">Grocery</button>
+          <button class="px-4 py-2 rounded-full bg-[#f3f4f6] text-neutral-800 hover:bg-neutral-200 shrink-0">Convenience</button>
+        </div>
+
+        <div class="grid grid-cols-5 gap-1 px-3 py-3.5 text-center">
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE8D6] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#E85D36] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#FFD166] absolute top-1 left-2"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FFD166] absolute bottom-1.5 right-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Pizza</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE5E5] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#E54B4B] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#52B788] absolute top-1.5 left-2"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FFE5E5] absolute bottom-2 right-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Chinese</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FFF1D6] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#E58F2A] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#52B788] absolute top-1.5 right-2.5"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FFF1D6] absolute bottom-1.5 left-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Indian</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#E0F2FE] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#F87171] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#10B981] absolute top-2 right-1.5"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#BAE6FD] absolute bottom-1.5 left-1.5"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Sushi</span>
+          </div>
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#EDE9FE] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#7C4A2D] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#A3E635] absolute top-1 left-2.5"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#DDD6FE] absolute bottom-2 right-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Halal</span>
+          </div>
+        </div>
+
+        <!-- Condition A Banner -->
+        <div class="mx-4 my-2 p-5 bg-black rounded-[24px] text-white relative overflow-hidden shadow-lg">
+          <div class="absolute -top-6 -right-6 w-36 h-36 bg-[#0E623B] rounded-full opacity-90 pointer-events-none"></div>
+          <div class="absolute top-0 right-0 w-28 h-28 bg-[#06C167] rounded-full opacity-90 pointer-events-none translate-x-4 -translate-y-4"></div>
+          <div class="relative z-10 flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-full bg-[#06C167] text-black flex items-center justify-center text-xs shadow">
+              <i class="fa-solid fa-sparkles text-xs"></i>
+            </div>
+            <span class="px-2.5 py-0.5 rounded-full bg-[#06C167] text-neutral-950 text-[10px] font-extrabold uppercase tracking-wide">NEW</span>
+          </div>
+          <h3 class="relative z-10 text-[21px] font-extrabold tracking-tight leading-tight">Pick for me tonight</h3>
+          <p class="relative z-10 text-xs text-neutral-300 mt-2 leading-relaxed max-w-[240px]">
+            We choose a meal from your usual orders, the time and your budget. Change it any time.
+          </p>
+          <div class="relative z-10 mt-4">
+            <button onclick="goToScreen(2)" class="px-5 py-2.5 rounded-full bg-white text-neutral-900 font-extrabold text-xs flex items-center gap-2 hover:bg-neutral-100 transition active:scale-95 shadow">
+              <i class="fa-solid fa-chevron-right text-[10px]"></i>
+              <span>Get my pick</span>
+            </button>
+          </div>
+          <p class="relative z-10 text-[10px] text-neutral-400 mt-3 font-normal">Curated by AI from your orders. Not sponsored.</p>
+        </div>
+
+        <!-- Featured Nearby -->
+        <div class="px-4 mt-4">
+          <div class="flex items-center justify-between mb-1">
+            <div>
+              <h4 class="font-extrabold text-neutral-900 text-sm">Featured nearby</h4>
+              <p class="text-[10px] text-neutral-400 underline decoration-neutral-300">Sponsored</p>
+            </div>
+            <button class="w-7 h-7 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-700">
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+          <div class="flex gap-3 overflow-x-auto hide-scrollbar pt-2 pb-2">
+            <div onclick="goToDish('Mama Napoli Margherita', 'Mama Napoli Pizza', 10.50, '🍕')" class="w-48 shrink-0 cursor-pointer">
+              <div class="h-28 rounded-2xl bg-[#FFE8D6] relative flex items-center justify-center overflow-hidden border border-neutral-100">
+                <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-sm">
+                  <div class="w-16 h-16 rounded-full bg-[#E85D36] flex items-center justify-center relative">
+                    <span class="w-3.5 h-3.5 rounded-full bg-[#FFD166] absolute top-2 left-3"></span>
+                    <span class="w-3 h-3 rounded-full bg-[#FFD166] absolute bottom-2.5 right-3"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2">
+                <h5 class="font-extrabold text-xs text-neutral-900 truncate">Mama Napoli Pizza</h5>
+                <p class="text-[11px] text-neutral-500 mt-0.5 font-medium">€5 delivery fee • 15 min</p>
+              </div>
+            </div>
+
+            <div onclick="goToDish('Perfect Plate Mixed Feast', 'Perfect Plate Kebab', 11.50, '🥙')" class="w-48 shrink-0 cursor-pointer">
+              <div class="h-28 rounded-2xl bg-[#FFE8D6] relative flex items-center justify-center overflow-hidden border border-neutral-100">
+                <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-sm">
+                  <div class="w-16 h-16 rounded-full bg-[#C26D2B] flex items-center justify-center relative">
+                    <span class="w-3 h-3 rounded-full bg-[#10B981] absolute top-3 right-3"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2">
+                <h5 class="font-extrabold text-xs text-neutral-900 truncate">Perfect Plate Kebab</h5>
+                <p class="text-[11px] text-neutral-500 mt-0.5 font-medium">€0 delivery fee • 20 min</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Restaurant Menu Accessible via Scroll -->
+        <div class="px-4 mt-5 pt-4 border-t-4 border-neutral-100 pb-6">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h4 class="font-black text-base text-neutral-900 tracking-tight">All Restaurants & Menus</h4>
+              <p class="text-[11px] text-neutral-500 font-medium">Browse full menus from 40+ local kitchens</p>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700 text-[10px] font-extrabold">Full Catalog</span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍔</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Bun Box Express</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.8 (850+) • 18 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box · Burgers', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and house sauce.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Signature house item.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Double Smash</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€12.99</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Beef, cheddar, fries</p>
+                </div>
+                <div onclick="openDishDetailModal('Crispy Chicken Stack', 'Bun Box · Burgers', 11.50, '🍗', 'Buttermilk fried chicken breast, chipotle slaw, pickles on brioche bun.', '★ 4.6', '16 min', '€0 Delivery Fee', 'Buttermilk fried favorite.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Chicken Stack</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€11.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Chipotle slaw, pickles</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= S2: CURATED 3 OPTIONS DECK ================= -->
+      <div id="screen-s2" class="screen-view hidden">
+        <div class="bg-[#E9F7EF] px-4 py-3 border-b border-emerald-100/80">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-emerald-800">
+              <span class="text-xs">✦</span>
+              <h3 class="font-extrabold text-[15px] text-neutral-900 tracking-tight">Picked for you tonight</h3>
+            </div>
+            <button onclick="shuffleOptionsDeck()" class="shrink-0 px-3.5 py-1.5 rounded-full bg-white text-neutral-900 font-bold text-xs shadow-sm border border-neutral-200/90 flex items-center gap-1.5 hover:bg-neutral-50 active:scale-95 transition">
+              <i class="fa-solid fa-shuffle text-[11px] text-neutral-800"></i>
+              <span>Shuffle</span>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between mt-2.5 pt-2 border-t border-emerald-200/40 text-[11px]">
+            <div class="flex items-center gap-1.5">
+              <span class="text-neutral-500 font-medium">Card:</span>
+              <div class="flex gap-1 items-center" id="deck-indicators">
+                <button onclick="scrollToCard('deck-carousel-container', 0)" id="dot-0" class="w-4 h-2 rounded-full bg-neutral-900 transition-all cursor-pointer"></button>
+                <button onclick="scrollToCard('deck-carousel-container', 1)" id="dot-1" class="w-2 h-2 rounded-full bg-neutral-300 transition-all cursor-pointer"></button>
+                <button onclick="scrollToCard('deck-carousel-container', 2)" id="dot-2" class="w-2 h-2 rounded-full bg-neutral-300 transition-all cursor-pointer"></button>
+              </div>
+              <span id="card-counter-label" class="text-[10px] font-bold text-neutral-700 ml-1">1 of 3</span>
+              <div class="flex items-center gap-1 ml-1.5 text-neutral-600">
+                <button onclick="stepCard('deck-carousel-container', -1)" class="w-4 h-4 rounded-full bg-white/80 border border-neutral-300 hover:bg-white flex items-center justify-center text-[8px]">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="stepCard('deck-carousel-container', 1)" class="w-4 h-4 rounded-full bg-white/80 border border-neutral-300 hover:bg-white flex items-center justify-center text-[8px]">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <button onclick="toggleDeckLayout()" id="btn-toggle-layout" class="text-emerald-800 font-bold hover:underline flex items-center gap-1">
+              <i class="fa-solid fa-layer-group text-[10px]"></i>
+              <span id="label-toggle-layout">View all 3 stacked</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 SWIPEABLE CARDS -->
+        <div id="deck-carousel-container" class="snap-swipe-deck py-3 px-4 overflow-x-auto flex gap-3 hide-scrollbar transition-all duration-300">
+          <!-- Card 1 -->
+          <div onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender pieces of grilled chicken breast simmered in a mildly spiced, velvety tomato-cream curry sauce.', '★ 4.7 (380+ reviews)', '22 min', '€0 delivery', 'You often order Indian on Friday evenings between 20:00 and 21:00.')" class="deck-card shrink-0 w-[310px] snap-center rounded-2xl border border-neutral-200 bg-white p-3 shadow-md transition-all cursor-pointer hover:border-neutral-300">
+            <div class="h-32 rounded-xl bg-[#FDE8D7] relative flex items-center justify-center overflow-hidden mb-2.5">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-neutral-900 text-white text-[10px] font-extrabold tracking-wide flex items-center gap-1">✦ Best match</span>
+              <span class="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-white/90 text-neutral-800 text-[10px] font-bold shadow-xs">1 of 3</span>
+              <div class="w-20 h-20 rounded-full bg-white/80 p-2 shadow-inner flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-[#E05A2B] flex items-center justify-center text-3xl shadow">🍛</div>
+              </div>
+            </div>
+            <div class="flex justify-between items-start">
+              <h4 class="font-extrabold text-sm text-neutral-900 leading-snug">Chicken Tikka Masala</h4>
+              <span class="font-black text-sm text-neutral-900 ml-2">€11.90</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-0.5 font-medium">Spice Lane · Indian</p>
+            <div class="flex items-center gap-2 mt-1.5 text-[11px] text-neutral-600">
+              <span class="font-bold text-amber-500">★ 4.7</span><span>•</span><span>⏱ 22 min</span><span>•</span><span class="text-emerald-700 font-semibold">€0 delivery</span>
+            </div>
+            <div class="mt-2.5 py-1.5 px-2 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-between text-[11px] text-neutral-600">
+              <span class="truncate">ⓘ You often order Indian on Fridays</span>
+              <span class="text-neutral-900 font-bold underline shrink-0 ml-1">Why?</span>
+            </div>
+            <button onclick="event.stopPropagation(); quickSelect('Chicken Tikka Masala', 'Spice Lane', 11.90)" class="w-full mt-3 py-2.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs hover:bg-neutral-800 active:scale-95 transition shadow">Order this · €11.90</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div onclick="openDishDetailModal('Woodfired Margherita D.O.P.', 'Forno Antico · Italian', 10.50, '🍕', 'Authentic Neapolitan pizza with slow-fermented dough, San Marzano tomato reduction, and mozzarella.', '★ 4.8 (640+ reviews)', '15 min', '€0 delivery', 'Fastest hot freshly-prepared dinner option within 1.5 km.')" class="deck-card shrink-0 w-[310px] snap-center rounded-2xl border border-neutral-200 bg-white p-3 shadow-md transition-all cursor-pointer hover:border-neutral-300">
+            <div class="h-32 rounded-xl bg-[#FDE8D7] relative flex items-center justify-center overflow-hidden mb-2.5">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-emerald-800 text-white text-[10px] font-extrabold tracking-wide flex items-center gap-1">✦ Quickest prep</span>
+              <span class="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-white/90 text-neutral-800 text-[10px] font-bold shadow-xs">2 of 3</span>
+              <div class="w-20 h-20 rounded-full bg-white/80 p-2 shadow-inner flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-[#D9381E] flex items-center justify-center text-3xl shadow">🍕</div>
+              </div>
+            </div>
+            <div class="flex justify-between items-start">
+              <h4 class="font-extrabold text-sm text-neutral-900 leading-snug">Woodfired Margherita D.O.P.</h4>
+              <span class="font-black text-sm text-neutral-900 ml-2">€10.50</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-0.5 font-medium">Forno Antico · Italian</p>
+            <div class="flex items-center gap-2 mt-1.5 text-[11px] text-neutral-600">
+              <span class="font-bold text-amber-500">★ 4.8</span><span>•</span><span>⏱ 15 min</span><span>•</span><span class="text-emerald-700 font-semibold">€0 delivery</span>
+            </div>
+            <div class="mt-2.5 py-1.5 px-2 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-between text-[11px] text-neutral-600">
+              <span class="truncate">ⓘ Fastest hot dinner within 1.5 km</span>
+              <span class="text-neutral-900 font-bold underline shrink-0 ml-1">Why?</span>
+            </div>
+            <button onclick="event.stopPropagation(); quickSelect('Woodfired Margherita D.O.P.', 'Forno Antico', 10.50)" class="w-full mt-3 py-2.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs hover:bg-neutral-800 active:scale-95 transition shadow">Order this · €10.50</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div onclick="openDishDetailModal('Truffle Smash Cheeseburger', 'Bun Box · Burgers', 12.20, '🍔', 'Two smashed dry-aged beef patties, Irish cheddar, black truffle aioli, on a brioche bun with fries.', '★ 4.6 (510+ reviews)', '20 min', '€1.50 delivery', 'High repeat order frequency around Linden Court.')" class="deck-card shrink-0 w-[310px] snap-center rounded-2xl border border-neutral-200 bg-white p-3 shadow-md transition-all cursor-pointer hover:border-neutral-300">
+            <div class="h-32 rounded-xl bg-[#FDE8D7] relative flex items-center justify-center overflow-hidden mb-2.5">
+              <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-neutral-900 text-white text-[10px] font-extrabold tracking-wide flex items-center gap-1">✦ Popular choice</span>
+              <span class="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-white/90 text-neutral-800 text-[10px] font-bold shadow-xs">3 of 3</span>
+              <div class="w-20 h-20 rounded-full bg-white/80 p-2 shadow-inner flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-[#BA6820] flex items-center justify-center text-3xl shadow">🍔</div>
+              </div>
+            </div>
+            <div class="flex justify-between items-start">
+              <h4 class="font-extrabold text-sm text-neutral-900 leading-snug">Truffle Smash Cheeseburger</h4>
+              <span class="font-black text-sm text-neutral-900 ml-2">€12.20</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-0.5 font-medium">Bun Box · Burgers</p>
+            <div class="flex items-center gap-2 mt-1.5 text-[11px] text-neutral-600">
+              <span class="font-bold text-amber-500">★ 4.6</span><span>•</span><span>⏱ 20 min</span><span>•</span><span class="text-neutral-500 font-semibold">€1.50 delivery</span>
+            </div>
+            <div class="mt-2.5 py-1.5 px-2 rounded-lg bg-neutral-50 border border-neutral-100 flex items-center justify-between text-[11px] text-neutral-600">
+              <span class="truncate">ⓘ High repeat frequency in Linden</span>
+              <span class="text-neutral-900 font-bold underline shrink-0 ml-1">Why?</span>
+            </div>
+            <button onclick="event.stopPropagation(); quickSelect('Truffle Smash Cheeseburger', 'Bun Box', 12.20)" class="w-full mt-3 py-2.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs hover:bg-neutral-800 active:scale-95 transition shadow">Order this · €12.20</button>
+          </div>
+        </div>
+
+        <!-- Fine Tune Filters -->
+        <div class="mt-2 px-4 pt-3 border-t border-neutral-100">
+          <h4 class="font-bold text-xs text-neutral-900 mb-2">Fine-tune your pick</h4>
+          <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-1">
+            <button onclick="goToScreen(3)" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-neutral-100 hover:bg-neutral-200 text-neutral-800 shrink-0">Near & fast</button>
+            <button onclick="goToScreen(3)" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-neutral-100 hover:bg-neutral-200 text-neutral-800 shrink-0">Under €5</button>
+            <button onclick="goToScreen(3)" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-neutral-100 hover:bg-neutral-200 text-neutral-800 shrink-0">New to you</button>
+            <button onclick="goToScreen(3)" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-neutral-100 hover:bg-neutral-200 text-neutral-800 shrink-0">Previously ordered</button>
+            <button onclick="goToScreen(3)" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-neutral-100 hover:bg-neutral-200 text-neutral-800 shrink-0">Free delivery</button>
+            <button onclick="goToScreen(3)" class="px-3 py-1.5 rounded-full text-[11px] font-semibold bg-neutral-100 hover:bg-neutral-200 text-neutral-800 shrink-0">Healthy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= S3: SHUFFLED / FILTERED DECK ================= -->
+      <div id="screen-s3" class="screen-view hidden">
+        <div class="bg-[#E9F7EF] px-4 py-3 border-b border-emerald-100/80">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5 text-emerald-800">
+              <span class="text-xs">✦</span>
+              <h3 class="font-extrabold text-[15px] text-neutral-900 tracking-tight">Picked for you tonight</h3>
+            </div>
+            <button onclick="cycleShuffleDeck()" class="shrink-0 px-3.5 py-1.5 rounded-full bg-white text-neutral-900 font-bold text-xs shadow-sm border border-neutral-200/90 flex items-center gap-1.5 hover:bg-neutral-50 active:scale-95 transition">
+              <i class="fa-solid fa-shuffle text-[11px] text-neutral-800"></i>
+              <span>Shuffle</span>
+            </button>
+          </div>
+          <div class="flex items-center justify-between mt-2.5 pt-2 border-t border-emerald-200/40 text-[11px]">
+            <span class="text-neutral-700 font-bold">1 of 3</span>
+            <button onclick="toggleS3DeckLayout()" class="text-emerald-800 font-bold hover:underline">View all 3 stacked</button>
+          </div>
+        </div>
+
+        <div id="s3-deck-carousel-container" class="snap-swipe-deck py-3 px-4 overflow-x-auto flex gap-3 hide-scrollbar transition-all duration-300">
+          <!-- Dynamic cards injected via renderS3Deck() -->
+        </div>
+      </div>
+
+      <!-- ================= S4: ITEM DETAILS ================= -->
+      <div id="screen-s4" class="screen-view hidden px-4 py-3">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
+          <button onclick="goToScreen(2)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <h3 class="font-extrabold text-sm text-neutral-900">Item details</h3>
+          <div class="w-8"></div>
+        </div>
+
+        <div class="h-44 rounded-2xl bg-[#FDE8D7] relative flex items-center justify-center my-3 overflow-hidden shadow-inner">
+          <div class="w-28 h-28 rounded-full bg-white/90 p-3 shadow-md flex items-center justify-center">
+            <span id="dish-hero-emoji" class="text-6xl">🍛</span>
+          </div>
+        </div>
+
+        <div class="flex items-start justify-between">
+          <div>
+            <h2 id="dish-title" class="text-lg font-black text-neutral-900">Chicken Tikka Masala</h2>
+            <p id="dish-restaurant" class="text-xs font-semibold text-neutral-500 mt-0.5">Spice Lane · Indian</p>
+          </div>
+          <span id="dish-price" class="text-lg font-black text-neutral-900 ml-2">€11.90</span>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-neutral-100">
+          <h4 class="text-xs font-bold text-neutral-900 mb-2">Spice Level</h4>
+          <div class="space-y-1.5 text-xs">
+            <label class="flex items-center justify-between p-2.5 rounded-xl border border-neutral-200 hover:bg-neutral-50 cursor-pointer">
+              <span>Mild</span>
+              <input type="radio" name="dish-spice" class="accent-black">
+            </label>
+            <label class="flex items-center justify-between p-2.5 rounded-xl border border-neutral-900 bg-neutral-50 cursor-pointer">
+              <span class="font-bold">Regular (Medium)</span>
+              <input type="radio" name="dish-spice" checked class="accent-black">
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-5 pt-3">
+          <button onclick="goToScreen(5)" class="w-full py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs flex items-center justify-between px-4 hover:bg-neutral-800 transition">
+            <span>Add to order & Checkout</span>
+            <span id="dish-btn-price">€11.90</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S5: CHECKOUT WITH STEPPER (+ / -) ================= -->
+      <div id="screen-s5" class="screen-view hidden px-4 py-3">
+        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+          <button onclick="goToScreen(2)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <h3 class="font-extrabold text-sm text-neutral-900">Review your pick</h3>
+          <button onclick="goToScreen(2)" class="text-xs font-bold text-neutral-600 underline">Change</button>
+        </div>
+
+        <div class="mt-3 p-3 rounded-2xl bg-neutral-50 border border-neutral-200 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-motorcycle text-sm"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-xs text-neutral-900">Delivery to Linden Court</span>
+              <span class="text-[11px] font-bold text-emerald-700">18–24 min</span>
+            </div>
+            <p class="text-[11px] text-neutral-500 mt-0.5" id="cart-restaurant">Spice Lane · 1.4 km away</p>
+          </div>
+        </div>
+
+        <!-- PORTION STEPPER (+ / -) -->
+        <div class="mt-4 p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+          <div class="flex items-start justify-between">
+            <div class="flex-1 pr-2">
+              <h4 id="cart-item-name" class="font-extrabold text-sm text-neutral-900">Chicken Tikka Masala</h4>
+              <p id="cart-item-unit-price" class="text-xs text-neutral-500 mt-0.5">€11.90 each</p>
+              <p class="text-[11px] text-emerald-700 font-semibold mt-1">✓ Curated according to your usual taste</p>
+            </div>
+            <div class="flex items-center gap-2 bg-neutral-100 rounded-xl p-1 shrink-0 border border-neutral-200">
+              <button onclick="changeQty(-1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs hover:bg-neutral-200 active:scale-90 transition">
+                <i class="fa-solid fa-minus text-[10px]"></i>
+              </button>
+              <span id="cart-qty" class="w-5 text-center font-black text-xs text-neutral-900">1</span>
+              <button onclick="changeQty(1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs hover:bg-neutral-200 active:scale-90 transition">
+                <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total Breakdown -->
+        <div class="mt-4 pt-3 border-t border-neutral-100 space-y-1.5 text-xs text-neutral-600">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="breakdown-subtotal" class="font-bold text-neutral-900">€11.90</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Service Fee</span>
+            <span class="font-bold text-neutral-900">€1.50</span>
+          </div>
+          <div class="flex justify-between pt-2 border-t border-neutral-200 font-extrabold text-sm text-neutral-900">
+            <span>Total</span>
+            <span id="breakdown-total">€13.40</span>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <button onclick="goToScreen(6)" class="w-full py-3.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs flex items-center justify-center gap-2 hover:bg-neutral-800 transition shadow-lg">
+            <span>Place order</span>
+            <span id="btn-place-total">• €13.40</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S6: ORDER PLACED ================= -->
+      <div id="screen-s6" class="screen-view hidden px-5 py-3 flex flex-col justify-between min-h-[580px]">
+        <div>
+          <div class="flex items-center justify-end">
+            <button onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-700">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+          </div>
+
+          <div class="flex flex-col items-center mt-3 text-center">
+            <div class="w-20 h-20 rounded-full bg-[#00C165] text-white flex items-center justify-center shadow-md mb-4">
+              <i class="fa-solid fa-check text-3xl font-extrabold"></i>
+            </div>
+            <h2 class="text-2xl font-black text-neutral-900 tracking-tight">Order placed</h2>
+            <p class="text-xs text-neutral-500 mt-1 font-medium">Arriving around 7:58 pm</p>
+          </div>
+
+          <div class="mt-6">
+            <div class="grid grid-cols-3 gap-1.5 h-1">
+              <div class="bg-[#00C165] rounded-full h-full"></div>
+              <div class="bg-neutral-200 rounded-full h-full"></div>
+              <div class="bg-neutral-200 rounded-full h-full"></div>
+            </div>
+            <div class="grid grid-cols-3 text-[11px] font-semibold mt-2">
+              <span class="text-neutral-900">Preparing</span>
+              <span class="text-neutral-400 text-center">On the way</span>
+              <span class="text-neutral-400 text-right">Arrived</span>
+            </div>
+          </div>
+
+          <div class="mt-5 p-3.5 rounded-2xl border border-neutral-200 bg-white flex items-center gap-3.5 shadow-xs">
+            <div class="w-14 h-14 rounded-xl bg-[#FDE8D7] shrink-0 flex items-center justify-center">
+              <span id="s6-item-emoji" class="text-2xl">🍛</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 id="s6-item-name" class="font-extrabold text-sm text-neutral-900 truncate">Chicken Tikka Masala</h4>
+              <p id="s6-item-sub" class="text-xs text-neutral-500 mt-0.5 truncate">Spice Lane · €13.40 total</p>
+              <span class="text-[11px] font-bold text-[#00C165] block mt-0.5">Picked for you</span>
+            </div>
+          </div>
+
+          <div class="mt-3.5 py-2.5 px-3.5 rounded-2xl bg-[#FFF8E6] border border-[#FFE8B3] flex items-center gap-2.5 text-xs text-[#8A5800]">
+            <i class="fa-regular fa-clock text-sm"></i>
+            <span class="font-medium">Free to change or cancel for 1:48</span>
+          </div>
+        </div>
+
+        <div class="mt-8 space-y-2.5 pb-2">
+          <button onclick="goToScreen(7)" class="w-full py-3.5 rounded-full bg-neutral-950 text-white font-extrabold text-sm hover:bg-neutral-800 transition shadow">
+            Track order
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S7: POST-MEAL SURVEY (REDIRECTS TO FORM) ================= -->
+      <div id="screen-s7" class="screen-view hidden px-4 py-4">
+        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+          <span class="text-neutral-400 text-xs font-semibold">Touchpoint 7: Academic Survey</span>
+          <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-bold">Exp A Complete</span>
+        </div>
+
+        <div class="mt-3 text-center">
+          <div class="w-14 h-14 rounded-full bg-[#FFE8D6] mx-auto flex items-center justify-center text-2xl shadow-sm mb-2">🍛</div>
+          <h3 class="text-base font-black text-neutral-900">How was your pick tonight?</h3>
+          <p class="text-xs text-neutral-500 mt-0.5"><span id="s7-dish-name">Chicken Tikka Masala</span> · Spice Lane</p>
+          <div class="flex justify-center gap-2 my-3 text-2xl text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+          </div>
+        </div>
+
+        <div class="space-y-3 mt-4 text-xs">
+          <div class="p-3 rounded-xl border border-neutral-200 bg-white">
+            <label class="font-bold text-neutral-900 block mb-2">Did the recommendation match your taste?</label>
+            <div class="grid grid-cols-3 gap-1.5">
+              <button onclick="selectPill(this)" class="survey-pill py-2 px-1 rounded-lg border border-neutral-900 bg-neutral-900 text-white text-center text-[11px] font-semibold">Spot on</button>
+              <button onclick="selectPill(this)" class="survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold">Just okay</button>
+              <button onclick="selectPill(this)" class="survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold">Missed it</button>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl border border-neutral-200 bg-white">
+            <label class="font-bold text-neutral-900 block mb-1">Would you let the feature pick for you again?</label>
+            <p class="text-[11px] text-neutral-500 mb-2">To save decision time after tiring days.</p>
+            <div class="flex gap-2">
+              <button onclick="selectPill(this)" class="survey-pill flex-1 py-2 rounded-lg border border-neutral-900 bg-neutral-900 text-white text-center text-[11px] font-semibold">Yes, definitely</button>
+              <button onclick="selectPill(this)" class="survey-pill flex-1 py-2 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold">Prefer browsing</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM REDIRECT BUTTON -->
+        <div class="mt-6">
+          <button onclick="submitToForm()" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition shadow-lg">
+            <span>Done & Submit to Survey</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </button>
+          <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to your external survey link with session metrics</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Persistent Bottom Navigation -->
+    <div class="w-full bg-white border-t border-neutral-200 shrink-0 z-40 relative">
+      <div class="h-14 flex items-center justify-around px-2 text-neutral-500">
+        <button onclick="goToScreen(1)" class="flex flex-col items-center gap-0.5 text-neutral-900">
+          <i class="fa-solid fa-house text-sm"></i>
+          <span class="text-[9px] font-bold">Home</span>
+        </button>
+        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
+          <i class="fa-solid fa-compass text-sm"></i>
+          <span class="text-[9px] font-medium">Browse</span>
+        </button>
+        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
+          <i class="fa-solid fa-magnifying-glass text-sm"></i>
+          <span class="text-[9px] font-medium">Search</span>
+        </button>
+        <button onclick="goToScreen(5)" class="flex flex-col items-center gap-0.5 relative hover:text-neutral-900 transition">
+          <i class="fa-solid fa-basket-shopping text-sm"></i>
+          <span id="nav-badge-cart" class="hidden absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-600 text-white text-[8px] font-bold rounded-full flex items-center justify-center">1</span>
+          <span class="text-[9px] font-medium">Carts</span>
+        </button>
+        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
+          <i class="fa-solid fa-user text-sm"></i>
+          <span class="text-[9px] font-medium">Account</span>
+        </button>
+      </div>
+      <div class="h-4 w-full bg-white flex justify-center items-center pb-1">
+        <div class="w-32 h-1 bg-neutral-300 rounded-full"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Dish Modal -->
+  <div id="dish-detail-modal" class="hidden absolute inset-0 z-50 bg-black/60 backdrop-blur-[2px] flex flex-col justify-end">
+    <div onclick="closeDishDetailModal()" class="flex-1"></div>
+    <div class="bg-white rounded-t-[28px] max-h-[85%] overflow-y-auto hide-scrollbar p-5 shadow-2xl relative border-t border-neutral-200">
+      <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
+        <div class="w-10 h-1 bg-neutral-300 rounded-full mx-auto -mr-2"></div>
+        <button onclick="closeDishDetailModal()" class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-700 flex items-center justify-center">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+      <div class="h-32 rounded-2xl bg-[#FDE8D7] flex items-center justify-center my-3">
+        <span id="modal-dish-emoji" class="text-5xl">🍛</span>
+      </div>
+      <h3 id="modal-dish-title" class="text-lg font-extrabold text-neutral-900">Chicken Tikka Masala</h3>
+      <p id="modal-dish-restaurant" class="text-xs text-neutral-500 mt-0.5">Spice Lane · Indian</p>
+      <span id="modal-dish-price" class="text-lg font-black text-neutral-900 block mt-1">€11.90</span>
+      <p id="modal-dish-desc" class="text-xs text-neutral-600 mt-2">Tender clay-oven chicken breast in rich tomato cream curry.</p>
+      <button onclick="orderFromModal()" class="w-full mt-4 py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs">Add to order & Review</button>
+    </div>
+  </div>
+
+  <script>
+    // ================= CONFIGURATION =================
+    // REPLACE THIS URL WITH YOUR ACTUAL GOOGLE FORM / QUALTRICS / TYPEFORM LINK
+    const SURVEY_FORM_BASE_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform";
+
+    let startTime = Date.now();
+    let currentQty = 1;
+    let unitPrice = 11.90;
+    let currentItem = "Chicken Tikka Masala";
+    let currentRestaurant = "Spice Lane";
+    let currentEmoji = "🍛";
+    let isStackedLayout = false;
+    let isS3StackedLayout = false;
+    let currentShuffleIndex = 0;
+
+    // Timer
+    setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const m = String(Math.floor(elapsed / 60)).padStart(2, '0');
+      const s = String(elapsed % 60).padStart(2, '0');
+      const timerEl = document.getElementById('study-timer');
+      if (timerEl) timerEl.innerText = `${m}:${s}`;
+    }, 1000);
+
+    const shuffleSets = [
+      {
+        items: [
+          { title: "Tokyo Salmon Poké Bowl", restaurant: "Tokyo Bowl · Japanese", price: 12.50, emoji: "🥗", badge: "✦ Fresh pick", rating: "4.8", time: "18 min", delivery: "€0 delivery", why: "Dispatched from kitchen located 900m away" },
+          { title: "Smash Cheeseburger Supreme", restaurant: "Bun Box · Burgers", price: 11.20, emoji: "🍔", badge: "✦ Comfort food", rating: "4.7", time: "15 min", delivery: "€1.00 delivery", why: "Top re-ordered late evening item in Linden Court" },
+          { title: "Artisanal Margherita D.O.P.", restaurant: "Forno Antico · Italian", price: 10.50, emoji: "🍕", badge: "✦ Quickest hot meal", rating: "4.9", time: "14 min", delivery: "€0 delivery", why: "Fastest oven dispatch within 1.5 km" }
+        ]
+      },
+      {
+        items: [
+          { title: "Penne Alla Vodka", restaurant: "Pastaficio Roma · Italian", price: 12.00, emoji: "🍝", badge: "✦ Comfort match", rating: "4.8", time: "16 min", delivery: "€0 delivery", why: "You often re-order pasta on tired evenings" },
+          { title: "Crispy Katsu Curry Don", restaurant: "Bento Works · Asian", price: 10.90, emoji: "🍛", badge: "✦ Fastest prep", rating: "4.7", time: "13 min", delivery: "€0 delivery", why: "Dispatched from kitchen located 600m away" },
+          { title: "Classic Smash Bacon Stack", restaurant: "Bun Box · Burgers", price: 11.80, emoji: "🍔", badge: "✦ Popular tonight", rating: "4.6", time: "20 min", delivery: "€1.00 delivery", why: "Ordered 14 times around Linden Court tonight" }
+        ]
+      }
+    ];
+
+    function goToScreen(n) {
+      for (let i = 1; i <= 7; i++) {
+        const el = document.getElementById('screen-s' + i);
+        if (el) el.classList.add('hidden');
+      }
+      const active = document.getElementById('screen-s' + n);
+      if (active) active.classList.remove('hidden');
+      document.getElementById('screen-content').scrollTop = 0;
+    }
+
+    function quickSelect(title, restaurant, price) {
+      currentItem = title;
+      currentRestaurant = restaurant;
+      unitPrice = price;
+      currentQty = 1;
+      updateCartDisplay();
+      goToScreen(5);
+    }
+
+    function changeQty(d) {
+      currentQty = Math.max(1, currentQty + d);
+      updateCartDisplay();
+    }
+
+    function updateCartDisplay() {
+      document.getElementById('cart-restaurant').innerText = currentRestaurant;
+      document.getElementById('cart-item-name').innerText = currentItem;
+      document.getElementById('cart-qty').innerText = currentQty;
+      document.getElementById('cart-item-unit-price').innerText = '€' + unitPrice.toFixed(2) + ' each';
+      const subtotal = unitPrice * currentQty;
+      const total = subtotal + 1.50;
+      document.getElementById('breakdown-subtotal').innerText = '€' + subtotal.toFixed(2);
+      document.getElementById('breakdown-total').innerText = '€' + total.toFixed(2);
+      document.getElementById('btn-place-total').innerText = '• €' + total.toFixed(2);
+
+      const s6Name = document.getElementById('s6-item-name');
+      const s6Sub = document.getElementById('s6-item-sub');
+      const s6Emoji = document.getElementById('s6-item-emoji');
+      if (s6Name) s6Name.innerText = currentItem;
+      if (s6Sub) s6Sub.innerText = `${currentRestaurant} · €${total.toFixed(2)} total`;
+      if (s6Emoji) s6Emoji.innerText = currentEmoji;
+
+      const s7Dish = document.getElementById('s7-dish-name');
+      if (s7Dish) s7Dish.innerText = currentItem;
+
+      const badge = document.getElementById('nav-badge-cart');
+      if (badge) {
+        badge.innerText = currentQty;
+        badge.classList.remove('hidden');
+      }
+    }
+
+    function openDishDetailModal(title, restaurant, price, emoji) {
+      currentItem = title;
+      currentRestaurant = restaurant;
+      unitPrice = price;
+      currentEmoji = emoji;
+      document.getElementById('modal-dish-title').innerText = title;
+      document.getElementById('modal-dish-restaurant').innerText = restaurant;
+      document.getElementById('modal-dish-price').innerText = '€' + price.toFixed(2);
+      document.getElementById('modal-dish-emoji').innerText = emoji;
+      document.getElementById('dish-detail-modal').classList.remove('hidden');
+    }
+
+    function closeDishDetailModal() {
+      document.getElementById('dish-detail-modal').classList.add('hidden');
+    }
+
+    function orderFromModal() {
+      closeDishDetailModal();
+      quickSelect(currentItem, currentRestaurant, unitPrice);
+    }
+
+    function shuffleOptionsDeck() {
+      goToScreen(3);
+      renderS3Deck();
+    }
+
+    function cycleShuffleDeck() {
+      currentShuffleIndex = (currentShuffleIndex + 1) % shuffleSets.length;
+      renderS3Deck();
+    }
+
+    function renderS3Deck() {
+      const set = shuffleSets[currentShuffleIndex];
+      const container = document.getElementById('s3-deck-carousel-container');
+      if (!container) return;
+      let html = '';
+      set.items.forEach((item, idx) => {
+        html += `
+          <div onclick="openDishDetailModal('${item.title}', '${item.restaurant}', ${item.price}, '${item.emoji}')" class="shrink-0 w-[310px] rounded-2xl border border-neutral-200 bg-white p-3 shadow-md cursor-pointer">
+            <div class="h-32 rounded-xl bg-[#FDE8D7] flex items-center justify-center text-4xl mb-2">
+              ${item.emoji}
+            </div>
+            <div class="flex justify-between items-start">
+              <h4 class="font-extrabold text-sm text-neutral-900">${item.title}</h4>
+              <span class="font-black text-sm text-neutral-900">€${item.price.toFixed(2)}</span>
+            </div>
+            <p class="text-xs text-neutral-500">${item.restaurant}</p>
+            <button onclick="event.stopPropagation(); quickSelect('${item.title}', '${item.restaurant}', ${item.price})" class="w-full mt-3 py-2.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs">Order this · €${item.price.toFixed(2)}</button>
+          </div>
+        `;
+      });
+      container.innerHTML = html;
+    }
+
+    function selectPill(btn) {
+      btn.parentElement.querySelectorAll('button').forEach(b => {
+        b.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold";
+      });
+      btn.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-900 bg-neutral-900 text-white text-center text-[11px] font-semibold";
+    }
+
+    // REDIRECT TO GOOGLE FORMS / QUALTRICS / TYPEFORM
+    function submitToForm() {
+      const durationSeconds = Math.floor((Date.now() - startTime) / 1000);
+      const queryParams = new URLSearchParams({
+        condition: 'A',
+        dish: currentItem,
+        restaurant: currentRestaurant,
+        price: unitPrice.toFixed(2),
+        quantity: currentQty,
+        timeToDecide: durationSeconds + 's'
+      });
+
+      const fullFormUrl = `${SURVEY_FORM_BASE_URL}?${queryParams.toString()}`;
+      window.location.href = fullFormUrl;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderS3Deck();
+    });
+  </script>
+</body>
+</html>
