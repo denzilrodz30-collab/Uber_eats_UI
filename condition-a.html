@@ -28,75 +28,126 @@
   <!-- Mobile Frame Container -->
   <div class="relative w-full max-w-[393px] h-[820px] bg-white rounded-[44px] overflow-hidden flex flex-col shadow-2xl border-4 border-neutral-800 select-none">
     
-    <!-- iOS Status Bar & Dynamic Island -->
-    <div class="h-11 w-full bg-white flex items-center justify-between px-7 shrink-0 z-50">
-      <span class="text-xs font-semibold text-neutral-800">20:15</span>
-      <div class="w-24 h-5 bg-black rounded-full flex items-center justify-end px-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    <!-- iOS Status Bar (Clean Minimal Notchless Style: 3:58 Silent Bell | Signal Wi-Fi Battery Charging) -->
+    <div class="h-11 w-full bg-white flex items-center justify-between px-6 shrink-0 z-50 pt-2">
+      <!-- Left: 3:58 + Silent Bell with Slash -->
+      <div class="flex items-center gap-1.5">
+        <span class="text-[16px] font-bold text-neutral-950 tracking-tight font-sans">3:58</span>
+        <!-- Silent Bell with diagonal strike matching reference -->
+        <svg class="w-4 h-4 text-neutral-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.3 4.3A5 5 0 0 1 18 8.5c0 2.3.8 4 1.8 5.4"></path>
+          <path d="M4.3 4.3l15.4 15.4"></path>
+          <path d="M6.3 8.7A5 5 0 0 0 6 8.5c0 2.3-.8 4-1.8 5.4A1.9 1.9 0 0 0 5.8 17h11.4"></path>
+          <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+        </svg>
       </div>
-      <div class="flex items-center gap-1.5 text-neutral-800 text-xs">
-        <i class="fa-solid fa-signal text-[10px]"></i>
-        <span class="text-[11px] font-bold">5G</span>
-        <i class="fa-solid fa-battery-three-quarters text-xs"></i>
+
+      <!-- Right: Cellular 4-Bars (3 filled, 1 dim) + Wi-Fi + Green Charging Battery -->
+      <div class="flex items-center gap-2">
+        <!-- 4-Bar Cellular Signal (3 active, 1 dim) -->
+        <div class="flex items-end gap-[1.5px] h-3">
+          <span class="w-[3px] h-1.5 bg-neutral-950 rounded-[0.5px]"></span>
+          <span class="w-[3px] h-2 bg-neutral-950 rounded-[0.5px]"></span>
+          <span class="w-[3px] h-2.5 bg-neutral-950 rounded-[0.5px]"></span>
+          <span class="w-[3px] h-3 bg-neutral-300 rounded-[0.5px]"></span>
+        </div>
+
+        <!-- Wi-Fi Waves -->
+        <svg class="w-4 h-3.5 text-neutral-950" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.95-3.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.07 0l-1.42-1.41zm-2.83-2.83a11 11 0 0 1 15.56 0l-1.42 1.41a9 9 0 0 0-12.73 0L4.22 12.12zm-2.83-2.83a15 15 0 0 1 21.22 0l-1.42 1.41a13 13 0 0 0-18.38 0L1.39 9.29z"/>
+        </svg>
+
+        <!-- Green Battery Pill with Lightning Bolt Inside -->
+        <div class="flex items-center">
+          <div class="w-[24px] h-[12px] rounded-[3.5px] bg-[#34C759] p-[1.5px] flex items-center justify-center relative shadow-xs">
+            <!-- Lightning Bolt Glyph -->
+            <svg class="w-2.5 h-2.5 text-neutral-950 fill-current" viewBox="0 0 24 24">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <!-- Battery Nipple Nub -->
+          <div class="w-[1.5px] h-[4.5px] bg-[#34C759] rounded-r-xs ml-[1px]"></div>
+        </div>
       </div>
     </div>
 
     <!-- MAIN SCROLLABLE CONTENT AREA -->
-    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-6">
+    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-24">
       
       <!-- ================= S1: FEED SCREEN ================= -->
       <div id="screen-s1" class="screen-view">
-        <div class="px-5 pt-2 pb-1 text-neutral-400 text-[11px] font-semibold border-b border-neutral-100 flex items-center justify-between">
-          <span class="text-neutral-900 font-bold">S1 Home</span>
-          <span class="text-[10px] text-neutral-400">Feed with Pick for me entry</span>
-        </div>
-
-        <div class="px-4 py-2.5 flex items-center justify-between">
-          <div class="flex items-center gap-1.5 cursor-pointer">
-            <i class="fa-solid fa-location-dot text-neutral-900 text-sm"></i>
-            <span class="font-bold text-[15px] text-neutral-900 tracking-tight">Linden Court</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-neutral-600 ml-0.5"></i>
+        <!-- Location Header Bar -->
+        <div class="px-4 pt-1 pb-2 flex items-center justify-between">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center text-neutral-900">
+              <i class="fa-solid fa-location-dot text-base"></i>
+            </div>
+            <span class="font-extrabold text-[17px] text-neutral-900 tracking-tight">Linden Court</span>
+            <i class="fa-solid fa-chevron-down text-xs text-neutral-800 ml-0.5"></i>
           </div>
-          <button class="w-8 h-8 rounded-full flex items-center justify-center text-neutral-800 hover:bg-neutral-100 transition">
-            <i class="fa-regular fa-bell text-base"></i>
+          <button class="w-9 h-9 rounded-full flex items-center justify-center text-neutral-900 hover:bg-neutral-100 transition">
+            <i class="fa-regular fa-bell text-lg"></i>
           </button>
         </div>
 
-        <div class="flex gap-2 px-4 py-1.5 overflow-x-auto hide-scrollbar text-xs font-semibold">
-          <button class="px-4 py-2 rounded-full bg-neutral-700 text-white shrink-0">All</button>
-          <button class="px-4 py-2 rounded-full bg-[#f3f4f6] text-neutral-800 hover:bg-neutral-200 shrink-0">Rides</button>
-          <button class="px-4 py-2 rounded-full bg-[#f3f4f6] text-neutral-800 hover:bg-neutral-200 shrink-0">Grocery</button>
-          <button class="px-4 py-2 rounded-full bg-[#f3f4f6] text-neutral-800 hover:bg-neutral-200 shrink-0">Convenience</button>
+        <!-- Native Uber Eats Service Category Pills -->
+        <div class="flex gap-2 px-4 py-1.5 overflow-x-auto hide-scrollbar text-xs font-bold">
+          <button class="px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200/80 text-neutral-900 flex items-center gap-1.5 shrink-0 shadow-xs">
+            <span class="w-5 h-5 rounded-md bg-[#00C165] flex items-center justify-center text-white text-[10px]">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </span>
+            <span>All</span>
+          </button>
+          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+            <span class="text-sm">🚗</span>
+            <span>Rides</span>
+          </button>
+          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+            <span class="text-sm">🍌</span>
+            <span>Grocery</span>
+          </button>
+          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+            <span class="text-sm">🍿</span>
+            <span>Convenience</span>
+          </button>
         </div>
 
-        <div class="grid grid-cols-5 gap-1 px-3 py-3.5 text-center">
+        <!-- Circular Cuisine Category Shortcuts (Pizza, Chinese, Indian, Sushi, Halal) -->
+        <div class="grid grid-cols-5 gap-1 px-3 py-3 text-center">
+          <!-- Pizza -->
           <div class="flex flex-col items-center gap-1.5 cursor-pointer">
             <div class="w-[52px] h-[52px] rounded-full bg-[#FFE8D6] flex items-center justify-center relative">
               <div class="w-8 h-8 rounded-full bg-[#E85D36] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#FFD166] absolute top-1 left-2"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-[#FFD166] absolute bottom-1.5 right-2"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FFD166] absolute top-1 left-2"></span>
+                <span class="w-2 h-2 rounded-full bg-[#FFD166] absolute bottom-1 right-2"></span>
               </div>
             </div>
             <span class="text-[11px] font-medium text-neutral-700">Pizza</span>
           </div>
+
+          <!-- Chinese -->
           <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE5E5] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#E54B4B] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#52B788] absolute top-1.5 left-2"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-[#FFE5E5] absolute bottom-2 right-2"></span>
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FCE7F3] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#E11D48] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#6EE7B7] absolute top-1 right-2"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FBCFE8] absolute bottom-1 left-2"></span>
               </div>
             </div>
             <span class="text-[11px] font-medium text-neutral-700">Chinese</span>
           </div>
+
+          <!-- Indian -->
           <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FFF1D6] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#E58F2A] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#52B788] absolute top-1.5 right-2.5"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-[#FFF1D6] absolute bottom-1.5 left-2"></span>
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FEF3C7] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#D97706] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#10B981] absolute top-1 left-3"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FDE68A] absolute bottom-1 right-2"></span>
               </div>
             </div>
             <span class="text-[11px] font-medium text-neutral-700">Indian</span>
           </div>
+
+          <!-- Sushi -->
           <div class="flex flex-col items-center gap-1.5 cursor-pointer">
             <div class="w-[52px] h-[52px] rounded-full bg-[#E0F2FE] flex items-center justify-center relative">
               <div class="w-8 h-8 rounded-full bg-[#F87171] flex items-center justify-center relative shadow-sm">
@@ -106,6 +157,8 @@
             </div>
             <span class="text-[11px] font-medium text-neutral-700">Sushi</span>
           </div>
+
+          <!-- Halal -->
           <div class="flex flex-col items-center gap-1.5 cursor-pointer">
             <div class="w-[52px] h-[52px] rounded-full bg-[#EDE9FE] flex items-center justify-center relative">
               <div class="w-8 h-8 rounded-full bg-[#7C4A2D] flex items-center justify-center relative shadow-sm">
@@ -582,45 +635,62 @@
           </div>
         </div>
 
-        <!-- FORM REDIRECT BUTTON -->
-        <div class="mt-6">
+        <div class="mt-5">
           <button onclick="submitToForm()" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition shadow-lg">
             <span>Done & Submit to Survey</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
           </button>
-          <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to your external survey link with session metrics</p>
+          <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to external survey form with metrics</p>
         </div>
       </div>
 
+      <!-- Safe Bottom Scroll Spacer (Prevents any content from being hidden behind dock) -->
+      <div class="h-28 w-full shrink-0"></div>
+
     </div>
 
-    <!-- Persistent Bottom Navigation -->
-    <div class="w-full bg-white border-t border-neutral-200 shrink-0 z-40 relative">
-      <div class="h-14 flex items-center justify-around px-2 text-neutral-500">
-        <button onclick="goToScreen(1)" class="flex flex-col items-center gap-0.5 text-neutral-900">
-          <i class="fa-solid fa-house text-sm"></i>
-          <span class="text-[9px] font-bold">Home</span>
+    <!-- Persistent Floating Pill Navigation (Modern iOS / Uber Eats Dock) -->
+    <div class="absolute bottom-0 inset-x-0 z-40 pb-2 pt-8 pointer-events-none flex flex-col items-center bg-gradient-to-t from-white via-white/95 to-transparent">
+      
+      <!-- Floating Dock Row -->
+      <div class="pointer-events-auto flex items-center gap-2 px-3 py-1.5">
+        <!-- Home Button (Round White Pill with Shadow) -->
+        <button onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-950 active:scale-95 transition">
+          <i class="fa-solid fa-house text-base"></i>
         </button>
-        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
-          <i class="fa-solid fa-compass text-sm"></i>
-          <span class="text-[9px] font-medium">Browse</span>
+
+        <!-- Browse / Location Pin Button -->
+        <button onclick="goToScreen(2)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+          <svg class="w-5 h-5 text-neutral-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
         </button>
-        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
-          <i class="fa-solid fa-magnifying-glass text-sm"></i>
-          <span class="text-[9px] font-medium">Search</span>
+
+        <!-- Wide Pill Search Bar -->
+        <button onclick="goToScreen(2)" class="h-12 px-6 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center gap-2.5 text-neutral-700 hover:text-black active:scale-95 transition">
+          <i class="fa-solid fa-magnifying-glass text-sm text-neutral-600"></i>
+          <span class="text-sm font-semibold text-neutral-800 tracking-tight">Search</span>
         </button>
-        <button onclick="goToScreen(5)" class="flex flex-col items-center gap-0.5 relative hover:text-neutral-900 transition">
-          <i class="fa-solid fa-basket-shopping text-sm"></i>
-          <span id="nav-badge-cart" class="hidden absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-600 text-white text-[8px] font-bold rounded-full flex items-center justify-center">1</span>
-          <span class="text-[9px] font-medium">Carts</span>
+
+        <!-- Cart Button -->
+        <button onclick="goToScreen(5)" class="relative w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+          <i class="fa-solid fa-cart-shopping text-sm"></i>
+          <span id="nav-badge-cart" class="hidden absolute top-1.5 right-1.5 w-4 h-4 bg-emerald-600 text-white text-[9px] font-black rounded-full flex items-center justify-center border-2 border-white">1</span>
         </button>
-        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
-          <i class="fa-solid fa-user text-sm"></i>
-          <span class="text-[9px] font-medium">Account</span>
+
+        <!-- Account / Uber One Profile Button -->
+        <button class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+          <div class="relative">
+            <i class="fa-solid fa-user text-sm"></i>
+            <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-neutral-900 text-white text-[6px] font-extrabold rounded-full flex items-center justify-center">1</span>
+          </div>
         </button>
       </div>
-      <div class="h-4 w-full bg-white flex justify-center items-center pb-1">
-        <div class="w-32 h-1 bg-neutral-300 rounded-full"></div>
+
+      <!-- iOS Home Grab Indicator Bar -->
+      <div class="h-4 w-full flex justify-center items-center mt-1">
+        <div class="w-32 h-1 bg-neutral-900/80 rounded-full"></div>
       </div>
     </div>
 
