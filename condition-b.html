@@ -24,41 +24,91 @@
 
   <div class="relative w-full max-w-[393px] h-[820px] bg-white rounded-[44px] overflow-hidden flex flex-col shadow-2xl border-4 border-neutral-800 select-none">
     
-    <!-- iOS Status Bar -->
-    <div class="h-11 w-full bg-white flex items-center justify-between px-7 shrink-0 z-50">
-      <span class="text-xs font-semibold text-neutral-800">20:15</span>
-      <div class="w-24 h-5 bg-black rounded-full flex items-center justify-end px-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    <!-- iOS Status Bar (Clean Minimal Notchless Style: 3:58 Silent Bell | Signal Wi-Fi Battery Charging) -->
+    <div class="h-11 w-full bg-white flex items-center justify-between px-6 shrink-0 z-50 pt-2">
+      <!-- Left: 3:58 + Silent Bell with Slash -->
+      <div class="flex items-center gap-1.5">
+        <span class="text-[16px] font-bold text-neutral-950 tracking-tight font-sans">3:58</span>
+        <!-- Silent Bell with diagonal strike matching reference -->
+        <svg class="w-4 h-4 text-neutral-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.3 4.3A5 5 0 0 1 18 8.5c0 2.3.8 4 1.8 5.4"></path>
+          <path d="M4.3 4.3l15.4 15.4"></path>
+          <path d="M6.3 8.7A5 5 0 0 0 6 8.5c0 2.3-.8 4-1.8 5.4A1.9 1.9 0 0 0 5.8 17h11.4"></path>
+          <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+        </svg>
       </div>
-      <div class="flex items-center gap-1.5 text-neutral-800 text-xs">
-        <i class="fa-solid fa-signal text-[10px]"></i>
-        <span class="text-[11px] font-bold">5G</span>
-        <i class="fa-solid fa-battery-three-quarters text-xs"></i>
+
+      <!-- Right: Cellular 4-Bars (3 filled, 1 dim) + Wi-Fi + Green Charging Battery -->
+      <div class="flex items-center gap-2">
+        <!-- 4-Bar Cellular Signal (3 active, 1 dim) -->
+        <div class="flex items-end gap-[1.5px] h-3">
+          <span class="w-[3px] h-1.5 bg-neutral-950 rounded-[0.5px]"></span>
+          <span class="w-[3px] h-2 bg-neutral-950 rounded-[0.5px]"></span>
+          <span class="w-[3px] h-2.5 bg-neutral-950 rounded-[0.5px]"></span>
+          <span class="w-[3px] h-3 bg-neutral-300 rounded-[0.5px]"></span>
+        </div>
+
+        <!-- Wi-Fi Waves -->
+        <svg class="w-4 h-3.5 text-neutral-950" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.95-3.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.07 0l-1.42-1.41zm-2.83-2.83a11 11 0 0 1 15.56 0l-1.42 1.41a9 9 0 0 0-12.73 0L4.22 12.12zm-2.83-2.83a15 15 0 0 1 21.22 0l-1.42 1.41a13 13 0 0 0-18.38 0L1.39 9.29z"/>
+        </svg>
+
+        <!-- Green Battery Pill with Lightning Bolt Inside -->
+        <div class="flex items-center">
+          <div class="w-[24px] h-[12px] rounded-[3.5px] bg-[#34C759] p-[1.5px] flex items-center justify-center relative shadow-xs">
+            <!-- Lightning Bolt Glyph -->
+            <svg class="w-2.5 h-2.5 text-neutral-950 fill-current" viewBox="0 0 24 24">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <!-- Battery Nipple Nub -->
+          <div class="w-[1.5px] h-[4.5px] bg-[#34C759] rounded-r-xs ml-[1px]"></div>
+        </div>
       </div>
     </div>
 
     <!-- MAIN SCROLLABLE CONTENT -->
-    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-6">
+    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-24">
       
       <!-- ================= S1: FEED WITH 6 POPULAR ITEMS ================= -->
       <div id="screen-s1" class="screen-view">
-        <div class="px-5 pt-2 pb-1 text-neutral-400 text-[11px] font-semibold border-b border-neutral-100 flex items-center justify-between">
-          <span class="text-neutral-900 font-bold">S1 Home</span>
-          <span class="text-[10px] text-neutral-400">Home Feed with Popular Items</span>
-        </div>
-
-        <div class="px-4 py-2.5 flex items-center justify-between">
-          <div class="flex items-center gap-1.5 cursor-pointer">
-            <i class="fa-solid fa-location-dot text-neutral-900 text-sm"></i>
-            <span class="font-bold text-[15px] text-neutral-900 tracking-tight">Linden Court</span>
-            <i class="fa-solid fa-chevron-down text-[10px] text-neutral-600 ml-0.5"></i>
+        <!-- Location Header Bar -->
+        <div class="px-4 pt-1 pb-2 flex items-center justify-between">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <div class="w-6 h-6 rounded-full flex items-center justify-center text-neutral-900">
+              <i class="fa-solid fa-location-dot text-base"></i>
+            </div>
+            <span class="font-extrabold text-[17px] text-neutral-900 tracking-tight">Linden Court</span>
+            <i class="fa-solid fa-chevron-down text-xs text-neutral-800 ml-0.5"></i>
           </div>
-          <button class="w-8 h-8 rounded-full flex items-center justify-center text-neutral-800 hover:bg-neutral-100 transition">
-            <i class="fa-regular fa-bell text-base"></i>
+          <button class="w-9 h-9 rounded-full flex items-center justify-center text-neutral-900 hover:bg-neutral-100 transition">
+            <i class="fa-regular fa-bell text-lg"></i>
           </button>
         </div>
 
-        <div class="px-4 pt-2 pb-1 flex items-center justify-between">
+        <!-- Native Uber Eats Service Category Pills -->
+        <div class="flex gap-2 px-4 py-1.5 overflow-x-auto hide-scrollbar text-xs font-bold">
+          <button class="px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200/80 text-neutral-900 flex items-center gap-1.5 shrink-0 shadow-xs">
+            <span class="w-5 h-5 rounded-md bg-[#00C165] flex items-center justify-center text-white text-[10px]">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </span>
+            <span>All</span>
+          </button>
+          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+            <span class="text-sm">🚗</span>
+            <span>Rides</span>
+          </button>
+          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+            <span class="text-sm">🍌</span>
+            <span>Grocery</span>
+          </button>
+          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+            <span class="text-sm">🍿</span>
+            <span>Convenience</span>
+          </button>
+        </div>
+
+        <div class="px-4 pt-3 pb-1 flex items-center justify-between">
           <div>
             <h3 class="font-extrabold text-base text-neutral-900 tracking-tight">Popular near you</h3>
             <p class="text-[11px] text-neutral-500 font-medium">Most ordered dishes in Linden Court tonight</p>
@@ -239,167 +289,47 @@
         </div>
       </div>
 
-      <!-- ================= S4: ITEM DETAILS ================= -->
-      <div id="screen-s4" class="screen-view hidden px-4 py-3">
-        <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
-          <button onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800">
-            <i class="fa-solid fa-arrow-left text-sm"></i>
-          </button>
-          <h3 class="font-extrabold text-sm text-neutral-900">Item details</h3>
-          <div class="w-8"></div>
-        </div>
-
-        <div class="h-44 rounded-2xl bg-[#FDE8D7] flex items-center justify-center my-3">
-          <span id="dish-hero-emoji" class="text-6xl">🍔</span>
-        </div>
-
-        <div class="flex items-start justify-between">
-          <div>
-            <h2 id="dish-title" class="text-lg font-black text-neutral-900">Supreme Double Smash</h2>
-            <p id="dish-restaurant" class="text-xs font-semibold text-neutral-500 mt-0.5">Bun Box Express</p>
-          </div>
-          <span id="dish-price" class="text-lg font-black text-neutral-900 ml-2">€12.99</span>
-        </div>
-
-        <div class="mt-5 pt-3">
-          <button onclick="goToScreen(5)" class="w-full py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs flex items-center justify-between px-4">
-            <span>Add to order & Checkout</span>
-            <span id="dish-btn-price">€12.99</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- ================= S5: CHECKOUT WITH STEPPER ================= -->
-      <div id="screen-s5" class="screen-view hidden px-4 py-3">
-        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
-          <button onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800">
-            <i class="fa-solid fa-arrow-left text-sm"></i>
-          </button>
-          <h3 class="font-extrabold text-sm text-neutral-900">Review your order</h3>
-          <button onclick="goToScreen(1)" class="text-xs font-bold text-neutral-600 underline">Change</button>
-        </div>
-
-        <div class="mt-4 p-3.5 rounded-2xl border border-neutral-200 bg-white">
-          <div class="flex items-start justify-between">
-            <div class="flex-1 pr-2">
-              <h4 id="cart-item-name" class="font-extrabold text-sm text-neutral-900">Supreme Double Smash</h4>
-              <p id="cart-item-unit-price" class="text-xs text-neutral-500 mt-0.5">€12.99 each</p>
-            </div>
-            <div class="flex items-center gap-2 bg-neutral-100 rounded-xl p-1 shrink-0 border border-neutral-200">
-              <button onclick="changeQty(-1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-minus text-[10px]"></i>
-              </button>
-              <span id="cart-qty" class="w-5 text-center font-black text-xs text-neutral-900">1</span>
-              <button onclick="changeQty(1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm">
-                <i class="fa-solid fa-plus text-[10px]"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 pt-3 border-t border-neutral-100 space-y-1.5 text-xs text-neutral-600">
-          <div class="flex justify-between">
-            <span>Subtotal</span>
-            <span id="breakdown-subtotal" class="font-bold text-neutral-900">€12.99</span>
-          </div>
-          <div class="flex justify-between">
-            <span>Service Fee</span>
-            <span class="font-bold text-neutral-900">€1.50</span>
-          </div>
-          <div class="flex justify-between pt-2 border-t border-neutral-200 font-extrabold text-sm text-neutral-900">
-            <span>Total</span>
-            <span id="breakdown-total">€14.49</span>
-          </div>
-        </div>
-
-        <div class="mt-5">
-          <button onclick="goToScreen(6)" class="w-full py-3.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs flex items-center justify-center gap-2">
-            <span>Place order</span>
-            <span id="btn-place-total">• €14.49</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- ================= S6: ORDER PLACED ================= -->
-      <div id="screen-s6" class="screen-view hidden px-5 py-3 flex flex-col justify-between min-h-[580px]">
-        <div>
-          <div class="flex flex-col items-center mt-6 text-center">
-            <div class="w-20 h-20 rounded-full bg-[#00C165] text-white flex items-center justify-center shadow-md mb-4">
-              <i class="fa-solid fa-check text-3xl font-extrabold"></i>
-            </div>
-            <h2 class="text-2xl font-black text-neutral-900 tracking-tight">Order placed</h2>
-            <p class="text-xs text-neutral-500 mt-1">Arriving around 7:58 pm</p>
-          </div>
-
-          <div class="mt-6 p-3.5 rounded-2xl border border-neutral-200 bg-white flex items-center gap-3.5">
-            <div class="w-14 h-14 rounded-xl bg-amber-50 flex items-center justify-center text-2xl">
-              <span id="s6-item-emoji">🍔</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <h4 id="s6-item-name" class="font-extrabold text-sm text-neutral-900 truncate">Supreme Double Smash</h4>
-              <p id="s6-item-sub" class="text-xs text-neutral-500 mt-0.5 truncate">Bun Box Express</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 pb-2">
-          <button onclick="goToScreen(7)" class="w-full py-3.5 rounded-full bg-neutral-950 text-white font-extrabold text-sm">
-            Track order
-          </button>
-        </div>
-      </div>
-
-      <!-- ================= S7: REFLECTION SURVEY (REDIRECTS TO FORM) ================= -->
-      <div id="screen-s7" class="screen-view hidden px-4 py-4">
-        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
-          <span class="text-neutral-400 text-xs font-semibold">Touchpoint 7: Academic Survey</span>
-          <span class="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded font-bold">Exp B Complete</span>
-        </div>
-
-        <div class="mt-4 text-center">
-          <div class="w-14 h-14 rounded-full bg-amber-100 mx-auto flex items-center justify-center text-2xl shadow-sm mb-2">🍔</div>
-          <h3 class="text-base font-black text-neutral-900">How was your meal selection?</h3>
-          <p class="text-xs text-neutral-500 mt-0.5"><span id="s7-dish-name">Supreme Double Smash</span></p>
-        </div>
-
-        <div class="mt-6">
-          <button onclick="submitToForm()" class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-neutral-950 font-extrabold text-sm flex items-center justify-center gap-2 transition shadow-lg">
-            <span>Done & Submit to Survey</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-          </button>
-          <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to external survey form with metrics</p>
-        </div>
-      </div>
+      <!-- Safe Bottom Scroll Spacer (Prevents content being hidden behind dock) -->
+      <div class="h-28 w-full shrink-0"></div>
 
     </div>
 
-    <!-- Persistent Bottom Bar -->
-    <div class="w-full bg-white border-t border-neutral-200 shrink-0 z-40 relative">
-      <div class="h-14 flex items-center justify-around px-2 text-neutral-500">
-        <button onclick="goToScreen(1)" class="flex flex-col items-center gap-0.5 text-neutral-900">
-          <i class="fa-solid fa-house text-sm"></i>
-          <span class="text-[9px] font-bold">Home</span>
+    <!-- Persistent Floating Pill Navigation (Modern iOS / Uber Eats Dock) -->
+    <div class="absolute bottom-0 inset-x-0 z-40 pb-2 pt-8 pointer-events-none flex flex-col items-center bg-gradient-to-t from-white via-white/95 to-transparent">
+      
+      <!-- Floating Dock Row -->
+      <div class="pointer-events-auto flex items-center gap-2 px-3 py-1.5">
+        <button onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-950 active:scale-95 transition">
+          <i class="fa-solid fa-house text-base"></i>
         </button>
-        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
-          <i class="fa-solid fa-compass text-sm"></i>
-          <span class="text-[9px] font-medium">Browse</span>
+
+        <button onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+          <svg class="w-5 h-5 text-neutral-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
         </button>
-        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
-          <i class="fa-solid fa-magnifying-glass text-sm"></i>
-          <span class="text-[9px] font-medium">Search</span>
+
+        <button onclick="goToScreen(1)" class="h-12 px-6 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center gap-2.5 text-neutral-700 hover:text-black active:scale-95 transition">
+          <i class="fa-solid fa-magnifying-glass text-sm text-neutral-600"></i>
+          <span class="text-sm font-semibold text-neutral-800 tracking-tight">Search</span>
         </button>
-        <button onclick="goToScreen(5)" class="flex flex-col items-center gap-0.5 relative hover:text-neutral-900 transition">
-          <i class="fa-solid fa-basket-shopping text-sm"></i>
-          <span id="nav-badge-cart" class="hidden absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-600 text-white text-[8px] font-bold rounded-full flex items-center justify-center">1</span>
-          <span class="text-[9px] font-medium">Carts</span>
+
+        <button onclick="goToScreen(5)" class="relative w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+          <i class="fa-solid fa-cart-shopping text-sm"></i>
+          <span id="nav-badge-cart" class="hidden absolute top-1.5 right-1.5 w-4 h-4 bg-emerald-600 text-white text-[9px] font-black rounded-full flex items-center justify-center border-2 border-white">1</span>
         </button>
-        <button class="flex flex-col items-center gap-0.5 hover:text-neutral-900 transition">
-          <i class="fa-solid fa-user text-sm"></i>
-          <span class="text-[9px] font-medium">Account</span>
+
+        <button class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+          <div class="relative">
+            <i class="fa-solid fa-user text-sm"></i>
+            <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-neutral-900 text-white text-[6px] font-extrabold rounded-full flex items-center justify-center">1</span>
+          </div>
         </button>
       </div>
-      <div class="h-4 w-full bg-white flex justify-center items-center pb-1">
-        <div class="w-32 h-1 bg-neutral-300 rounded-full"></div>
+
+      <div class="h-4 w-full flex justify-center items-center mt-1">
+        <div class="w-32 h-1 bg-neutral-900/80 rounded-full"></div>
       </div>
     </div>
 
