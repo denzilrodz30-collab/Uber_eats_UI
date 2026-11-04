@@ -55,14 +55,14 @@
 
         <!-- Green Battery Pill with Lightning Bolt Inside -->
         <div class="flex items-center">
-          <div class="w-[24px] h-[12px] rounded-[3.5px] bg-[#34C759] p-[1.5px] flex items-center justify-center relative shadow-xs">
+          <div class="w-[24px] h-[12px] rounded-[3.5px] bg-[#34C759] p-[1.5px] flex items-center justify-center relative shadow-sm">
             <!-- Lightning Bolt Glyph -->
             <svg class="w-2.5 h-2.5 text-neutral-950 fill-current" viewBox="0 0 24 24">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
           </div>
           <!-- Battery Nipple Nub -->
-          <div class="w-[1.5px] h-[4.5px] bg-[#34C759] rounded-r-xs ml-[1px]"></div>
+          <div class="w-[1.5px] h-[4.5px] bg-[#34C759] rounded-r-sm ml-[1px]"></div>
         </div>
       </div>
     </div>
@@ -108,7 +108,60 @@
           </button>
         </div>
 
-        <div class="px-4 pt-3 pb-1 flex items-center justify-between">
+        <!-- Circular Cuisine Category Shortcuts (Pizza, Chinese, Indian, Sushi, Halal) -->
+        <div class="grid grid-cols-5 gap-1 px-3 py-3 text-center">
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE8D6] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#E85D36] flex items-center justify-center relative shadow-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FFD166] absolute top-1 left-2"></span>
+                <span class="w-2 h-2 rounded-full bg-[#FFD166] absolute bottom-1 right-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Pizza</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FCE7F3] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#E11D48] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#6EE7B7] absolute top-1 right-2"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FBCFE8] absolute bottom-1 left-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Chinese</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FEF3C7] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#D97706] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#10B981] absolute top-1 left-3"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FDE68A] absolute bottom-1 right-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Indian</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#E0F2FE] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#F87171] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#10B981] absolute top-2 right-1.5"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#BAE6FD] absolute bottom-1.5 left-1.5"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Sushi</span>
+          </div>
+
+          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#EDE9FE] flex items-center justify-center relative">
+              <div class="w-8 h-8 rounded-full bg-[#7C4A2D] flex items-center justify-center relative shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-[#A3E635] absolute top-1 left-2.5"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-[#DDD6FE] absolute bottom-2 right-2"></span>
+              </div>
+            </div>
+            <span class="text-[11px] font-medium text-neutral-700">Halal</span>
+          </div>
+        </div>
+
+        <div class="px-4 pt-1 pb-1 flex items-center justify-between">
           <div>
             <h3 class="font-extrabold text-base text-neutral-900 tracking-tight">Popular near you</h3>
             <p class="text-[11px] text-neutral-500 font-medium">Most ordered dishes in Linden Court tonight</p>
@@ -119,7 +172,7 @@
         <!-- 6 POPULAR ITEMS WITH SOCIAL PROOF -->
         <div class="p-3.5 space-y-3">
           <!-- Item 1 -->
-          <div onclick="selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, '🍔')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+          <div onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express · Fast Food', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Top ordered item with 10k+ customer orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
             <div class="flex items-start gap-3">
               <div class="w-20 h-20 rounded-xl bg-amber-50 flex items-center justify-center text-3xl shrink-0 border border-amber-100 relative">
                 🍔
@@ -140,14 +193,14 @@
                 </div>
               </div>
             </div>
-            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs">
+            <button onclick="event.stopPropagation(); selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, '🍔')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
               <span>Select</span>
               <span class="text-neutral-400 font-normal">• €12.99</span>
             </button>
           </div>
 
           <!-- Item 2 -->
-          <div onclick="selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, '🍕')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+          <div onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza · Italian', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Second most ordered pizza with 8.4k+ community orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
             <div class="flex items-start gap-3">
               <div class="w-20 h-20 rounded-xl bg-rose-50 flex items-center justify-center text-3xl shrink-0 border border-rose-100 relative">
                 🍕
@@ -168,14 +221,14 @@
                 </div>
               </div>
             </div>
-            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs">
+            <button onclick="event.stopPropagation(); selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, '🍕')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
               <span>Select</span>
               <span class="text-neutral-400 font-normal">• €13.50</span>
             </button>
           </div>
 
           <!-- Item 3 -->
-          <div onclick="selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, '🍛')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+          <div onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato-garam masala sauce with basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', 'Top ordered Indian dinner with 12k+ orders in Dublin.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
             <div class="flex items-start gap-3">
               <div class="w-20 h-20 rounded-xl bg-amber-50 flex items-center justify-center text-3xl shrink-0 border border-amber-100 relative">
                 🍛
@@ -196,14 +249,14 @@
                 </div>
               </div>
             </div>
-            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs">
+            <button onclick="event.stopPropagation(); selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, '🍛')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
               <span>Select</span>
               <span class="text-neutral-400 font-normal">• €11.90</span>
             </button>
           </div>
 
           <!-- Item 4 -->
-          <div onclick="selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, '🍱')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+          <div onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame, and pickled radish.', '★ 4.9', '20 min', '€0 Delivery Fee', 'Over 6.5k orders this month in the student district.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
             <div class="flex items-start gap-3">
               <div class="w-20 h-20 rounded-xl bg-sky-50 flex items-center justify-center text-3xl shrink-0 border border-sky-100">🍱</div>
               <div class="flex-1 min-w-0">
@@ -221,14 +274,14 @@
                 </div>
               </div>
             </div>
-            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs">
+            <button onclick="event.stopPropagation(); selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, '🍱')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
               <span>Select</span>
               <span class="text-neutral-400 font-normal">• €12.20</span>
             </button>
           </div>
 
           <!-- Item 5 -->
-          <div onclick="selectDish('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, '🥙')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+          <div onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and hot flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Top late evening item with 9.1k+ orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
             <div class="flex items-start gap-3">
               <div class="w-20 h-20 rounded-xl bg-emerald-50 flex items-center justify-center text-3xl shrink-0 border border-emerald-100">🥙</div>
               <div class="flex-1 min-w-0">
@@ -246,14 +299,14 @@
                 </div>
               </div>
             </div>
-            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs">
+            <button onclick="event.stopPropagation(); selectDish('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, '🥙')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
               <span>Select</span>
               <span class="text-neutral-400 font-normal">• €11.50</span>
             </button>
           </div>
 
           <!-- Item 6 -->
-          <div onclick="selectDish('Special Chow Mein Wok Noodles', 'Okee Chinese', 10.50, '🍜')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
+          <div onclick="openDishDetailModal('Special Chow Mein Wok Noodles', 'Okee Chinese · Asian', 10.50, '🍜', 'Egg noodles wok-tossed with king prawns, roast pork, bean sprouts, and scallions.', '★ 4.5', '30 min', '€0 Delivery Fee', 'Community favorite noodles with 5.3k+ orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
             <div class="flex items-start gap-3">
               <div class="w-20 h-20 rounded-xl bg-purple-50 flex items-center justify-center text-3xl shrink-0 border border-purple-100">🍜</div>
               <div class="flex-1 min-w-0">
@@ -271,21 +324,346 @@
                 </div>
               </div>
             </div>
-            <button class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs">
+            <button onclick="event.stopPropagation(); selectDish('Special Chow Mein Wok Noodles', 'Okee Chinese', 10.50, '🍜')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
               <span>Select</span>
               <span class="text-neutral-400 font-normal">• €10.50</span>
             </button>
           </div>
         </div>
 
-        <!-- Full Restaurant Menu Accessible via Scroll -->
+        <!-- FULL RESTAURANT MENU FEED ACCESSIBLE VIA SCROLL (CONDITION B) -->
         <div class="px-4 mt-5 pt-4 border-t-4 border-neutral-100 pb-6">
-          <h4 class="font-black text-base text-neutral-900 tracking-tight mb-2">All Nearby Kitchens</h4>
-          <p class="text-xs text-neutral-500 mb-3">Browse all 40+ restaurant menus</p>
-          <div class="p-3 rounded-xl border border-neutral-200 text-xs">
-            <h5 class="font-bold text-neutral-900">Tokyo Bowl (Full Menu)</h5>
-            <p class="text-neutral-500 mt-0.5">Poké bowls, gyoza, katsu curries</p>
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <h4 class="font-black text-base text-neutral-900 tracking-tight">All Restaurants & Menus</h4>
+              <p class="text-[11px] text-neutral-500 font-medium">Browse full menus from 40+ local kitchens</p>
+            </div>
+            <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700 text-[10px] font-extrabold">Full Catalog</span>
           </div>
+
+          <!-- Quick Cuisine Filter Chips for S1 Full Menu -->
+          <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-[11px] font-semibold mb-3">
+            <button onclick="filterS1Catalog('all', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-900 text-white shrink-0">All Menus</button>
+            <button onclick="filterS1Catalog('burgers', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Burgers</button>
+            <button onclick="filterS1Catalog('pizza', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Pizza</button>
+            <button onclick="filterS1Catalog('indian', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Indian</button>
+            <button onclick="filterS1Catalog('japanese', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Japanese</button>
+            <button onclick="filterS1Catalog('halal', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Halal</button>
+          </div>
+
+          <!-- Full Menus by Restaurant -->
+          <div class="space-y-4" id="s1-full-menu-list">
+            <!-- Restaurant 1: Bun Box Burgers -->
+            <div data-cuisine="burgers" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍔</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Bun Box Express</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.8 (850+) • 18 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express · Fast Food', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and house sauce.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Top ordered item with 10k+ customer orders.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Double Smash</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€12.99</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Beef, cheddar, fries</p>
+                </div>
+                <div onclick="openDishDetailModal('Crispy Chicken Stack', 'Bun Box Express · Burgers', 11.50, '🍗', 'Buttermilk fried chicken breast, chipotle slaw, pickles on brioche bun.', '★ 4.6', '16 min', '€0 Delivery Fee', 'Buttermilk fried favorite.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Chicken Stack</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€11.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Chipotle slaw, pickles</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 2: Mama Napoli Pizza -->
+            <div data-cuisine="pizza" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center text-xl shrink-0">🍕</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Mama Napoli Pizza</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.7 (620+) • 15 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza · Italian', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Stone-baked artisan pizza.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Diavola Pizza</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€13.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Spicy salami, hot honey</p>
+                </div>
+                <div onclick="openDishDetailModal('Margherita Classica', 'Mama Napoli Pizza · Italian', 10.50, '🍕', 'San Marzano tomato base, fresh buffalo mozzarella, virgin olive oil, basil.', '★ 4.8', '14 min', '€0 Delivery Fee', 'Classic Napoletana.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Margherita D.O.P.</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€10.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">San Marzano & basil</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 3: Spice Lane -->
+            <div data-cuisine="indian" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍛</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Spice Lane (Indian Cuisine)</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.7 (380+) • 22 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato-garam masala sauce with basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', 'House favorite curry.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Chicken Tikka</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€11.90</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Tomato cream curry & rice</p>
+                </div>
+                <div onclick="openDishDetailModal('Lamb Rogan Josh', 'Spice Lane · Indian', 13.50, '🍲', 'Slow-cooked tender lamb in Kashmiri chili, cardamom, and brown onion reduction.', '★ 4.8', '24 min', '€0 Delivery Fee', 'Kashmiri specialty.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Lamb Rogan Josh</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€13.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Slow-braised spiced lamb</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 4: Tokyo Bowl -->
+            <div data-cuisine="japanese" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-xl shrink-0">🍱</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Tokyo Bowl</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.9 (420+) • 20 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame, and pickled radish.', '★ 4.9', '20 min', '€0 Delivery Fee', 'Authentic bento box.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Karaage Bento</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€12.20</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Crispy chicken & rice</p>
+                </div>
+                <div onclick="openDishDetailModal('Tokyo Salmon Poké Bowl', 'Tokyo Bowl · Japanese', 12.80, '🥗', 'Fresh Atlantic salmon, sushi rice, avocado, cucumber, sesame dressing.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Fresh poké bowl.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Salmon Poké</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€12.80</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Salmon, avocado, rice</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 5: Harbour Kebab -->
+            <div data-cuisine="halal" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-xl shrink-0">🥙</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Harbour Kebab</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.6 (890+) • 25 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and hot flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Freshly sliced kebab.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Mixed Doner</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€11.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Lamb & chicken platter</p>
+                </div>
+                <div onclick="openDishDetailModal('Falafel Hummus Wrap', 'Harbour Kebab · Halal', 8.90, '🧆', 'Crispy chickpea falafels, creamy tahini, garlic pickles, and crisp greens in flatbread.', '★ 4.7', '20 min', '€0 Delivery Fee', 'Vegetarian favorite.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Falafel Wrap</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€8.90</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Tahini, pickles & flatbread</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= S5: CHECKOUT WITH STEPPER (+ / -) ================= -->
+      <div id="screen-s5" class="screen-view hidden px-4 py-3">
+        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+          <button type="button" onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800 hover:bg-neutral-200">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <h3 class="font-extrabold text-sm text-neutral-900">Review your order</h3>
+          <button type="button" onclick="goToScreen(1)" class="text-xs font-bold text-neutral-600 underline">Change</button>
+        </div>
+
+        <div class="mt-3 p-3 rounded-2xl bg-neutral-50 border border-neutral-200 flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-motorcycle text-sm"></i>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-xs text-neutral-900">Delivery to Linden Court</span>
+              <span class="text-[11px] font-bold text-emerald-700">15–20 min</span>
+            </div>
+            <p class="text-[11px] text-neutral-500 mt-0.5" id="cart-restaurant">Bun Box Express · Fast Food</p>
+          </div>
+        </div>
+
+        <!-- PORTION STEPPER (+ / -) -->
+        <div class="mt-4 p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+          <div class="flex items-start justify-between">
+            <div class="flex-1 pr-2">
+              <h4 id="cart-item-name" class="font-extrabold text-sm text-neutral-900">Supreme Double Smash</h4>
+              <p id="cart-item-unit-price" class="text-xs text-neutral-500 mt-0.5">€12.99 each</p>
+              <p class="text-[11px] text-amber-700 font-semibold mt-1">🔥 Top ordered dish in Linden Court</p>
+            </div>
+            <div class="flex items-center gap-2 bg-neutral-100 rounded-xl p-1 shrink-0 border border-neutral-200">
+              <button type="button" onclick="changeQty(-1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs hover:bg-neutral-200 active:scale-90 transition">
+                <i class="fa-solid fa-minus text-[10px]"></i>
+              </button>
+              <span id="cart-qty" class="w-5 text-center font-black text-xs text-neutral-900">1</span>
+              <button type="button" onclick="changeQty(1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs hover:bg-neutral-200 active:scale-90 transition">
+                <i class="fa-solid fa-plus text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cost Breakdown -->
+        <div class="mt-4 pt-3 border-t border-neutral-100 space-y-1.5 text-xs text-neutral-600">
+          <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span id="breakdown-subtotal" class="font-bold text-neutral-900">€12.99</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Delivery Fee</span>
+            <span class="font-bold text-emerald-700">€0.00 (Free)</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Service Fee</span>
+            <span class="font-bold text-neutral-900">€1.50</span>
+          </div>
+          <div class="flex justify-between pt-2 border-t border-neutral-200 font-extrabold text-sm text-neutral-900">
+            <span>Total</span>
+            <span id="breakdown-total">€14.49</span>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <button type="button" onclick="goToScreen(6)" class="w-full py-3.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs flex items-center justify-center gap-2 hover:bg-neutral-800 transition shadow-lg">
+            <span>Place order</span>
+            <span id="btn-place-total">• €14.49</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S6: ORDER PLACED ================= -->
+      <div id="screen-s6" class="screen-view hidden px-5 py-3 flex flex-col justify-between min-h-[580px]">
+        <div>
+          <div class="flex items-center justify-end">
+            <button type="button" onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-700 hover:bg-neutral-200 transition">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+          </div>
+
+          <div class="flex flex-col items-center mt-3 text-center">
+            <div class="w-20 h-20 rounded-full bg-[#00C165] text-white flex items-center justify-center shadow-md mb-4">
+              <i class="fa-solid fa-check text-3xl font-extrabold"></i>
+            </div>
+            <h2 class="text-2xl font-black text-neutral-900 tracking-tight">Order placed</h2>
+            <p class="text-xs text-neutral-500 mt-1 font-medium">Arriving around 7:58 pm</p>
+          </div>
+
+          <div class="mt-6">
+            <div class="grid grid-cols-3 gap-1.5 h-1">
+              <div class="bg-[#00C165] rounded-full h-full"></div>
+              <div class="bg-neutral-200 rounded-full h-full"></div>
+              <div class="bg-neutral-200 rounded-full h-full"></div>
+            </div>
+            <div class="grid grid-cols-3 text-[11px] font-semibold mt-2">
+              <span class="text-neutral-900">Preparing</span>
+              <span class="text-neutral-400 text-center">On the way</span>
+              <span class="text-neutral-400 text-right">Arrived</span>
+            </div>
+          </div>
+
+          <div class="mt-5 p-3.5 rounded-2xl border border-neutral-200 bg-white flex items-center gap-3.5 shadow-xs">
+            <div class="w-14 h-14 rounded-xl bg-[#FDE8D7] shrink-0 flex items-center justify-center">
+              <span id="s6-item-emoji" class="text-2xl">🍔</span>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 id="s6-item-name" class="font-extrabold text-sm text-neutral-900 truncate">Supreme Double Smash</h4>
+              <p id="s6-item-sub" class="text-xs text-neutral-500 mt-0.5 truncate">Bun Box Express · €14.49 total</p>
+              <span class="text-[11px] font-bold text-amber-600 block mt-0.5">Top Community Choice</span>
+            </div>
+          </div>
+
+          <div class="mt-3.5 py-2.5 px-3.5 rounded-2xl bg-[#FFF8E6] border border-[#FFE8B3] flex items-center gap-2.5 text-xs text-[#8A5800]">
+            <i class="fa-regular fa-clock text-sm"></i>
+            <span class="font-medium">Free to change or cancel for 1:48</span>
+          </div>
+        </div>
+
+        <div class="mt-8 space-y-2.5 pb-2">
+          <button type="button" onclick="goToScreen(7)" class="w-full py-3.5 rounded-full bg-neutral-950 text-white font-extrabold text-sm hover:bg-neutral-800 transition shadow">
+            Track order
+          </button>
+        </div>
+      </div>
+
+      <!-- ================= S7: POST-ORDER REFLECTION SURVEY ================= -->
+      <div id="screen-s7" class="screen-view hidden px-4 py-4">
+        <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
+          <span class="text-neutral-400 text-xs font-semibold">Touchpoint 7: Academic Survey</span>
+          <span class="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded font-bold">Exp B Complete</span>
+        </div>
+
+        <div class="mt-3 text-center">
+          <div class="w-14 h-14 rounded-full bg-[#FFE8D6] mx-auto flex items-center justify-center text-2xl shadow-sm mb-2">🍔</div>
+          <h3 class="text-base font-black text-neutral-900">How was your ordering decision?</h3>
+          <p class="text-xs text-neutral-500 mt-0.5"><span id="s7-dish-name">Supreme Double Smash</span> · Bun Box Express</p>
+          <div class="flex justify-center gap-2 my-3 text-2xl text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+          </div>
+        </div>
+
+        <div class="space-y-3 mt-4 text-xs">
+          <div class="p-3 rounded-xl border border-neutral-200 bg-white">
+            <label class="font-bold text-neutral-900 block mb-2">Did the popular badges (e.g. 10k+ ordered) help you decide?</label>
+            <div class="grid grid-cols-3 gap-1.5">
+              <button type="button" onclick="selectSurveyPill(this)" class="survey-pill py-2 px-1 rounded-lg border border-neutral-900 bg-neutral-900 text-white text-center text-[11px] font-semibold">Very helpful</button>
+              <button type="button" onclick="selectSurveyPill(this)" class="survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold">Somewhat</button>
+              <button type="button" onclick="selectSurveyPill(this)" class="survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold">Ignored them</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <button type="button" onclick="submitToForm()" class="w-full py-3.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition shadow-lg">
+            <span>Done & Submit to Survey</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </button>
+          <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to external survey form with metrics</p>
         </div>
       </div>
 
@@ -294,33 +672,71 @@
 
     </div>
 
+    <!-- Dish Detail Modal: In-Frame Bottom Sheet (Strictly constrained within the phone container) -->
+    <div id="dish-detail-modal" class="hidden absolute inset-0 z-50 bg-black/60 backdrop-blur-[2px] flex flex-col justify-end transition-opacity duration-200">
+      <div onclick="closeDishDetailModal()" class="flex-1 cursor-pointer"></div>
+      <div class="bg-white rounded-t-[28px] max-h-[85%] overflow-y-auto hide-scrollbar p-5 shadow-2xl relative border-t border-neutral-200 w-full animate-in slide-in-from-bottom">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
+          <div class="w-10 h-1 bg-neutral-300 rounded-full mx-auto -mr-2"></div>
+          <button type="button" aria-label="Close" onclick="closeDishDetailModal()" class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-700 flex items-center justify-center hover:bg-neutral-200 active:scale-95 transition">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+        <div class="h-32 rounded-2xl bg-[#FDE8D7] flex items-center justify-center my-3 shadow-inner">
+          <span id="modal-dish-emoji" class="text-5xl">🍔</span>
+        </div>
+        <div class="flex items-start justify-between">
+          <div>
+            <h3 id="modal-dish-title" class="text-lg font-extrabold text-neutral-900">Supreme Double Smash Combo</h3>
+            <p id="modal-dish-restaurant" class="text-xs text-neutral-500 mt-0.5 font-medium">Bun Box Express · Fast Food</p>
+          </div>
+          <span id="modal-dish-price" class="text-lg font-black text-neutral-900 ml-2">€12.99</span>
+        </div>
+        <div class="flex items-center gap-2 mt-2 text-xs text-neutral-600">
+          <span id="modal-dish-rating" class="font-bold text-amber-500">★ 4.8</span>
+          <span>•</span>
+          <span id="modal-dish-time">⏱ 18 min</span>
+          <span>•</span>
+          <span id="modal-dish-delivery" class="text-emerald-700 font-semibold">€0 delivery</span>
+        </div>
+        <div class="mt-3 p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900">
+          <span class="font-bold">🔥 Community Popular Choice:</span>
+          <p id="modal-dish-why" class="text-[11px] text-amber-800 mt-0.5">Top ordered dish tonight in Linden Court with 10k+ satisfied orders.</p>
+        </div>
+        <p id="modal-dish-desc" class="text-xs text-neutral-600 mt-2 leading-relaxed">Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.</p>
+        <button type="button" onclick="orderFromModal()" class="w-full mt-4 py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs hover:bg-neutral-800 active:scale-98 transition shadow">
+          Add to order & Review
+        </button>
+      </div>
+    </div>
+
     <!-- Persistent Floating Pill Navigation (Modern iOS / Uber Eats Dock) -->
     <div class="absolute bottom-0 inset-x-0 z-40 pb-2 pt-8 pointer-events-none flex flex-col items-center bg-gradient-to-t from-white via-white/95 to-transparent">
       
       <!-- Floating Dock Row -->
       <div class="pointer-events-auto flex items-center gap-2 px-3 py-1.5">
-        <button onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-950 active:scale-95 transition">
+        <button type="button" aria-label="Home" onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-950 active:scale-95 transition">
           <i class="fa-solid fa-house text-base"></i>
         </button>
 
-        <button onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+        <button type="button" aria-label="Browse" onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
           <svg class="w-5 h-5 text-neutral-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
         </button>
 
-        <button onclick="goToScreen(1)" class="h-12 px-6 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center gap-2.5 text-neutral-700 hover:text-black active:scale-95 transition">
+        <button type="button" aria-label="Search" onclick="goToScreen(1)" class="h-12 px-6 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center gap-2.5 text-neutral-700 hover:text-black active:scale-95 transition">
           <i class="fa-solid fa-magnifying-glass text-sm text-neutral-600"></i>
           <span class="text-sm font-semibold text-neutral-800 tracking-tight">Search</span>
         </button>
 
-        <button onclick="goToScreen(5)" class="relative w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+        <button type="button" aria-label="Cart" onclick="goToScreen(5)" class="relative w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
           <i class="fa-solid fa-cart-shopping text-sm"></i>
           <span id="nav-badge-cart" class="hidden absolute top-1.5 right-1.5 w-4 h-4 bg-emerald-600 text-white text-[9px] font-black rounded-full flex items-center justify-center border-2 border-white">1</span>
         </button>
 
-        <button class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
+        <button type="button" aria-label="Account Profile" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-700 hover:text-black active:scale-95 transition">
           <div class="relative">
             <i class="fa-solid fa-user text-sm"></i>
             <span class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-neutral-900 text-white text-[6px] font-extrabold rounded-full flex items-center justify-center">1</span>
@@ -366,17 +782,51 @@
       currentItem = title;
       currentRestaurant = restaurant;
       unitPrice = price;
-      currentEmoji = emoji;
+      currentEmoji = emoji || '🍔';
       currentQty = 1;
-
-      document.getElementById('dish-title').innerText = title;
-      document.getElementById('dish-restaurant').innerText = restaurant;
-      document.getElementById('dish-price').innerText = '€' + price.toFixed(2);
-      document.getElementById('dish-btn-price').innerText = '€' + price.toFixed(2);
-      document.getElementById('dish-hero-emoji').innerText = emoji;
 
       updateCart();
       goToScreen(5);
+    }
+
+    function openDishDetailModal(title, restaurant, price, emoji, description, rating, time, delivery, whyText) {
+      currentItem = title;
+      currentRestaurant = restaurant;
+      unitPrice = price;
+      currentEmoji = emoji || '🍔';
+
+      const titleEl = document.getElementById('modal-dish-title');
+      const restEl = document.getElementById('modal-dish-restaurant');
+      const priceEl = document.getElementById('modal-dish-price');
+      const emojiEl = document.getElementById('modal-dish-emoji');
+      const ratingEl = document.getElementById('modal-dish-rating');
+      const timeEl = document.getElementById('modal-dish-time');
+      const delEl = document.getElementById('modal-dish-delivery');
+      const descEl = document.getElementById('modal-dish-desc');
+      const whyEl = document.getElementById('modal-dish-why');
+
+      if (titleEl) titleEl.innerText = title;
+      if (restEl) restEl.innerText = restaurant;
+      if (priceEl) priceEl.innerText = '€' + price.toFixed(2);
+      if (emojiEl) emojiEl.innerText = emoji || '🍔';
+      if (ratingEl) ratingEl.innerText = rating || '★ 4.8';
+      if (timeEl) timeEl.innerText = '⏱ ' + (time || '18 min');
+      if (delEl) delEl.innerText = delivery || '€0 delivery';
+      if (descEl && description) descEl.innerText = description;
+      if (whyEl && whyText) whyEl.innerText = whyText;
+
+      const modal = document.getElementById('dish-detail-modal');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeDishDetailModal() {
+      const modal = document.getElementById('dish-detail-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function orderFromModal() {
+      closeDishDetailModal();
+      selectDish(currentItem, currentRestaurant, unitPrice, currentEmoji);
     }
 
     function changeQty(d) {
@@ -385,14 +835,26 @@
     }
 
     function updateCart() {
-      document.getElementById('cart-item-name').innerText = currentItem;
-      document.getElementById('cart-qty').innerText = currentQty;
-      document.getElementById('cart-item-unit-price').innerText = '€' + unitPrice.toFixed(2) + ' each';
+      const nameEl = document.getElementById('cart-item-name');
+      const qtyEl = document.getElementById('cart-qty');
+      const unitEl = document.getElementById('cart-item-unit-price');
+      const restEl = document.getElementById('cart-restaurant');
+
+      if (nameEl) nameEl.innerText = currentItem;
+      if (qtyEl) qtyEl.innerText = currentQty;
+      if (unitEl) unitEl.innerText = '€' + unitPrice.toFixed(2) + ' each';
+      if (restEl) restEl.innerText = currentRestaurant;
+
       const subtotal = unitPrice * currentQty;
       const total = subtotal + 1.50;
-      document.getElementById('breakdown-subtotal').innerText = '€' + subtotal.toFixed(2);
-      document.getElementById('breakdown-total').innerText = '€' + total.toFixed(2);
-      document.getElementById('btn-place-total').innerText = '• €' + total.toFixed(2);
+
+      const subtotalEl = document.getElementById('breakdown-subtotal');
+      const totalEl = document.getElementById('breakdown-total');
+      const btnTotalEl = document.getElementById('btn-place-total');
+
+      if (subtotalEl) subtotalEl.innerText = '€' + subtotal.toFixed(2);
+      if (totalEl) totalEl.innerText = '€' + total.toFixed(2);
+      if (btnTotalEl) btnTotalEl.innerText = '• €' + total.toFixed(2);
 
       const s6Name = document.getElementById('s6-item-name');
       const s6Sub = document.getElementById('s6-item-sub');
@@ -409,6 +871,31 @@
         badge.innerText = currentQty;
         badge.classList.remove('hidden');
       }
+    }
+
+    function selectSurveyPill(btn) {
+      btn.parentElement.querySelectorAll('.survey-pill').forEach(b => {
+        b.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold";
+      });
+      btn.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-900 bg-neutral-900 text-white text-center text-[11px] font-semibold";
+    }
+
+    function filterS1Catalog(cuisine, btn) {
+      document.querySelectorAll('.s1-catalog-pill').forEach(p => {
+        p.classList.remove('bg-neutral-900', 'text-white');
+        p.classList.add('bg-neutral-100', 'text-neutral-800');
+      });
+      btn.classList.add('bg-neutral-900', 'text-white');
+      btn.classList.remove('bg-neutral-100', 'text-neutral-800');
+
+      const restaurants = document.querySelectorAll('.s1-restaurant-block');
+      restaurants.forEach(block => {
+        if (cuisine === 'all' || block.getAttribute('data-cuisine') === cuisine) {
+          block.classList.remove('hidden');
+        } else {
+          block.classList.add('hidden');
+        }
+      });
     }
 
     function submitToForm() {
