@@ -237,7 +237,7 @@
           </div>
         </div>
 
-        <!-- Full Restaurant Menu Accessible via Scroll -->
+        <!-- FULL RESTAURANT MENU FEED ACCESSIBLE VIA SCROLL DOWN (CONDITION A) -->
         <div class="px-4 mt-5 pt-4 border-t-4 border-neutral-100 pb-6">
           <div class="flex items-center justify-between mb-3">
             <div>
@@ -247,8 +247,20 @@
             <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700 text-[10px] font-extrabold">Full Catalog</span>
           </div>
 
-          <div class="space-y-4">
-            <div class="p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+          <!-- Quick Cuisine Filter Chips -->
+          <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-[11px] font-semibold mb-3">
+            <button onclick="filterS1Catalog('all', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-900 text-white shrink-0">All Menus</button>
+            <button onclick="filterS1Catalog('burgers', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Burgers</button>
+            <button onclick="filterS1Catalog('pizza', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Pizza</button>
+            <button onclick="filterS1Catalog('indian', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Indian</button>
+            <button onclick="filterS1Catalog('japanese', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Japanese</button>
+            <button onclick="filterS1Catalog('halal', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Halal</button>
+          </div>
+
+          <!-- Full Menus by Restaurant -->
+          <div class="space-y-4" id="s1-full-menu-list">
+            <!-- Restaurant 1: Bun Box Burgers -->
+            <div data-cuisine="burgers" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
               <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
                 <div class="flex items-center gap-2.5">
                   <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍔</div>
@@ -276,8 +288,129 @@
                 </div>
               </div>
             </div>
+
+            <!-- Restaurant 2: Mama Napoli Pizza -->
+            <div data-cuisine="pizza" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center text-xl shrink-0">🍕</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Mama Napoli Pizza</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.7 (620+) • 15 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli · Pizza', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Stone-baked artisan pizza.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Diavola Pizza</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€13.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Spicy salami, hot honey</p>
+                </div>
+                <div onclick="openDishDetailModal('Margherita Classica', 'Mama Napoli · Pizza', 10.50, '🍕', 'San Marzano tomato base, fresh buffalo mozzarella, virgin olive oil, basil.', '★ 4.8', '14 min', '€0 Delivery Fee', 'Classic Napoletana.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Margherita D.O.P.</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€10.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">San Marzano & basil</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 3: Spice Lane -->
+            <div data-cuisine="indian" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍛</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Spice Lane (Indian Cuisine)</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.7 (380+) • 22 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Chicken Tikka Masala Bowl', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato-garam masala sauce with basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', 'House favorite curry.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Chicken Tikka</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€11.90</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Tomato cream curry & rice</p>
+                </div>
+                <div onclick="openDishDetailModal('Lamb Rogan Josh', 'Spice Lane · Indian', 13.50, '🍲', 'Slow-cooked tender lamb in Kashmiri chili, cardamom, and brown onion reduction.', '★ 4.8', '24 min', '€0 Delivery Fee', 'Kashmiri specialty.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Lamb Rogan Josh</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€13.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Slow-braised spiced lamb</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 4: Tokyo Bowl -->
+            <div data-cuisine="japanese" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-xl shrink-0">🍱</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Tokyo Bowl</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.9 (420+) • 20 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame, and pickled radish.', '★ 4.9', '20 min', '€0 Delivery Fee', 'Authentic bento box.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Karaage Bento</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€12.20</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Crispy chicken & rice</p>
+                </div>
+                <div onclick="openDishDetailModal('Tokyo Salmon Poké Bowl', 'Tokyo Bowl · Japanese', 12.80, '🥗', 'Fresh Atlantic salmon, sushi rice, avocado, cucumber, sesame dressing.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Fresh poké bowl.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Salmon Poké</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€12.80</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Salmon, avocado, rice</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Restaurant 5: Harbour Kebab -->
+            <div data-cuisine="halal" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-xl shrink-0">🥙</div>
+                  <div>
+                    <h5 class="font-extrabold text-sm text-neutral-900">Harbour Kebab</h5>
+                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.6 (890+) • 25 min • €0 Delivery</p>
+                  </div>
+                </div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2.5">
+                <div onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and hot flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Freshly sliced kebab.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Mixed Doner</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€11.50</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Lamb & chicken platter</p>
+                </div>
+                <div onclick="openDishDetailModal('Falafel Hummus Wrap', 'Harbour Kebab · Halal', 8.90, '🧆', 'Crispy chickpea falafels, creamy tahini, garlic pickles, and crisp greens in flatbread.', '★ 4.7', '20 min', '€0 Delivery Fee', 'Vegetarian favorite.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
+                  <div class="flex justify-between items-start">
+                    <h6 class="font-bold text-xs text-neutral-900 truncate">Falafel Wrap</h6>
+                    <span class="text-[11px] font-black text-neutral-900">€8.90</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Tahini, pickles & flatbread</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
 
       <!-- ================= S2: CURATED 3 OPTIONS DECK ================= -->
@@ -694,27 +827,33 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- Dish Modal -->
-  <div id="dish-detail-modal" class="hidden absolute inset-0 z-50 bg-black/60 backdrop-blur-[2px] flex flex-col justify-end">
-    <div onclick="closeDishDetailModal()" class="flex-1"></div>
-    <div class="bg-white rounded-t-[28px] max-h-[85%] overflow-y-auto hide-scrollbar p-5 shadow-2xl relative border-t border-neutral-200">
-      <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
-        <div class="w-10 h-1 bg-neutral-300 rounded-full mx-auto -mr-2"></div>
-        <button onclick="closeDishDetailModal()" class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-700 flex items-center justify-center">
-          <i class="fa-solid fa-xmark text-sm"></i>
+    <!-- Dish Modal: Positioned INSIDE the phone frame so width stays locked to phone -->
+    <div id="dish-detail-modal" class="hidden absolute inset-0 z-50 bg-black/60 backdrop-blur-[2px] flex flex-col justify-end transition-opacity duration-200">
+      <div onclick="closeDishDetailModal()" class="flex-1 cursor-pointer"></div>
+      <div class="bg-white rounded-t-[28px] max-h-[85%] overflow-y-auto hide-scrollbar p-5 shadow-2xl relative border-t border-neutral-200 w-full animate-in slide-in-from-bottom">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-100">
+          <div class="w-10 h-1 bg-neutral-300 rounded-full mx-auto -mr-2"></div>
+          <button onclick="closeDishDetailModal()" class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-700 flex items-center justify-center hover:bg-neutral-200 active:scale-95 transition">
+            <i class="fa-solid fa-xmark text-sm"></i>
+          </button>
+        </div>
+        <div class="h-32 rounded-2xl bg-[#FDE8D7] flex items-center justify-center my-3 shadow-inner">
+          <span id="modal-dish-emoji" class="text-5xl">🍛</span>
+        </div>
+        <h3 id="modal-dish-title" class="text-lg font-extrabold text-neutral-900">Chicken Tikka Masala</h3>
+        <p id="modal-dish-restaurant" class="text-xs text-neutral-500 mt-0.5 font-medium">Spice Lane · Indian</p>
+        <span id="modal-dish-price" class="text-lg font-black text-neutral-900 block mt-1">€11.90</span>
+        <div class="mt-2 p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 text-xs text-emerald-800">
+          <span class="font-bold">✦ Why this was picked:</span>
+          <p id="modal-dish-why" class="text-[11px] text-emerald-700 mt-0.5">Based on your frequent Friday orders and high satisfaction ratings.</p>
+        </div>
+        <p id="modal-dish-desc" class="text-xs text-neutral-600 mt-2 leading-relaxed">Tender clay-oven chicken breast in rich tomato cream curry sauce served with fragrant rice.</p>
+        <button onclick="orderFromModal()" class="w-full mt-4 py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs hover:bg-neutral-800 active:scale-98 transition shadow">
+          Add to order & Review
         </button>
       </div>
-      <div class="h-32 rounded-2xl bg-[#FDE8D7] flex items-center justify-center my-3">
-        <span id="modal-dish-emoji" class="text-5xl">🍛</span>
-      </div>
-      <h3 id="modal-dish-title" class="text-lg font-extrabold text-neutral-900">Chicken Tikka Masala</h3>
-      <p id="modal-dish-restaurant" class="text-xs text-neutral-500 mt-0.5">Spice Lane · Indian</p>
-      <span id="modal-dish-price" class="text-lg font-black text-neutral-900 block mt-1">€11.90</span>
-      <p id="modal-dish-desc" class="text-xs text-neutral-600 mt-2">Tender clay-oven chicken breast in rich tomato cream curry.</p>
-      <button onclick="orderFromModal()" class="w-full mt-4 py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs">Add to order & Review</button>
     </div>
+
   </div>
 
   <script>
@@ -731,6 +870,7 @@
     let isStackedLayout = false;
     let isS3StackedLayout = false;
     let currentShuffleIndex = 0;
+    const CARD_STEP_WIDTH = 322; // 310px width + 12px gap
 
     // Timer
     setInterval(() => {
@@ -757,6 +897,131 @@
         ]
       }
     ];
+
+    function scrollToCard(containerId, index) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      container.scrollTo({
+        left: index * CARD_STEP_WIDTH,
+        behavior: 'smooth'
+      });
+    }
+
+    function stepCard(containerId, direction) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const currentIdx = Math.round(container.scrollLeft / CARD_STEP_WIDTH);
+      const nextIdx = Math.max(0, Math.min(2, currentIdx + direction));
+      scrollToCard(containerId, nextIdx);
+    }
+
+    function updateDeckIndicators(activeIndex) {
+      for (let i = 0; i < 3; i++) {
+        const dot = document.getElementById('dot-' + i);
+        if (dot) {
+          dot.className = (i === activeIndex) 
+            ? "w-4 h-2 rounded-full bg-neutral-900 transition-all cursor-pointer"
+            : "w-2 h-2 rounded-full bg-neutral-300 transition-all cursor-pointer";
+        }
+      }
+      const label = document.getElementById('card-counter-label');
+      if (label) label.innerText = (activeIndex + 1) + ' of 3';
+    }
+
+    function setupDeckSwipe() {
+      const el = document.getElementById('deck-carousel-container');
+      if (!el) return;
+
+      el.addEventListener('scroll', () => {
+        if (isStackedLayout) return;
+        const activeIndex = Math.min(2, Math.max(0, Math.round(el.scrollLeft / CARD_STEP_WIDTH)));
+        updateDeckIndicators(activeIndex);
+      });
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      el.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - el.offsetLeft;
+        scrollLeft = el.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDown) return;
+        isDown = false;
+        const activeIndex = Math.min(2, Math.max(0, Math.round(el.scrollLeft / CARD_STEP_WIDTH)));
+        scrollToCard('deck-carousel-container', activeIndex);
+      });
+
+      el.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - el.offsetLeft;
+        const walk = (x - startX) * 1.2;
+        el.scrollLeft = scrollLeft - walk;
+      });
+
+      let touchStartX = 0;
+      el.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      el.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const diffX = touchStartX - touchEndX;
+        if (Math.abs(diffX) > 40) {
+          const currentIdx = Math.round(el.scrollLeft / CARD_STEP_WIDTH);
+          const dir = diffX > 0 ? 1 : -1;
+          const target = Math.max(0, Math.min(2, currentIdx + dir));
+          scrollToCard('deck-carousel-container', target);
+        }
+      }, { passive: true });
+    }
+
+    function toggleDeckLayout() {
+      const container = document.getElementById('deck-carousel-container');
+      const cards = container.querySelectorAll('.deck-card');
+      const label = document.getElementById('label-toggle-layout');
+      isStackedLayout = !isStackedLayout;
+
+      if (isStackedLayout) {
+        container.className = "py-3 px-4 flex flex-col gap-3 transition-all duration-300";
+        cards.forEach(card => {
+          card.classList.remove('w-[310px]', 'shrink-0', 'snap-center');
+          card.classList.add('w-full');
+        });
+        label.innerText = "View swipeable deck";
+      } else {
+        container.className = "snap-swipe-deck py-3 px-4 overflow-x-auto flex gap-3 hide-scrollbar transition-all duration-300";
+        cards.forEach(card => {
+          card.classList.add('w-[310px]', 'shrink-0', 'snap-center');
+          card.classList.remove('w-full');
+        });
+        label.innerText = "View all 3 stacked";
+      }
+    }
+
+    function toggleS3DeckLayout() {
+      const container = document.getElementById('s3-deck-carousel-container');
+      const cards = container.querySelectorAll('.s3-deck-card');
+      isS3StackedLayout = !isS3StackedLayout;
+
+      if (isS3StackedLayout) {
+        container.className = "py-3 px-4 flex flex-col gap-3 transition-all duration-300";
+        cards.forEach(card => {
+          card.classList.remove('w-[310px]', 'shrink-0');
+          card.classList.add('w-full');
+        });
+      } else {
+        container.className = "snap-swipe-deck py-3 px-4 overflow-x-auto flex gap-3 hide-scrollbar transition-all duration-300";
+        cards.forEach(card => {
+          card.classList.add('w-[310px]', 'shrink-0');
+          card.classList.remove('w-full');
+        });
+      }
+    }
 
     function goToScreen(n) {
       for (let i = 1; i <= 7; i++) {
@@ -810,7 +1075,7 @@
       }
     }
 
-    function openDishDetailModal(title, restaurant, price, emoji) {
+    function openDishDetailModal(title, restaurant, price, emoji, description, rating, time, delivery, whyText) {
       currentItem = title;
       currentRestaurant = restaurant;
       unitPrice = price;
@@ -819,6 +1084,8 @@
       document.getElementById('modal-dish-restaurant').innerText = restaurant;
       document.getElementById('modal-dish-price').innerText = '€' + price.toFixed(2);
       document.getElementById('modal-dish-emoji').innerText = emoji;
+      if (description) document.getElementById('modal-dish-desc').innerText = description;
+      if (whyText) document.getElementById('modal-dish-why').innerText = whyText;
       document.getElementById('dish-detail-modal').classList.remove('hidden');
     }
 
@@ -848,7 +1115,7 @@
       let html = '';
       set.items.forEach((item, idx) => {
         html += `
-          <div onclick="openDishDetailModal('${item.title}', '${item.restaurant}', ${item.price}, '${item.emoji}')" class="shrink-0 w-[310px] rounded-2xl border border-neutral-200 bg-white p-3 shadow-md cursor-pointer">
+          <div onclick="openDishDetailModal('${item.title}', '${item.restaurant}', ${item.price}, '${item.emoji}', '', '${item.rating}', '${item.time}', '${item.delivery}', '${item.why}')" class="s3-deck-card shrink-0 w-[310px] rounded-2xl border border-neutral-200 bg-white p-3 shadow-md cursor-pointer">
             <div class="h-32 rounded-xl bg-[#FDE8D7] flex items-center justify-center text-4xl mb-2">
               ${item.emoji}
             </div>
@@ -857,6 +1124,9 @@
               <span class="font-black text-sm text-neutral-900">€${item.price.toFixed(2)}</span>
             </div>
             <p class="text-xs text-neutral-500">${item.restaurant}</p>
+            <div class="mt-2 py-1 px-2 rounded-lg bg-neutral-50 border border-neutral-100 text-[11px] text-neutral-600 truncate">
+              ⓘ ${item.why}
+            </div>
             <button onclick="event.stopPropagation(); quickSelect('${item.title}', '${item.restaurant}', ${item.price})" class="w-full mt-3 py-2.5 rounded-xl bg-neutral-900 text-white font-extrabold text-xs">Order this · €${item.price.toFixed(2)}</button>
           </div>
         `;
@@ -869,6 +1139,24 @@
         b.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold";
       });
       btn.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-900 bg-neutral-900 text-white text-center text-[11px] font-semibold";
+    }
+
+    function filterS1Catalog(cuisine, btn) {
+      document.querySelectorAll('.s1-catalog-pill').forEach(p => {
+        p.classList.remove('bg-neutral-900', 'text-white');
+        p.classList.add('bg-neutral-100', 'text-neutral-800');
+      });
+      btn.classList.add('bg-neutral-900', 'text-white');
+      btn.classList.remove('bg-neutral-100', 'text-neutral-800');
+
+      const restaurants = document.querySelectorAll('.s1-restaurant-block');
+      restaurants.forEach(block => {
+        if (cuisine === 'all' || block.getAttribute('data-cuisine') === cuisine) {
+          block.classList.remove('hidden');
+        } else {
+          block.classList.add('hidden');
+        }
+      });
     }
 
     // REDIRECT TO GOOGLE FORMS / QUALTRICS / TYPEFORM
@@ -888,6 +1176,7 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+      setupDeckSwipe();
       renderS3Deck();
     });
   </script>
