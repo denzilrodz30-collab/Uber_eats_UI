@@ -161,347 +161,522 @@
           </div>
         </div>
 
-        <div class="px-4 pt-1 pb-1 flex items-center justify-between">
-          <div>
-            <h3 class="font-extrabold text-base text-neutral-900 tracking-tight">Popular near you</h3>
-            <p class="text-[11px] text-neutral-500 font-medium">Most ordered dishes in Linden Court tonight</p>
-          </div>
-          <span class="px-2.5 py-0.5 rounded-full bg-neutral-100 text-neutral-700 text-[10px] font-bold">6 Popular</span>
-        </div>
-
-        <!-- 6 POPULAR ITEMS WITH SOCIAL PROOF -->
-        <div class="p-3.5 space-y-3">
-          <!-- Item 1 -->
-          <div onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express · Fast Food', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Top ordered item with 10k+ customer orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
-            <div class="flex items-start gap-3">
-              <div class="w-20 h-20 rounded-xl bg-amber-50 flex items-center justify-center text-3xl shrink-0 border border-amber-100 relative">
-                🍔
-                <span class="absolute -bottom-1 -left-1 px-1.5 py-0.2 rounded bg-amber-500 text-white text-[9px] font-black">#1</span>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between">
-                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Supreme Double Smash</h4>
-                  <span class="font-black text-sm text-neutral-900">€12.99</span>
-                </div>
-                <p class="text-xs text-neutral-500 mt-0.5">Bun Box Express · Fast Food</p>
-                <div class="flex items-center gap-2 mt-1 text-[11px]">
-                  <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded text-[10px]">10k+ ordered</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-amber-600 font-bold">★ 4.8</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-neutral-500">1.6km · 18 min</span>
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, '🍔')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
-              <span>Select</span>
-              <span class="text-neutral-400 font-normal">• €12.99</span>
-            </button>
-          </div>
-
-          <!-- Item 2 -->
-          <div onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza · Italian', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Second most ordered pizza with 8.4k+ community orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
-            <div class="flex items-start gap-3">
-              <div class="w-20 h-20 rounded-xl bg-rose-50 flex items-center justify-center text-3xl shrink-0 border border-rose-100 relative">
-                🍕
-                <span class="absolute -bottom-1 -left-1 px-1.5 py-0.2 rounded bg-amber-500 text-white text-[9px] font-black">#2</span>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between">
-                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Artisanal Diavola Pizza</h4>
-                  <span class="font-black text-sm text-neutral-900">€13.50</span>
-                </div>
-                <p class="text-xs text-neutral-500 mt-0.5">Mama Napoli Pizza · Italian</p>
-                <div class="flex items-center gap-2 mt-1 text-[11px]">
-                  <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded text-[10px]">8.4k+ ordered</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-amber-600 font-bold">★ 4.7</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-neutral-500">1.2km · 15 min</span>
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, '🍕')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
-              <span>Select</span>
-              <span class="text-neutral-400 font-normal">• €13.50</span>
-            </button>
-          </div>
-
-          <!-- Item 3 -->
-          <div onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato-garam masala sauce with basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', 'Top ordered Indian dinner with 12k+ orders in Dublin.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
-            <div class="flex items-start gap-3">
-              <div class="w-20 h-20 rounded-xl bg-amber-50 flex items-center justify-center text-3xl shrink-0 border border-amber-100 relative">
-                🍛
-                <span class="absolute -bottom-1 -left-1 px-1.5 py-0.2 rounded bg-amber-500 text-white text-[9px] font-black">#3</span>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between">
-                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Chicken Tikka Masala</h4>
-                  <span class="font-black text-sm text-neutral-900">€11.90</span>
-                </div>
-                <p class="text-xs text-neutral-500 mt-0.5">Spice Lane · Indian</p>
-                <div class="flex items-center gap-2 mt-1 text-[11px]">
-                  <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded text-[10px]">12k+ ordered</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-amber-600 font-bold">★ 4.7</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-neutral-500">1.4km · 22 min</span>
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, '🍛')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
-              <span>Select</span>
-              <span class="text-neutral-400 font-normal">• €11.90</span>
-            </button>
-          </div>
-
-          <!-- Item 4 -->
-          <div onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame, and pickled radish.', '★ 4.9', '20 min', '€0 Delivery Fee', 'Over 6.5k orders this month in the student district.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
-            <div class="flex items-start gap-3">
-              <div class="w-20 h-20 rounded-xl bg-sky-50 flex items-center justify-center text-3xl shrink-0 border border-sky-100">🍱</div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between">
-                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Crispy Karaage Bento</h4>
-                  <span class="font-black text-sm text-neutral-900">€12.20</span>
-                </div>
-                <p class="text-xs text-neutral-500 mt-0.5">Tokyo Bowl · Japanese</p>
-                <div class="flex items-center gap-2 mt-1 text-[11px]">
-                  <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded text-[10px]">6.5k+ ordered</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-amber-600 font-bold">★ 4.9</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-neutral-500">1.8km · 20 min</span>
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, '🍱')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
-              <span>Select</span>
-              <span class="text-neutral-400 font-normal">• €12.20</span>
-            </button>
-          </div>
-
-          <!-- Item 5 -->
-          <div onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and hot flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Top late evening item with 9.1k+ orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
-            <div class="flex items-start gap-3">
-              <div class="w-20 h-20 rounded-xl bg-emerald-50 flex items-center justify-center text-3xl shrink-0 border border-emerald-100">🥙</div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between">
-                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Mixed Doner Kebab Box</h4>
-                  <span class="font-black text-sm text-neutral-900">€11.50</span>
-                </div>
-                <p class="text-xs text-neutral-500 mt-0.5">Harbour Kebab · Halal</p>
-                <div class="flex items-center gap-2 mt-1 text-[11px]">
-                  <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded text-[10px]">9.1k+ ordered</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-amber-600 font-bold">★ 4.6</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-neutral-500">2.1km · 25 min</span>
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); selectDish('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, '🥙')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
-              <span>Select</span>
-              <span class="text-neutral-400 font-normal">• €11.50</span>
-            </button>
-          </div>
-
-          <!-- Item 6 -->
-          <div onclick="openDishDetailModal('Special Chow Mein Wok Noodles', 'Okee Chinese · Asian', 10.50, '🍜', 'Egg noodles wok-tossed with king prawns, roast pork, bean sprouts, and scallions.', '★ 4.5', '30 min', '€0 Delivery Fee', 'Community favorite noodles with 5.3k+ orders.')" class="p-3 rounded-2xl border border-neutral-200 bg-white shadow-xs cursor-pointer hover:border-neutral-300 transition">
-            <div class="flex items-start gap-3">
-              <div class="w-20 h-20 rounded-xl bg-purple-50 flex items-center justify-center text-3xl shrink-0 border border-purple-100">🍜</div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center justify-between">
-                  <h4 class="font-extrabold text-sm text-neutral-900 truncate">Special Chow Mein Noodles</h4>
-                  <span class="font-black text-sm text-neutral-900">€10.50</span>
-                </div>
-                <p class="text-xs text-neutral-500 mt-0.5">Okee Chinese · Asian</p>
-                <div class="flex items-center gap-2 mt-1 text-[11px]">
-                  <span class="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded text-[10px]">5.3k+ ordered</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-amber-600 font-bold">★ 4.5</span>
-                  <span class="text-neutral-400">•</span>
-                  <span class="text-neutral-500">2.4km · 30 min</span>
-                </div>
-              </div>
-            </div>
-            <button onclick="event.stopPropagation(); selectDish('Special Chow Mein Wok Noodles', 'Okee Chinese', 10.50, '🍜')" class="w-full mt-2.5 py-2 rounded-xl bg-neutral-900 text-white text-xs font-bold flex items-center justify-center gap-1 shadow-xs hover:bg-neutral-800 active:scale-98 transition">
-              <span>Select</span>
-              <span class="text-neutral-400 font-normal">• €10.50</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- FULL RESTAURANT MENU FEED ACCESSIBLE VIA SCROLL (CONDITION B) -->
-        <div class="px-4 mt-5 pt-4 border-t-4 border-neutral-100 pb-6">
-          <div class="flex items-center justify-between mb-3">
+        <!-- POPULAR IN YOUR AREA HEADER & SWIPE ARROWS -->
+        <div class="pt-2 pb-2">
+          <div class="px-4 flex items-center justify-between mb-2">
             <div>
-              <h4 class="font-black text-base text-neutral-900 tracking-tight">All Restaurants & Menus</h4>
-              <p class="text-[11px] text-neutral-500 font-medium">Browse full menus from 40+ local kitchens</p>
+              <h3 class="font-extrabold text-base text-neutral-900 tracking-tight">Popular in your area</h3>
+              <p class="text-[11px] text-neutral-500 font-medium">Most reordered restaurants · Swipe each row independently</p>
+            </div>
+            <!-- Arrow Controls for Top Row -->
+            <div class="flex items-center gap-1">
+              <button type="button" aria-label="Scroll left" onclick="scrollPopularRow('popular-row-1', -1)" class="w-7 h-7 rounded-full bg-neutral-100 hover:bg-neutral-200 active:scale-95 flex items-center justify-center text-neutral-700 transition">
+                <i class="fa-solid fa-chevron-left text-[11px]"></i>
+              </button>
+              <button type="button" aria-label="Scroll right" onclick="scrollPopularRow('popular-row-1', 1)" class="w-7 h-7 rounded-full bg-neutral-100 hover:bg-neutral-200 active:scale-95 flex items-center justify-center text-neutral-700 transition">
+                <i class="fa-solid fa-chevron-right text-[11px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- INDEPENDENT ROW 1 (5 Swipeable Restaurants) -->
+          <div class="mb-3">
+            <div id="popular-row-1" class="popular-swipe-row flex gap-3 overflow-x-auto hide-scrollbar px-4 pb-1 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+              <!-- 1. San Sab Blackrock -->
+              <div onclick="selectDish('Thai Massaman Curry Bowl', 'San Sab Blackrock', 12.80, '🍲')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-amber-500 to-orange-500 relative flex items-center justify-center text-3xl">
+                  🍲
+                  <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#1 Thai</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">San Sab Blackrock</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.6 (320)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€4.50 Delivery Fee · 35 min</p>
+                </div>
+              </div>
+
+              <!-- 2. Spice Lane -->
+              <div onclick="selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, '🍛')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-orange-400 to-red-500 relative flex items-center justify-center text-3xl">
+                  🍛
+                  <span class="absolute top-2 left-2 bg-black/75 text-white text-[9px] font-black px-1.5 py-0.5 rounded">12k+ ordered</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Spice Lane (Indian)</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.7 (380)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€0 Delivery Fee · 22 min</p>
+                </div>
+              </div>
+
+              <!-- 3. Bun Box Express -->
+              <div onclick="selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, '🍔')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-amber-400 to-yellow-500 relative flex items-center justify-center text-3xl">
+                  🍔
+                  <span class="absolute top-2 left-2 bg-black/75 text-white text-[9px] font-black px-1.5 py-0.5 rounded">10k+ ordered</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Bun Box Express</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.8 (510)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€1.50 Delivery Fee · 18 min</p>
+                </div>
+              </div>
+
+              <!-- 4. Harbour Kebab -->
+              <div onclick="selectDish('Mixed Doner Kebab Box', 'Harbour Kebab', 11.50, '🥙')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-orange-400 to-amber-600 relative flex items-center justify-center text-3xl">
+                  🥙
+                  <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#1 Halal</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Harbour Kebab</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.5 (800)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€0 Delivery Fee · 25 min</p>
+                </div>
+              </div>
+
+              <!-- 5. Mama Napoli Pizza -->
+              <div onclick="selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, '🍕')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-amber-500 to-rose-500 relative flex items-center justify-center text-3xl">
+                  🍕
+                  <span class="absolute top-2 left-2 bg-neutral-900 text-white text-[9px] font-black px-1.5 py-0.5 rounded">Top Rated</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Mama Napoli Pizza</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.7 (620)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€2.50 Delivery Fee · 20 min</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- INDEPENDENT ROW 2 (5 Swipeable Restaurants - Header Removed) -->
+          <div>
+            <div id="popular-row-2" class="popular-swipe-row flex gap-3 overflow-x-auto hide-scrollbar px-4 pb-2 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+              <!-- 6. JJ Ramen Stillorgan -->
+              <div onclick="selectDish('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, '🍜')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-rose-500 to-amber-500 relative flex items-center justify-center text-3xl">
+                  🍜
+                  <span class="absolute top-2 left-2 bg-rose-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">20% off €20</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">JJ Ramen Stillorgan</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.8 (180)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€3.50 Delivery Fee · 25 min</p>
+                </div>
+              </div>
+
+              <!-- 7. Forno Antico -->
+              <div onclick="selectDish('Artisanal Diavola Pizza', 'Forno Antico', 13.50, '🍕')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-red-500 to-amber-500 relative flex items-center justify-center text-3xl">
+                  🍕
+                  <span class="absolute top-2 left-2 bg-amber-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#2 Pizza</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Forno Antico Pizzeria</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.8 (640)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€0 Delivery Fee · 15 min</p>
+                </div>
+              </div>
+
+              <!-- 8. Tokyo Bowl -->
+              <div onclick="selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, '🍱')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-indigo-400 to-purple-400 relative flex items-center justify-center text-3xl">
+                  🍱
+                  <span class="absolute top-2 left-2 bg-indigo-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">6.5k+ ordered</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Tokyo Bowl</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.9 (420)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€2.00 Delivery Fee · 20 min</p>
+                </div>
+              </div>
+
+              <!-- 9. Okee Chinese -->
+              <div onclick="selectDish('Special Chow Mein Noodles', 'Okee Chinese', 10.90, '🍜')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-red-500 to-yellow-600 relative flex items-center justify-center text-3xl">
+                  🍜
+                  <span class="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#6 Chinese</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Okee Chinese Takeaway</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.5 (390)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€0 Delivery Fee · 30 min</p>
+                </div>
+              </div>
+
+              <!-- 10. Green Garden Bowl -->
+              <div onclick="selectDish('Superfood Green Salad Bowl', 'Green Garden Bowl', 10.50, '🥗')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-24 bg-gradient-to-r from-emerald-400 to-teal-500 relative flex items-center justify-center text-3xl">
+                  🥗
+                  <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded">Healthy</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+                </div>
+                <div class="p-2.5">
+                  <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-xs text-neutral-900 truncate">Green Garden Bowl</h4>
+                    <span class="text-[10px] font-black text-neutral-800">★ 4.6 (140)</span>
+                  </div>
+                  <p class="text-[10px] text-neutral-500 mt-0.5">€1.80 Delivery Fee · 15 min</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BROWSE ALL RESTAURANTS (STANDARDIZED WITH 3 RESTAURANTS PER CUISINE) -->
+        <div class="px-4 mt-5 pt-3 pb-6 border-t-4 border-neutral-100">
+          <div class="flex items-center justify-between mb-2.5">
+            <div>
+              <h3 class="font-black text-base text-neutral-900 tracking-tight">Browse all restaurants</h3>
+              <p class="text-[11px] text-neutral-500 font-medium">Explore menus across popular cuisines</p>
             </div>
             <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700 text-[10px] font-extrabold">Full Catalog</span>
           </div>
 
-          <!-- Quick Cuisine Filter Chips for S1 Full Menu -->
-          <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-[11px] font-semibold mb-3">
-            <button onclick="filterS1Catalog('all', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-900 text-white shrink-0">All Menus</button>
-            <button onclick="filterS1Catalog('burgers', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Burgers</button>
-            <button onclick="filterS1Catalog('pizza', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Pizza</button>
-            <button onclick="filterS1Catalog('indian', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Indian</button>
-            <button onclick="filterS1Catalog('japanese', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Japanese</button>
-            <button onclick="filterS1Catalog('halal', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Halal</button>
+          <!-- Cuisine Filter Pills -->
+          <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-2 text-[11px] font-bold mb-3">
+            <button type="button" onclick="filterS1Catalog('all', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-900 text-white shrink-0">All Menus</button>
+            <button type="button" onclick="filterS1Catalog('burgers', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Burgers</button>
+            <button type="button" onclick="filterS1Catalog('pizza', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Pizza</button>
+            <button type="button" onclick="filterS1Catalog('indian', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Indian</button>
+            <button type="button" onclick="filterS1Catalog('japanese', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Japanese</button>
+            <button type="button" onclick="filterS1Catalog('halal', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Halal</button>
           </div>
 
-          <!-- Full Menus by Restaurant -->
-          <div class="space-y-4" id="s1-full-menu-list">
-            <!-- Restaurant 1: Bun Box Burgers -->
-            <div data-cuisine="burgers" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
-              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍔</div>
-                  <div>
-                    <h5 class="font-extrabold text-sm text-neutral-900">Bun Box Express</h5>
-                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.8 (850+) • 18 min • €0 Delivery</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+          <!-- Restaurant Summary Cards (Standardized: Exactly 3 restaurants per category) -->
+          <div class="space-y-3.5" id="s1-restaurant-list">
+            
+            <!-- BURGERS (3 Restaurants) -->
+            <!-- 1. Bun Box Express -->
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express · Fast Food', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '18 min', '€1.50 Delivery Fee', 'Top ordered item with 10k+ customer orders.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 relative flex items-center justify-center text-4xl">
+                🍔
+                <span class="absolute top-2.5 left-2.5 bg-black/75 backdrop-blur-md text-white text-[10px] font-black px-2 py-0.5 rounded-md">#2 Fast Food</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-2.5">
-                <div onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express · Fast Food', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and house sauce.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Top ordered item with 10k+ customer orders.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Double Smash</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€12.99</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Beef, cheddar, fries</p>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Bun Box Express</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (850+)</span>
                 </div>
-                <div onclick="openDishDetailModal('Crispy Chicken Stack', 'Bun Box Express · Burgers', 11.50, '🍗', 'Buttermilk fried chicken breast, chipotle slaw, pickles on brioche bun.', '★ 4.6', '16 min', '€0 Delivery Fee', 'Buttermilk fried favorite.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Chicken Stack</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€11.50</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Chipotle slaw, pickles</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · American · €1.50 Delivery Fee · 18 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-amber-50 text-amber-800 border border-amber-200/60 px-1.5 py-0.5 rounded font-bold">10k+ ordered</span>
+                  <span>• €0 Delivery with Uber One</span>
                 </div>
               </div>
             </div>
 
-            <!-- Restaurant 2: Mama Napoli Pizza -->
-            <div data-cuisine="pizza" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
-              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center text-xl shrink-0">🍕</div>
-                  <div>
-                    <h5 class="font-extrabold text-sm text-neutral-900">Mama Napoli Pizza</h5>
-                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.7 (620+) • 15 min • €0 Delivery</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+            <!-- 2. Smash Bros Burger -->
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Smoked Bacon Cheddar Smash', 'Smash Bros Burger', 13.50, '🍔', 'Double crispy smashed patties, maple smoked bacon, American cheddar & house pickle mayo.', '★ 4.7', '20 min', '€1.90 Delivery Fee', 'Popular crispy burger.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-yellow-500 via-amber-500 to-red-500 relative flex items-center justify-center text-4xl">
+                🍔
+                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Top Rated</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-2.5">
-                <div onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza · Italian', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Stone-baked artisan pizza.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Diavola Pizza</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€13.50</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Spicy salami, hot honey</p>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Smash Bros Burger</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (430+)</span>
                 </div>
-                <div onclick="openDishDetailModal('Margherita Classica', 'Mama Napoli Pizza · Italian', 10.50, '🍕', 'San Marzano tomato base, fresh buffalo mozzarella, virgin olive oil, basil.', '★ 4.8', '14 min', '€0 Delivery Fee', 'Classic Napoletana.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Margherita D.O.P.</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€10.50</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">San Marzano & basil</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · Handcrafted · €1.90 Delivery Fee · 20 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-red-50 text-red-800 border border-red-200/60 px-1.5 py-0.5 rounded font-bold">Crispy Bacon</span>
+                  <span>• Local Favorite</span>
                 </div>
               </div>
             </div>
 
-            <!-- Restaurant 3: Spice Lane -->
-            <div data-cuisine="indian" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
-              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-xl shrink-0">🍛</div>
-                  <div>
-                    <h5 class="font-extrabold text-sm text-neutral-900">Spice Lane (Indian Cuisine)</h5>
-                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.7 (380+) • 22 min • €0 Delivery</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+            <!-- 3. The Counter Kitchen -->
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Classic Truffle Burger', 'The Counter Kitchen', 14.20, '🍔', 'Grass-fed Irish beef, black truffle aioli, Swiss cheese and caramelized onions.', '★ 4.6', '25 min', '€2.00 Delivery Fee', 'Gourmet kitchen.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-orange-500 via-amber-600 to-yellow-600 relative flex items-center justify-center text-4xl">
+                🍔
+                <span class="absolute top-2.5 left-2.5 bg-amber-800 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Gourmet Pick</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-2.5">
-                <div onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato-garam masala sauce with basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', 'House favorite curry.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Chicken Tikka</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€11.90</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Tomato cream curry & rice</p>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">The Counter Kitchen</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.6 (310+)</span>
                 </div>
-                <div onclick="openDishDetailModal('Lamb Rogan Josh', 'Spice Lane · Indian', 13.50, '🍲', 'Slow-cooked tender lamb in Kashmiri chili, cardamom, and brown onion reduction.', '★ 4.8', '24 min', '€0 Delivery Fee', 'Kashmiri specialty.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Lamb Rogan Josh</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€13.50</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Slow-braised spiced lamb</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · Gourmet · €2.00 Delivery Fee · 25 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-amber-50 text-amber-800 border border-amber-200/60 px-1.5 py-0.5 rounded font-bold">Truffle Special</span>
+                  <span>• Hand-Cut Fries</span>
                 </div>
               </div>
             </div>
 
-            <!-- Restaurant 4: Tokyo Bowl -->
-            <div data-cuisine="japanese" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
-              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center text-xl shrink-0">🍱</div>
-                  <div>
-                    <h5 class="font-extrabold text-sm text-neutral-900">Tokyo Bowl</h5>
-                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.9 (420+) • 20 min • €0 Delivery</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+            <!-- PIZZA (3 Restaurants) -->
+            <!-- 1. Mama Napoli Pizza -->
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza · Italian', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Stone-baked artisan pizza.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-red-400 via-amber-500 to-yellow-500 relative flex items-center justify-center text-4xl">
+                🍕
+                <span class="absolute top-2.5 left-2.5 bg-black/75 backdrop-blur-md text-white text-[10px] font-black px-2 py-0.5 rounded-md">#3 Pizza</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-2.5">
-                <div onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame, and pickled radish.', '★ 4.9', '20 min', '€0 Delivery Fee', 'Authentic bento box.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Karaage Bento</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€12.20</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Crispy chicken & rice</p>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Mama Napoli Pizza</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (620+)</span>
                 </div>
-                <div onclick="openDishDetailModal('Tokyo Salmon Poké Bowl', 'Tokyo Bowl · Japanese', 12.80, '🥗', 'Fresh Atlantic salmon, sushi rice, avocado, cucumber, sesame dressing.', '★ 4.8', '18 min', '€0 Delivery Fee', 'Fresh poké bowl.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Salmon Poké</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€12.80</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Salmon, avocado, rice</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Italian · €0 Delivery Fee · 15 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-rose-50 text-rose-800 border border-rose-200/60 px-1.5 py-0.5 rounded font-bold">Top Rated</span>
+                  <span>• Woodfired Oven</span>
                 </div>
               </div>
             </div>
 
-            <!-- Restaurant 5: Harbour Kebab -->
-            <div data-cuisine="halal" class="s1-restaurant-block p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
-              <div class="flex items-center justify-between pb-2.5 border-b border-neutral-100">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-xl shrink-0">🥙</div>
-                  <div>
-                    <h5 class="font-extrabold text-sm text-neutral-900">Harbour Kebab</h5>
-                    <p class="text-[11px] text-neutral-500 font-medium">★ 4.6 (890+) • 25 min • €0 Delivery</p>
-                  </div>
-                </div>
-                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">Open</span>
+            <!-- 2. Forno Antico Pizzeria -->
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Margherita D.O.P.', 'Forno Antico Pizzeria', 11.50, '🍕', 'Buffalo mozzarella, San Marzano D.O.P. tomatoes, fresh basil, extra virgin olive oil.', '★ 4.8', '15 min', '€0 Delivery Fee', 'Neapolitan classic.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-red-500 via-rose-500 to-amber-500 relative flex items-center justify-center text-4xl">
+                🍕
+                <span class="absolute top-2.5 left-2.5 bg-amber-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#2 Pizza</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-2.5">
-                <div onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and hot flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Freshly sliced kebab.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Mixed Doner</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€11.50</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Lamb & chicken platter</p>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Forno Antico Pizzeria</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (640+)</span>
                 </div>
-                <div onclick="openDishDetailModal('Falafel Hummus Wrap', 'Harbour Kebab · Halal', 8.90, '🧆', 'Crispy chickpea falafels, creamy tahini, garlic pickles, and crisp greens in flatbread.', '★ 4.7', '20 min', '€0 Delivery Fee', 'Vegetarian favorite.')" class="p-2 rounded-xl bg-neutral-50 hover:bg-neutral-100 cursor-pointer border border-neutral-150 transition">
-                  <div class="flex justify-between items-start">
-                    <h6 class="font-bold text-xs text-neutral-900 truncate">Falafel Wrap</h6>
-                    <span class="text-[11px] font-black text-neutral-900">€8.90</span>
-                  </div>
-                  <p class="text-[10px] text-neutral-500 truncate mt-0.5">Tahini, pickles & flatbread</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Neapolitan · €0 Delivery Fee · 15 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-emerald-50 text-emerald-800 border border-emerald-200/60 px-1.5 py-0.5 rounded font-bold">Authentic D.O.P.</span>
+                  <span>• Fast Prep</span>
                 </div>
               </div>
             </div>
+
+            <!-- 3. Base Wood Fired Pizza -->
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Four Cheese Quattro Formaggi', 'Base Wood Fired Pizza', 13.90, '🍕', 'Mozzarella, gorgonzola dolce, fontina, parmesan, crushed walnuts & hot honey.', '★ 4.6', '20 min', '€1.50 Delivery Fee', 'Artisan woodfired.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-500 relative flex items-center justify-center text-4xl">
+                🍕
+                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Local Craft</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Base Wood Fired Pizza</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.6 (510+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Artisan Woodfired · €1.50 Delivery Fee · 20 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-orange-50 text-orange-800 border border-orange-200/60 px-1.5 py-0.5 rounded font-bold">Hot Honey</span>
+                  <span>• Artisan Crust</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- INDIAN (3 Restaurants) -->
+            <!-- 1. Spice Lane -->
+            <div data-cuisine="indian" onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato sauce.', '★ 4.7', '22 min', '€0 Delivery Fee', 'House favorite curry.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-orange-400 via-rose-400 to-red-500 relative flex items-center justify-center text-4xl">
+                🍛
+                <span class="absolute top-2.5 left-2.5 bg-emerald-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#1 Indian in Dublin</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Spice Lane (Indian Cuisine)</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (380+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · Curries · €0 Delivery Fee · 22 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-emerald-50 text-emerald-800 border border-emerald-200/60 px-1.5 py-0.5 rounded font-bold">12k+ ordered</span>
+                  <span>• Local Legend</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Ananda Fine Indian -->
+            <div data-cuisine="indian" onclick="openDishDetailModal('Lamb Rogan Josh', 'Ananda Fine Indian', 13.80, '🍛', 'Slow-cooked Irish lamb shoulder in aromatic Kashmiri spices and saffron.', '★ 4.8', '25 min', '€2.50 Delivery Fee', 'Michelin listed.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 relative flex items-center justify-center text-4xl">
+                🍛
+                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Michelin Listed</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Ananda Fine Indian</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (560+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · Regional Curries · €2.50 Delivery Fee · 25 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-purple-50 text-purple-800 border border-purple-200/60 px-1.5 py-0.5 rounded font-bold">Premium Taste</span>
+                  <span>• Slow Cooked</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Pickle Dublin -->
+            <div data-cuisine="indian" onclick="openDishDetailModal('Butter Chicken & Garlic Naan', 'Pickle Dublin', 12.50, '🍛', 'Tandoor chicken chunks in rich butter cream tomato gravy with hot garlic butter naan.', '★ 4.9', '20 min', '€1.80 Delivery Fee', 'Top rated Indian.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-amber-500 via-red-500 to-orange-500 relative flex items-center justify-center text-4xl">
+                🍛
+                <span class="absolute top-2.5 left-2.5 bg-rose-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Top Rated 4.9★</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Pickle Dublin</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.9 (720+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · North Indian Classics · €1.80 Delivery Fee · 20 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-amber-50 text-amber-800 border border-amber-200/60 px-1.5 py-0.5 rounded font-bold">9k+ ordered</span>
+                  <span>• Fresh Tandoor Naan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- JAPANESE (3 Restaurants) -->
+            <!-- 1. Tokyo Bowl -->
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame.', '★ 4.9', '20 min', '€2.00 Delivery Fee', 'Authentic bento box.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-sky-400 to-indigo-500 relative flex items-center justify-center text-4xl">
+                🍱
+                <span class="absolute top-2.5 left-2.5 bg-indigo-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#1 Japanese</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Tokyo Bowl</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.9 (420+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Poké & Bento · €2.00 Delivery Fee · 20 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-indigo-50 text-indigo-800 border border-indigo-200/60 px-1.5 py-0.5 rounded font-bold">6.5k+ ordered</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. JJ Ramen Stillorgan -->
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, '🍜', 'Rich 16-hour pork bone broth, handmade ramen noodles, chashu pork, seasoned soft egg & black garlic oil.', '★ 4.8', '25 min', '€3.50 Delivery Fee', 'Top rated ramen.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-rose-500 to-amber-500 relative flex items-center justify-center text-4xl">
+                🍜
+                <span class="absolute top-2.5 left-2.5 bg-rose-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">20% off €20</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">JJ Ramen Stillorgan</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (180+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Ramen & Gyoza · €3.50 Delivery Fee · 25 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-rose-50 text-rose-800 border border-rose-200/60 px-1.5 py-0.5 rounded font-bold">Top Ramen</span>
+                  <span>• Handmade Noodles</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Michie Sushi Kitchen -->
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Salmon Teriyaki & Roll Combo', 'Michie Sushi Kitchen', 14.50, '🍣', 'Fresh Scottish salmon sashimi, crispy prawn tempura rolls, and steamed edamame.', '★ 4.8', '22 min', '€1.90 Delivery Fee', 'Daily fresh sashimi.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-teal-400 to-blue-500 relative flex items-center justify-center text-4xl">
+                🍣
+                <span class="absolute top-2.5 left-2.5 bg-teal-800 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Fresh Sushi</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Michie Sushi Kitchen</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (490+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Sushi & Sashimi · €1.90 Delivery Fee · 22 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-teal-50 text-teal-800 border border-teal-200/60 px-1.5 py-0.5 rounded font-bold">Fresh Daily</span>
+                  <span>• Raw Fish Grade A</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- HALAL (3 Restaurants) -->
+            <!-- 1. Harbour Kebab -->
+            <div data-cuisine="halal" onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, salad, and flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Freshly sliced kebab.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-emerald-500 to-teal-600 relative flex items-center justify-center text-4xl">
+                🥙
+                <span class="absolute top-2.5 left-2.5 bg-emerald-800 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#1 Halal</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Harbour Kebab</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.6 (890+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Kebabs · €0 Delivery Fee · 25 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-emerald-50 text-emerald-800 border border-emerald-200/60 px-1.5 py-0.5 rounded font-bold">Popular</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Passion4Food Shawarma -->
+            <div data-cuisine="halal" onclick="openDishDetailModal('Charcoal Chicken Shawarma Plate', 'Passion4Food Shawarma', 12.00, '🥙', 'Charcoal flame grilled marinated chicken breast shawarma, spicy garlic whip, pickles and fresh khobz bread.', '★ 4.8', '20 min', '€1.50 Delivery Fee', 'Middle Eastern grill.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-orange-500 via-emerald-600 to-teal-600 relative flex items-center justify-center text-4xl">
+                🥙
+                <span class="absolute top-2.5 left-2.5 bg-emerald-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">100% Halal Certified</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Passion4Food Shawarma</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (670+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Middle Eastern & Shawarma · €1.50 Delivery Fee · 20 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-emerald-50 text-emerald-800 border border-emerald-200/60 px-1.5 py-0.5 rounded font-bold">Flame Grilled</span>
+                  <span>• Garlic Toum</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Reyna Doner & Grill -->
+            <div data-cuisine="halal" onclick="openDishDetailModal('Adana Lamb Kebab Skewer', 'Reyna Doner & Grill', 13.20, '🥙', 'Hand-minced spiced lamb grilled over charcoal, roasted peppers, sumac onions and fresh flatbread.', '★ 4.7', '24 min', '€1.80 Delivery Fee', 'Turkish grill.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-28 bg-gradient-to-r from-red-600 via-amber-600 to-emerald-700 relative flex items-center justify-center text-4xl">
+                🥙
+                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Charcoal Grill</span>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-extrabold text-sm text-neutral-900">Reyna Doner & Grill</h4>
+                  <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (410+)</span>
+                </div>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Turkish Charcoal Grill · €1.80 Delivery Fee · 24 min</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
+                  <span class="bg-amber-50 text-amber-800 border border-amber-200/60 px-1.5 py-0.5 rounded font-bold">Authentic Sumac</span>
+                  <span>• Handmade Pita</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -668,7 +843,7 @@
       </div>
 
       <!-- Safe Bottom Scroll Spacer (Prevents content being hidden behind dock) -->
-      <div class="h-28 w-full shrink-0"></div>
+      <div class="h-32 w-full shrink-0"></div>
 
     </div>
 
@@ -910,6 +1085,39 @@
       });
       window.location.href = `${SURVEY_FORM_BASE_URL}?${queryParams.toString()}`;
     }
+
+    // Scroll helper for independent rows in Condition B
+    function scrollPopularRow(rowId, direction) {
+      const row = document.getElementById(rowId);
+      if (!row) return;
+      const scrollAmount = 268;
+      row.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+
+    // Enable desktop drag-to-scroll on each swipeable row independently
+    window.addEventListener('DOMContentLoaded', () => {
+      const rows = document.querySelectorAll('.popular-swipe-row');
+      rows.forEach(slider => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+          isDown = true;
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => { isDown = false; });
+        slider.addEventListener('mouseup', () => { isDown = false; });
+        slider.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 1.5;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      });
+    });
   </script>
 </body>
 </html>
