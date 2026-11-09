@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uber Eats — Condition B (Popular Items)</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
     body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; -webkit-tap-highlight-color: transparent; }
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    svg { max-width: 100%; height: auto; }
   </style>
 </head>
 <body class="bg-neutral-900 text-neutral-900 min-h-screen py-4 sm:py-8 px-2 sm:px-4 flex flex-col items-center justify-center">
 
+  <!-- Experiment Header Tag -->
   <div class="mb-3 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold flex items-center gap-2">
     <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
     <span>Condition B: Popular Items (Social Proof)</span>
@@ -22,15 +26,15 @@
     <span id="study-timer" class="font-mono text-neutral-300">00:00</span>
   </div>
 
+  <!-- Mobile Frame Container (Exact 393x820, rounded-[44px], border-4 border-neutral-800) -->
   <div class="relative w-full max-w-[393px] h-[820px] bg-white rounded-[44px] overflow-hidden flex flex-col shadow-2xl border-4 border-neutral-800 select-none">
     
-    <!-- iOS Status Bar (Clean Minimal Notchless Style: 3:58 Silent Bell | Signal Wi-Fi Battery Charging) -->
-    <div class="h-11 w-full bg-white flex items-center justify-between px-6 shrink-0 z-50 pt-2">
-      <!-- Left: 3:58 + Silent Bell with Slash -->
+    <!-- iOS Status Bar (Clean Minimal Notchless: 3:58 Silent Bell | Signal Wi-Fi Battery Charging) -->
+    <header class="h-11 w-full bg-white flex items-center justify-between px-6 shrink-0 z-50 pt-2">
+      <!-- Left: 3:58 + Silent Bell with diagonal strike -->
       <div class="flex items-center gap-1.5">
         <span class="text-[16px] font-bold text-neutral-950 tracking-tight font-sans">3:58</span>
-        <!-- Silent Bell with diagonal strike matching reference -->
-        <svg class="w-4 h-4 text-neutral-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+        <svg style="width: 16px; height: 16px; min-width: 16px;" class="w-4 h-4 text-neutral-900 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
           <path d="M10.3 4.3A5 5 0 0 1 18 8.5c0 2.3.8 4 1.8 5.4"></path>
           <path d="M4.3 4.3l15.4 15.4"></path>
           <path d="M6.3 8.7A5 5 0 0 0 6 8.5c0 2.3-.8 4-1.8 5.4A1.9 1.9 0 0 0 5.8 17h11.4"></path>
@@ -40,7 +44,6 @@
 
       <!-- Right: Cellular 4-Bars (3 filled, 1 dim) + Wi-Fi + Green Charging Battery -->
       <div class="flex items-center gap-2">
-        <!-- 4-Bar Cellular Signal (3 active, 1 dim) -->
         <div class="flex items-end gap-[1.5px] h-3">
           <span class="w-[3px] h-1.5 bg-neutral-950 rounded-[0.5px]"></span>
           <span class="w-[3px] h-2 bg-neutral-950 rounded-[0.5px]"></span>
@@ -48,127 +51,103 @@
           <span class="w-[3px] h-3 bg-neutral-300 rounded-[0.5px]"></span>
         </div>
 
-        <!-- Wi-Fi Waves -->
-        <svg class="w-4 h-3.5 text-neutral-950" viewBox="0 0 24 24" fill="currentColor">
+        <svg style="width: 16px; height: 14px;" class="w-4 h-3.5 text-neutral-950 shrink-0" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.95-3.05a7 7 0 0 1 9.9 0l-1.41 1.41a5 5 0 0 0-7.07 0l-1.42-1.41zm-2.83-2.83a11 11 0 0 1 15.56 0l-1.42 1.41a9 9 0 0 0-12.73 0L4.22 12.12zm-2.83-2.83a15 15 0 0 1 21.22 0l-1.42 1.41a13 13 0 0 0-18.38 0L1.39 9.29z"/>
         </svg>
 
-        <!-- Green Battery Pill with Lightning Bolt Inside -->
         <div class="flex items-center">
           <div class="w-[24px] h-[12px] rounded-[3.5px] bg-[#34C759] p-[1.5px] flex items-center justify-center relative shadow-sm">
-            <!-- Lightning Bolt Glyph -->
-            <svg class="w-2.5 h-2.5 text-neutral-950 fill-current" viewBox="0 0 24 24">
+            <svg style="width: 10px; height: 10px;" class="w-2.5 h-2.5 text-neutral-950 fill-current shrink-0" viewBox="0 0 24 24">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
           </div>
-          <!-- Battery Nipple Nub -->
           <div class="w-[1.5px] h-[4.5px] bg-[#34C759] rounded-r-sm ml-[1px]"></div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <!-- MAIN SCROLLABLE CONTENT -->
-    <div id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-24">
+    <!-- Main Scrollable Phone Body -->
+    <main id="screen-content" class="flex-1 overflow-y-auto hide-scrollbar relative bg-white pb-28">
       
-      <!-- ================= S1: FEED WITH 6 POPULAR ITEMS ================= -->
-      <div id="screen-s1" class="screen-view">
+      <!-- ================= S1: FEED WITH 2 POPULAR SWIPE ROWS ================= -->
+      <section id="screen-s1" class="screen-view">
         <!-- Location Header Bar -->
         <div class="px-4 pt-1 pb-2 flex items-center justify-between">
-          <div class="flex items-center gap-2 cursor-pointer">
+          <div class="flex items-center gap-1.5 cursor-pointer">
             <div class="w-6 h-6 rounded-full flex items-center justify-center text-neutral-900">
               <i class="fa-solid fa-location-dot text-base"></i>
             </div>
             <span class="font-extrabold text-[17px] text-neutral-900 tracking-tight">Linden Court</span>
             <i class="fa-solid fa-chevron-down text-xs text-neutral-800 ml-0.5"></i>
           </div>
-          <button class="w-9 h-9 rounded-full flex items-center justify-center text-neutral-900 hover:bg-neutral-100 transition">
+          <button type="button" aria-label="Notifications" class="w-9 h-9 rounded-full flex items-center justify-center text-neutral-900 hover:bg-neutral-100 transition">
             <i class="fa-regular fa-bell text-lg"></i>
           </button>
         </div>
 
-        <!-- Native Uber Eats Service Category Pills -->
+        <!-- Service Category Pills -->
         <div class="flex gap-2 px-4 py-1.5 overflow-x-auto hide-scrollbar text-xs font-bold">
-          <button class="px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200/80 text-neutral-900 flex items-center gap-1.5 shrink-0 shadow-xs">
+          <button type="button" class="px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200/80 text-neutral-900 flex items-center gap-1.5 shrink-0 shadow-sm">
             <span class="w-5 h-5 rounded-md bg-[#00C165] flex items-center justify-center text-white text-[10px]">
               <i class="fa-solid fa-bag-shopping"></i>
             </span>
             <span>All</span>
           </button>
-          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+          <button type="button" class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-sm hover:bg-neutral-50">
             <span class="text-sm">🚗</span>
             <span>Rides</span>
           </button>
-          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+          <button type="button" class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-sm hover:bg-neutral-50">
             <span class="text-sm">🍌</span>
             <span>Grocery</span>
           </button>
-          <button class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-xs hover:bg-neutral-50">
+          <button type="button" class="px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 flex items-center gap-1.5 shrink-0 shadow-sm hover:bg-neutral-50">
             <span class="text-sm">🍿</span>
             <span>Convenience</span>
           </button>
         </div>
 
-        <!-- Circular Cuisine Category Shortcuts (Pizza, Chinese, Indian, Sushi, Halal) -->
+        <!-- Cuisine Category Icons -->
         <div class="grid grid-cols-5 gap-1 px-3 py-3 text-center">
-          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE8D6] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#E85D36] flex items-center justify-center relative shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#FFD166] absolute top-1 left-2"></span>
-                <span class="w-2 h-2 rounded-full bg-[#FFD166] absolute bottom-1 right-2"></span>
-              </div>
+          <div class="flex flex-col items-center gap-1 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE8D6] flex items-center justify-center relative shadow-sm">
+              <span class="text-2xl">🍕</span>
             </div>
-            <span class="text-[11px] font-medium text-neutral-700">Pizza</span>
+            <span class="text-[11px] font-semibold text-neutral-700">Pizza</span>
           </div>
-
-          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FCE7F3] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#E11D48] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#6EE7B7] absolute top-1 right-2"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-[#FBCFE8] absolute bottom-1 left-2"></span>
-              </div>
+          <div class="flex flex-col items-center gap-1 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FCE7F3] flex items-center justify-center relative shadow-sm">
+              <span class="text-2xl">🥡</span>
             </div>
-            <span class="text-[11px] font-medium text-neutral-700">Chinese</span>
+            <span class="text-[11px] font-semibold text-neutral-700">Chinese</span>
           </div>
-
-          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FEF3C7] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#D97706] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#10B981] absolute top-1 left-3"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-[#FDE68A] absolute bottom-1 right-2"></span>
-              </div>
+          <div class="flex flex-col items-center gap-1 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#FEF3C7] flex items-center justify-center relative shadow-sm">
+              <span class="text-2xl">🍛</span>
             </div>
-            <span class="text-[11px] font-medium text-neutral-700">Indian</span>
+            <span class="text-[11px] font-semibold text-neutral-700">Indian</span>
           </div>
-
-          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#E0F2FE] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#F87171] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#10B981] absolute top-2 right-1.5"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-[#BAE6FD] absolute bottom-1.5 left-1.5"></span>
-              </div>
+          <div class="flex flex-col items-center gap-1 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#E0F2FE] flex items-center justify-center relative shadow-sm">
+              <span class="text-2xl">🍱</span>
             </div>
-            <span class="text-[11px] font-medium text-neutral-700">Sushi</span>
+            <span class="text-[11px] font-semibold text-neutral-700">Sushi</span>
           </div>
-
-          <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#EDE9FE] flex items-center justify-center relative">
-              <div class="w-8 h-8 rounded-full bg-[#7C4A2D] flex items-center justify-center relative shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-[#A3E635] absolute top-1 left-2.5"></span>
-                <span class="w-1.5 h-1.5 rounded-full bg-[#DDD6FE] absolute bottom-2 right-2"></span>
-              </div>
+          <div class="flex flex-col items-center gap-1 cursor-pointer">
+            <div class="w-[52px] h-[52px] rounded-full bg-[#EDE9FE] flex items-center justify-center relative shadow-sm">
+              <span class="text-2xl">🥙</span>
             </div>
-            <span class="text-[11px] font-medium text-neutral-700">Halal</span>
+            <span class="text-[11px] font-semibold text-neutral-700">Halal</span>
           </div>
         </div>
 
-        <!-- POPULAR IN YOUR AREA HEADER & SWIPE ARROWS -->
+        <!-- POPULAR IN YOUR AREA: 2 INDEPENDENT SWIPEABLE ROWS -->
         <div class="pt-2 pb-2">
-          <div class="px-4 flex items-center justify-between mb-2">
+          <div class="px-6 flex items-center justify-between mb-2">
             <div>
               <h3 class="font-extrabold text-base text-neutral-900 tracking-tight">Popular in your area</h3>
               <p class="text-[11px] text-neutral-500 font-medium">Most reordered restaurants · Swipe each row independently</p>
             </div>
-            <!-- Arrow Controls for Top Row -->
             <div class="flex items-center gap-1">
               <button type="button" aria-label="Scroll left" onclick="scrollPopularRow('popular-row-1', -1)" class="w-7 h-7 rounded-full bg-neutral-100 hover:bg-neutral-200 active:scale-95 flex items-center justify-center text-neutral-700 transition">
                 <i class="fa-solid fa-chevron-left text-[11px]"></i>
@@ -179,15 +158,20 @@
             </div>
           </div>
 
-          <!-- INDEPENDENT ROW 1 (5 Swipeable Restaurants) -->
+          <!-- ROW 1 -->
           <div class="mb-3">
-            <div id="popular-row-1" class="popular-swipe-row flex gap-3 overflow-x-auto hide-scrollbar px-4 pb-1 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
-              <!-- 1. San Sab Blackrock -->
-              <div onclick="selectDish('Thai Massaman Curry Bowl', 'San Sab Blackrock', 12.80, '🍲')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-amber-500 to-orange-500 relative flex items-center justify-center text-3xl">
-                  🍲
-                  <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#1 Thai</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+            <div id="popular-row-1" class="popular-swipe-row flex gap-3.5 overflow-x-auto hide-scrollbar px-6 pb-1 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+              <div class="w-1 shrink-0"></div>
+
+              <!-- 1. San Sab -->
+              <div onclick="selectDish('Thai Massaman Curry Bowl', 'San Sab Blackrock', 12.80, 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=600&q=80" alt="San Sab Blackrock" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Thai</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -199,11 +183,14 @@
               </div>
 
               <!-- 2. Spice Lane -->
-              <div onclick="selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, '🍛')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-orange-400 to-red-500 relative flex items-center justify-center text-3xl">
-                  🍛
-                  <span class="absolute top-2 left-2 bg-black/75 text-white text-[9px] font-black px-1.5 py-0.5 rounded">12k+ ordered</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Chicken Tikka Masala', 'Spice Lane', 11.90, 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=600&q=80" alt="Spice Lane" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Indian</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -215,11 +202,12 @@
               </div>
 
               <!-- 3. Bun Box Express -->
-              <div onclick="selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, '🍔')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-amber-400 to-yellow-500 relative flex items-center justify-center text-3xl">
-                  🍔
-                  <span class="absolute top-2 left-2 bg-black/75 text-white text-[9px] font-black px-1.5 py-0.5 rounded">10k+ ordered</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Supreme Double Smash Combo', 'Bun Box Express', 12.99, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Bun Box Express" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">Great value</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -231,11 +219,14 @@
               </div>
 
               <!-- 4. Harbour Kebab -->
-              <div onclick="selectDish('Mixed Doner Kebab Box', 'Harbour Kebab', 11.50, '🥙')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-orange-400 to-amber-600 relative flex items-center justify-center text-3xl">
-                  🥙
-                  <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#1 Halal</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Mixed Doner Kebab Box', 'Harbour Kebab', 11.50, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=80" alt="Harbour Kebab" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Halal</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -247,11 +238,14 @@
               </div>
 
               <!-- 5. Mama Napoli Pizza -->
-              <div onclick="selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, '🍕')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-amber-500 to-rose-500 relative flex items-center justify-center text-3xl">
-                  🍕
-                  <span class="absolute top-2 left-2 bg-neutral-900 text-white text-[9px] font-black px-1.5 py-0.5 rounded">Top Rated</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80" alt="Mama Napoli Pizza" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Pizza</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -261,18 +255,22 @@
                   <p class="text-[10px] text-neutral-500 mt-0.5">€2.50 Delivery Fee · 20 min</p>
                 </div>
               </div>
+              <div class="w-2 shrink-0"></div>
             </div>
           </div>
 
-          <!-- INDEPENDENT ROW 2 (5 Swipeable Restaurants - Header Removed) -->
+          <!-- ROW 2 -->
           <div>
-            <div id="popular-row-2" class="popular-swipe-row flex gap-3 overflow-x-auto hide-scrollbar px-4 pb-2 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
-              <!-- 6. JJ Ramen Stillorgan -->
-              <div onclick="selectDish('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, '🍜')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-rose-500 to-amber-500 relative flex items-center justify-center text-3xl">
-                  🍜
-                  <span class="absolute top-2 left-2 bg-rose-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">20% off €20</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+            <div id="popular-row-2" class="popular-swipe-row flex gap-3.5 overflow-x-auto hide-scrollbar px-6 pb-2 snap-x snap-mandatory cursor-grab active:cursor-grabbing select-none" style="scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+              <div class="w-1 shrink-0"></div>
+
+              <!-- 6. JJ Ramen -->
+              <div onclick="selectDish('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80" alt="JJ Ramen Stillorgan" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">20% off €20</span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -284,11 +282,14 @@
               </div>
 
               <!-- 7. Forno Antico -->
-              <div onclick="selectDish('Artisanal Diavola Pizza', 'Forno Antico', 13.50, '🍕')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-red-500 to-amber-500 relative flex items-center justify-center text-3xl">
-                  🍕
-                  <span class="absolute top-2 left-2 bg-amber-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#2 Pizza</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Margherita D.O.P.', 'Forno Antico', 11.50, 'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=600&q=80" alt="Forno Antico Pizzeria" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Pizza</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -300,11 +301,14 @@
               </div>
 
               <!-- 8. Tokyo Bowl -->
-              <div onclick="selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, '🍱')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-indigo-400 to-purple-400 relative flex items-center justify-center text-3xl">
-                  🍱
-                  <span class="absolute top-2 left-2 bg-indigo-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">6.5k+ ordered</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Tokyo Bowl" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#3 Asian</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -316,11 +320,14 @@
               </div>
 
               <!-- 9. Okee Chinese -->
-              <div onclick="selectDish('Special Chow Mein Noodles', 'Okee Chinese', 10.90, '🍜')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-red-500 to-yellow-600 relative flex items-center justify-center text-3xl">
-                  🍜
-                  <span class="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-black px-1.5 py-0.5 rounded">#6 Chinese</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Special Chow Mein Noodles', 'Okee Chinese', 10.90, 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" alt="Okee Chinese Takeaway" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Chinese</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -332,11 +339,14 @@
               </div>
 
               <!-- 10. Green Garden Bowl -->
-              <div onclick="selectDish('Superfood Green Salad Bowl', 'Green Garden Bowl', 10.50, '🥗')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-                <div class="h-24 bg-gradient-to-r from-emerald-400 to-teal-500 relative flex items-center justify-center text-3xl">
-                  🥗
-                  <span class="absolute top-2 left-2 bg-emerald-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded">Healthy</span>
-                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-[10px]">♡</span>
+              <div onclick="selectDish('Superfood Green Salad Bowl', 'Green Garden Bowl', 10.50, 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80')" class="shrink-0 w-64 snap-start bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+                <div class="h-28 relative overflow-hidden bg-neutral-100">
+                  <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Green Garden Bowl" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  <span class="absolute top-2 left-2 bg-white text-[#262626] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>New</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                  <span class="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-[10px] shadow-sm">♡</span>
                 </div>
                 <div class="p-2.5">
                   <div class="flex items-center justify-between">
@@ -346,12 +356,12 @@
                   <p class="text-[10px] text-neutral-500 mt-0.5">€1.80 Delivery Fee · 15 min</p>
                 </div>
               </div>
+              <div class="w-2 shrink-0"></div>
             </div>
           </div>
-
         </div>
 
-        <!-- BROWSE ALL RESTAURANTS (STANDARDIZED WITH 3 RESTAURANTS PER CUISINE) -->
+        <!-- BROWSE ALL RESTAURANTS (15 Restaurants across 5 Cuisines) -->
         <div class="px-4 mt-5 pt-3 pb-6 border-t-4 border-neutral-100">
           <div class="flex items-center justify-between mb-2.5">
             <div>
@@ -371,16 +381,21 @@
             <button type="button" onclick="filterS1Catalog('halal', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Halal</button>
           </div>
 
-          <!-- Restaurant Summary Cards (Standardized: Exactly 3 restaurants per category) -->
+          <!-- 15 Restaurant Cards -->
           <div class="space-y-3.5" id="s1-restaurant-list">
             
             <!-- BURGERS (3 Restaurants) -->
-            <!-- 1. Bun Box Express -->
-            <div data-cuisine="burgers" onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express · Fast Food', 12.99, '🍔', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '18 min', '€1.50 Delivery Fee', 'Top ordered item with 10k+ customer orders.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 relative flex items-center justify-center text-4xl">
-                🍔
-                <span class="absolute top-2.5 left-2.5 bg-black/75 backdrop-blur-md text-white text-[10px] font-black px-2 py-0.5 rounded-md">#2 Fast Food</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express', 12.99, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '18 min', '€1.50 Delivery Fee', 'Top ordered dish with 10k+ customer orders.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Bun Box Express" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">Great value</span>
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Burgers</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -395,12 +410,16 @@
               </div>
             </div>
 
-            <!-- 2. Smash Bros Burger -->
-            <div data-cuisine="burgers" onclick="openDishDetailModal('Smoked Bacon Cheddar Smash', 'Smash Bros Burger', 13.50, '🍔', 'Double crispy smashed patties, maple smoked bacon, American cheddar & house pickle mayo.', '★ 4.7', '20 min', '€1.90 Delivery Fee', 'Popular crispy burger.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-yellow-500 via-amber-500 to-red-500 relative flex items-center justify-center text-4xl">
-                🍔
-                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Top Rated</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Smoked Bacon Cheddar Smash', 'Smash Bros Burger', 13.50, 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80', 'Double crispy smashed patties, maple smoked bacon, American cheddar & house pickle mayo.', '★ 4.7', '20 min', '€1.90 Delivery Fee', 'Popular crispy burger.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="Smash Bros Burger" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Burgers</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -415,12 +434,16 @@
               </div>
             </div>
 
-            <!-- 3. The Counter Kitchen -->
-            <div data-cuisine="burgers" onclick="openDishDetailModal('Classic Truffle Burger', 'The Counter Kitchen', 14.20, '🍔', 'Grass-fed Irish beef, black truffle aioli, Swiss cheese and caramelized onions.', '★ 4.6', '25 min', '€2.00 Delivery Fee', 'Gourmet kitchen.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-orange-500 via-amber-600 to-yellow-600 relative flex items-center justify-center text-4xl">
-                🍔
-                <span class="absolute top-2.5 left-2.5 bg-amber-800 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Gourmet Pick</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Classic Truffle Burger', 'The Counter Kitchen', 14.20, 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80', 'Grass-fed Irish beef, black truffle aioli, Swiss cheese and caramelized onions.', '★ 4.6', '25 min', '€2.00 Delivery Fee', 'Gourmet kitchen.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="The Counter Kitchen" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-white text-[#262626] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>New</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -436,12 +459,17 @@
             </div>
 
             <!-- PIZZA (3 Restaurants) -->
-            <!-- 1. Mama Napoli Pizza -->
-            <div data-cuisine="pizza" onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza · Italian', 13.50, '🍕', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Stone-baked artisan pizza.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-red-400 via-amber-500 to-yellow-500 relative flex items-center justify-center text-4xl">
-                🍕
-                <span class="absolute top-2.5 left-2.5 bg-black/75 backdrop-blur-md text-white text-[10px] font-black px-2 py-0.5 rounded-md">#3 Pizza</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', 'Stone-baked artisan pizza.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80" alt="Mama Napoli Pizza" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">Great value</span>
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#3 Pizza</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -456,12 +484,16 @@
               </div>
             </div>
 
-            <!-- 2. Forno Antico Pizzeria -->
-            <div data-cuisine="pizza" onclick="openDishDetailModal('Margherita D.O.P.', 'Forno Antico Pizzeria', 11.50, '🍕', 'Buffalo mozzarella, San Marzano D.O.P. tomatoes, fresh basil, extra virgin olive oil.', '★ 4.8', '15 min', '€0 Delivery Fee', 'Neapolitan classic.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-red-500 via-rose-500 to-amber-500 relative flex items-center justify-center text-4xl">
-                🍕
-                <span class="absolute top-2.5 left-2.5 bg-amber-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#2 Pizza</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Margherita D.O.P.', 'Forno Antico Pizzeria', 11.50, 'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80', 'Buffalo mozzarella, San Marzano D.O.P. tomatoes, fresh basil, extra virgin olive oil.', '★ 4.8', '15 min', '€0 Delivery Fee', 'Neapolitan classic.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80" alt="Forno Antico Pizzeria" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Pizza</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -476,12 +508,16 @@
               </div>
             </div>
 
-            <!-- 3. Base Wood Fired Pizza -->
-            <div data-cuisine="pizza" onclick="openDishDetailModal('Four Cheese Quattro Formaggi', 'Base Wood Fired Pizza', 13.90, '🍕', 'Mozzarella, gorgonzola dolce, fontina, parmesan, crushed walnuts & hot honey.', '★ 4.6', '20 min', '€1.50 Delivery Fee', 'Artisan woodfired.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-amber-600 via-orange-500 to-yellow-500 relative flex items-center justify-center text-4xl">
-                🍕
-                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Local Craft</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Four Cheese Quattro Formaggi', 'Base Wood Fired Pizza', 13.90, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80', 'Mozzarella, gorgonzola dolce, fontina, parmesan, crushed walnuts & hot honey.', '★ 4.6', '20 min', '€1.50 Delivery Fee', 'Artisan woodfired.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Base Wood Fired Pizza" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-white text-[#262626] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>New</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -497,12 +533,17 @@
             </div>
 
             <!-- INDIAN (3 Restaurants) -->
-            <!-- 1. Spice Lane -->
-            <div data-cuisine="indian" onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane · Indian', 11.90, '🍛', 'Tender charred chicken breast in a rich creamy tomato sauce.', '★ 4.7', '22 min', '€0 Delivery Fee', 'House favorite curry.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-orange-400 via-rose-400 to-red-500 relative flex items-center justify-center text-4xl">
-                🍛
-                <span class="absolute top-2.5 left-2.5 bg-emerald-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#1 Indian in Dublin</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="indian" onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane', 11.90, 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80', 'Tender charred chicken breast in a rich creamy tomato sauce with fragrant basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', 'House favorite curry.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Spice Lane" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">Great value</span>
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Indian</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -517,12 +558,16 @@
               </div>
             </div>
 
-            <!-- 2. Ananda Fine Indian -->
-            <div data-cuisine="indian" onclick="openDishDetailModal('Lamb Rogan Josh', 'Ananda Fine Indian', 13.80, '🍛', 'Slow-cooked Irish lamb shoulder in aromatic Kashmiri spices and saffron.', '★ 4.8', '25 min', '€2.50 Delivery Fee', 'Michelin listed.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-red-600 via-orange-600 to-amber-600 relative flex items-center justify-center text-4xl">
-                🍛
-                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Michelin Listed</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="indian" onclick="openDishDetailModal('Lamb Rogan Josh', 'Ananda Fine Indian', 13.80, 'https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=800&q=80', 'Slow-cooked Irish lamb shoulder in aromatic Kashmiri spices and saffron.', '★ 4.8', '25 min', '€2.50 Delivery Fee', 'Michelin listed.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=800&q=80" alt="Ananda Fine Indian" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Indian</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -537,12 +582,16 @@
               </div>
             </div>
 
-            <!-- 3. Pickle Dublin -->
-            <div data-cuisine="indian" onclick="openDishDetailModal('Butter Chicken & Garlic Naan', 'Pickle Dublin', 12.50, '🍛', 'Tandoor chicken chunks in rich butter cream tomato gravy with hot garlic butter naan.', '★ 4.9', '20 min', '€1.80 Delivery Fee', 'Top rated Indian.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-amber-500 via-red-500 to-orange-500 relative flex items-center justify-center text-4xl">
-                🍛
-                <span class="absolute top-2.5 left-2.5 bg-rose-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Top Rated 4.9★</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="indian" onclick="openDishDetailModal('Butter Chicken & Garlic Naan', 'Pickle Dublin', 12.50, 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80', 'Tandoor chicken chunks in rich butter cream tomato gravy with hot garlic butter naan.', '★ 4.9', '20 min', '€1.80 Delivery Fee', 'Top rated Indian.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Pickle Dublin" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-white text-[#262626] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>New</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -558,12 +607,17 @@
             </div>
 
             <!-- JAPANESE (3 Restaurants) -->
-            <!-- 1. Tokyo Bowl -->
-            <div data-cuisine="japanese" onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl · Japanese', 12.20, '🍱', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, edamame.', '★ 4.9', '20 min', '€2.00 Delivery Fee', 'Authentic bento box.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-sky-400 to-indigo-500 relative flex items-center justify-center text-4xl">
-                🍱
-                <span class="absolute top-2.5 left-2.5 bg-indigo-700 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#1 Japanese</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, and edamame.', '★ 4.9', '20 min', '€2.00 Delivery Fee', 'Authentic bento box.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Tokyo Bowl" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">Great value</span>
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Japanese</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -577,12 +631,17 @@
               </div>
             </div>
 
-            <!-- 2. JJ Ramen Stillorgan -->
-            <div data-cuisine="japanese" onclick="openDishDetailModal('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, '🍜', 'Rich 16-hour pork bone broth, handmade ramen noodles, chashu pork, seasoned soft egg & black garlic oil.', '★ 4.8', '25 min', '€3.50 Delivery Fee', 'Top rated ramen.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-rose-500 to-amber-500 relative flex items-center justify-center text-4xl">
-                🍜
-                <span class="absolute top-2.5 left-2.5 bg-rose-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md">20% off €20</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80', 'Rich 16-hour pork bone broth, handmade ramen noodles, chashu pork, seasoned soft egg & black garlic oil.', '★ 4.8', '25 min', '€3.50 Delivery Fee', 'Top rated ramen.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="JJ Ramen Stillorgan" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">20% off €20</span>
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Japanese</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -597,12 +656,16 @@
               </div>
             </div>
 
-            <!-- 3. Michie Sushi Kitchen -->
-            <div data-cuisine="japanese" onclick="openDishDetailModal('Salmon Teriyaki & Roll Combo', 'Michie Sushi Kitchen', 14.50, '🍣', 'Fresh Scottish salmon sashimi, crispy prawn tempura rolls, and steamed edamame.', '★ 4.8', '22 min', '€1.90 Delivery Fee', 'Daily fresh sashimi.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-teal-400 to-blue-500 relative flex items-center justify-center text-4xl">
-                🍣
-                <span class="absolute top-2.5 left-2.5 bg-teal-800 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Fresh Sushi</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Salmon Teriyaki & Roll Combo', 'Michie Sushi Kitchen', 14.50, 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80', 'Fresh Scottish salmon sashimi, crispy prawn tempura rolls, and steamed edamame.', '★ 4.8', '22 min', '€1.90 Delivery Fee', 'Daily fresh sashimi.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Michie Sushi Kitchen" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#3 Asian</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -618,12 +681,17 @@
             </div>
 
             <!-- HALAL (3 Restaurants) -->
-            <!-- 1. Harbour Kebab -->
-            <div data-cuisine="halal" onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab · Halal', 11.50, '🥙', 'Shaved spiced lamb & chicken, garlic sauce, salad, and flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Freshly sliced kebab.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-emerald-500 to-teal-600 relative flex items-center justify-center text-4xl">
-                🥙
-                <span class="absolute top-2.5 left-2.5 bg-emerald-800 text-white text-[10px] font-black px-2 py-0.5 rounded-md">#1 Halal</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="halal" onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80', 'Shaved spiced lamb & chicken, garlic sauce, salad, and flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', 'Freshly sliced kebab.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80" alt="Harbour Kebab" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">Great value</span>
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#1 Halal</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -637,12 +705,16 @@
               </div>
             </div>
 
-            <!-- 2. Passion4Food Shawarma -->
-            <div data-cuisine="halal" onclick="openDishDetailModal('Charcoal Chicken Shawarma Plate', 'Passion4Food Shawarma', 12.00, '🥙', 'Charcoal flame grilled marinated chicken breast shawarma, spicy garlic whip, pickles and fresh khobz bread.', '★ 4.8', '20 min', '€1.50 Delivery Fee', 'Middle Eastern grill.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-orange-500 via-emerald-600 to-teal-600 relative flex items-center justify-center text-4xl">
-                🥙
-                <span class="absolute top-2.5 left-2.5 bg-emerald-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">100% Halal Certified</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="halal" onclick="openDishDetailModal('Charcoal Chicken Shawarma Plate', 'Passion4Food Shawarma', 12.00, 'https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=800&q=80', 'Charcoal flame grilled marinated chicken breast shawarma, spicy garlic whip, pickles and fresh khobz bread.', '★ 4.8', '20 min', '€1.50 Delivery Fee', 'Middle Eastern grill.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=800&q=80" alt="Passion4Food Shawarma" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>#2 Halal</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -657,12 +729,16 @@
               </div>
             </div>
 
-            <!-- 3. Reyna Doner & Grill -->
-            <div data-cuisine="halal" onclick="openDishDetailModal('Adana Lamb Kebab Skewer', 'Reyna Doner & Grill', 13.20, '🥙', 'Hand-minced spiced lamb grilled over charcoal, roasted peppers, sumac onions and fresh flatbread.', '★ 4.7', '24 min', '€1.80 Delivery Fee', 'Turkish grill.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
-              <div class="h-28 bg-gradient-to-r from-red-600 via-amber-600 to-emerald-700 relative flex items-center justify-center text-4xl">
-                🥙
-                <span class="absolute top-2.5 left-2.5 bg-neutral-900 text-white text-[10px] font-black px-2 py-0.5 rounded-md">Charcoal Grill</span>
-                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
+            <div data-cuisine="halal" onclick="openDishDetailModal('Adana Lamb Kebab Skewer', 'Reyna Doner & Grill', 13.20, 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80', 'Hand-minced spiced lamb grilled over charcoal, roasted peppers, sumac onions and fresh flatbread.', '★ 4.7', '24 min', '€1.80 Delivery Fee', 'Turkish grill.')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+              <div class="h-32 relative overflow-hidden bg-neutral-100">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Reyna Doner & Grill" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="bg-white text-[#262626] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                    <span>New</span><span class="text-[10px] opacity-75">›</span>
+                  </span>
+                </div>
+                <span class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-neutral-700 text-xs shadow-sm">♡</span>
               </div>
               <div class="p-3">
                 <div class="flex items-center justify-between">
@@ -679,10 +755,10 @@
 
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- ================= S5: CHECKOUT WITH STEPPER (+ / -) ================= -->
-      <div id="screen-s5" class="screen-view hidden px-4 py-3">
+      <section id="screen-s5" class="screen-view hidden px-4 py-3">
         <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
           <button type="button" onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-800 hover:bg-neutral-200">
             <i class="fa-solid fa-arrow-left text-sm"></i>
@@ -692,7 +768,7 @@
         </div>
 
         <div class="mt-3 p-3 rounded-2xl bg-neutral-50 border border-neutral-200 flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+          <div class="w-9 h-9 rounded-full bg-[#00C165] text-white flex items-center justify-center shrink-0">
             <i class="fa-solid fa-motorcycle text-sm"></i>
           </div>
           <div class="flex-1">
@@ -705,7 +781,7 @@
         </div>
 
         <!-- PORTION STEPPER (+ / -) -->
-        <div class="mt-4 p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-xs">
+        <div class="mt-4 p-3.5 rounded-2xl border border-neutral-200 bg-white shadow-sm">
           <div class="flex items-start justify-between">
             <div class="flex-1 pr-2">
               <h4 id="cart-item-name" class="font-extrabold text-sm text-neutral-900">Supreme Double Smash</h4>
@@ -713,11 +789,11 @@
               <p class="text-[11px] text-amber-700 font-semibold mt-1">🔥 Top ordered dish in Linden Court</p>
             </div>
             <div class="flex items-center gap-2 bg-neutral-100 rounded-xl p-1 shrink-0 border border-neutral-200">
-              <button type="button" onclick="changeQty(-1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs hover:bg-neutral-200 active:scale-90 transition">
+              <button type="button" aria-label="Decrease quantity" onclick="changeQty(-1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-sm hover:bg-neutral-200 active:scale-90 transition">
                 <i class="fa-solid fa-minus text-[10px]"></i>
               </button>
               <span id="cart-qty" class="w-5 text-center font-black text-xs text-neutral-900">1</span>
-              <button type="button" onclick="changeQty(1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-xs hover:bg-neutral-200 active:scale-90 transition">
+              <button type="button" aria-label="Increase quantity" onclick="changeQty(1)" class="w-7 h-7 rounded-lg bg-white text-neutral-900 flex items-center justify-center font-bold text-sm shadow-sm hover:bg-neutral-200 active:scale-90 transition">
                 <i class="fa-solid fa-plus text-[10px]"></i>
               </button>
             </div>
@@ -750,10 +826,10 @@
             <span id="btn-place-total">• €14.49</span>
           </button>
         </div>
-      </div>
+      </section>
 
       <!-- ================= S6: ORDER PLACED ================= -->
-      <div id="screen-s6" class="screen-view hidden px-5 py-3 flex flex-col justify-between min-h-[580px]">
+      <section id="screen-s6" class="screen-view hidden px-5 py-3 flex flex-col justify-between min-h-[580px]">
         <div>
           <div class="flex items-center justify-end">
             <button type="button" onclick="goToScreen(1)" class="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-700 hover:bg-neutral-200 transition">
@@ -776,15 +852,15 @@
               <div class="bg-neutral-200 rounded-full h-full"></div>
             </div>
             <div class="grid grid-cols-3 text-[11px] font-semibold mt-2">
-              <span class="text-neutral-900">Preparing</span>
+              <span class="text-neutral-900 font-bold">Preparing</span>
               <span class="text-neutral-400 text-center">On the way</span>
               <span class="text-neutral-400 text-right">Arrived</span>
             </div>
           </div>
 
-          <div class="mt-5 p-3.5 rounded-2xl border border-neutral-200 bg-white flex items-center gap-3.5 shadow-xs">
-            <div class="w-14 h-14 rounded-xl bg-[#FDE8D7] shrink-0 flex items-center justify-center">
-              <span id="s6-item-emoji" class="text-2xl">🍔</span>
+          <div class="mt-5 p-3.5 rounded-2xl border border-neutral-200 bg-white flex items-center gap-3.5 shadow-sm">
+            <div class="w-14 h-14 rounded-xl overflow-hidden bg-neutral-100 shrink-0 flex items-center justify-center">
+              <img id="s6-item-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Order Thumbnail" class="w-full h-full object-cover">
             </div>
             <div class="flex-1 min-w-0">
               <h4 id="s6-item-name" class="font-extrabold text-sm text-neutral-900 truncate">Supreme Double Smash</h4>
@@ -804,17 +880,19 @@
             Track order
           </button>
         </div>
-      </div>
+      </section>
 
       <!-- ================= S7: POST-ORDER REFLECTION SURVEY ================= -->
-      <div id="screen-s7" class="screen-view hidden px-4 py-4">
+      <section id="screen-s7" class="screen-view hidden px-4 py-4">
         <div class="flex items-center justify-between pb-2 border-b border-neutral-100">
           <span class="text-neutral-400 text-xs font-semibold">Touchpoint 7: Academic Survey</span>
           <span class="text-[10px] bg-amber-50 text-amber-700 px-2 py-0.5 rounded font-bold">Exp B Complete</span>
         </div>
 
         <div class="mt-3 text-center">
-          <div class="w-14 h-14 rounded-full bg-[#FFE8D6] mx-auto flex items-center justify-center text-2xl shadow-sm mb-2">🍔</div>
+          <div class="w-14 h-14 rounded-full overflow-hidden mx-auto shadow-sm mb-2">
+            <img id="s7-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Dish photo" class="w-full h-full object-cover">
+          </div>
           <h3 class="text-base font-black text-neutral-900">How was your ordering decision?</h3>
           <p class="text-xs text-neutral-500 mt-0.5"><span id="s7-dish-name">Supreme Double Smash</span> · Bun Box Express</p>
           <div class="flex justify-center gap-2 my-3 text-2xl text-amber-400">
@@ -835,19 +913,16 @@
 
         <div class="mt-5">
           <button type="button" onclick="submitToForm()" class="w-full py-3.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition shadow-lg">
-            <span>Done & Submit to Survey</span>
+            <span>Done &amp; Submit to Survey</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
           </button>
           <p class="text-[10px] text-center text-neutral-400 mt-2">Redirects to external survey form with metrics</p>
         </div>
-      </div>
+      </section>
 
-      <!-- Safe Bottom Scroll Spacer (Prevents content being hidden behind dock) -->
-      <div class="h-32 w-full shrink-0"></div>
+    </main>
 
-    </div>
-
-    <!-- Dish Detail Modal: In-Frame Bottom Sheet (Strictly constrained within the phone container) -->
+    <!-- Dish Detail Modal: In-Frame Bottom Sheet -->
     <div id="dish-detail-modal" class="hidden absolute inset-0 z-50 bg-black/60 backdrop-blur-[2px] flex flex-col justify-end transition-opacity duration-200">
       <div onclick="closeDishDetailModal()" class="flex-1 cursor-pointer"></div>
       <div class="bg-white rounded-t-[28px] max-h-[85%] overflow-y-auto hide-scrollbar p-5 shadow-2xl relative border-t border-neutral-200 w-full animate-in slide-in-from-bottom">
@@ -857,8 +932,8 @@
             <i class="fa-solid fa-xmark text-sm"></i>
           </button>
         </div>
-        <div class="h-32 rounded-2xl bg-[#FDE8D7] flex items-center justify-center my-3 shadow-inner">
-          <span id="modal-dish-emoji" class="text-5xl">🍔</span>
+        <div class="h-36 rounded-2xl overflow-hidden relative my-3 shadow-inner bg-neutral-100">
+          <img id="modal-dish-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Dish detail" class="w-full h-full object-cover">
         </div>
         <div class="flex items-start justify-between">
           <div>
@@ -880,15 +955,13 @@
         </div>
         <p id="modal-dish-desc" class="text-xs text-neutral-600 mt-2 leading-relaxed">Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.</p>
         <button type="button" onclick="orderFromModal()" class="w-full mt-4 py-3 rounded-xl bg-neutral-900 text-white font-extrabold text-xs hover:bg-neutral-800 active:scale-98 transition shadow">
-          Add to order & Review
+          Add to order &amp; Review
         </button>
       </div>
     </div>
 
     <!-- Persistent Floating Pill Navigation (Modern iOS / Uber Eats Dock) -->
-    <div class="absolute bottom-0 inset-x-0 z-40 pb-2 pt-8 pointer-events-none flex flex-col items-center bg-gradient-to-t from-white via-white/95 to-transparent">
-      
-      <!-- Floating Dock Row -->
+    <nav class="absolute bottom-0 inset-x-0 z-40 pb-2 pt-6 pointer-events-none flex flex-col items-center bg-gradient-to-t from-white via-white/95 to-transparent">
       <div class="pointer-events-auto flex items-center gap-2 px-3 py-1.5">
         <button type="button" aria-label="Home" onclick="goToScreen(1)" class="w-12 h-12 rounded-full bg-white border border-neutral-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.12)] flex items-center justify-center text-neutral-950 active:scale-95 transition">
           <i class="fa-solid fa-house text-base"></i>
@@ -922,7 +995,7 @@
       <div class="h-4 w-full flex justify-center items-center mt-1">
         <div class="w-32 h-1 bg-neutral-900/80 rounded-full"></div>
       </div>
-    </div>
+    </nav>
 
   </div>
 
@@ -934,13 +1007,14 @@
     let unitPrice = 12.99;
     let currentItem = "Supreme Double Smash";
     let currentRestaurant = "Bun Box Express";
-    let currentEmoji = "🍔";
+    let currentPhoto = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80";
 
     setInterval(() => {
       const elapsed = Math.floor((Date.now() - startTime) / 1000);
       const m = String(Math.floor(elapsed / 60)).padStart(2, '0');
       const s = String(elapsed % 60).padStart(2, '0');
-      document.getElementById('study-timer').innerText = `${m}:${s}`;
+      const timerEl = document.getElementById('study-timer');
+      if (timerEl) timerEl.innerText = `${m}:${s}`;
     }, 1000);
 
     function goToScreen(n) {
@@ -950,30 +1024,31 @@
       }
       const active = document.getElementById('screen-s' + n);
       if (active) active.classList.remove('hidden');
-      document.getElementById('screen-content').scrollTop = 0;
+      const scrollBody = document.getElementById('screen-content');
+      if (scrollBody) scrollBody.scrollTop = 0;
     }
 
-    function selectDish(title, restaurant, price, emoji) {
+    function selectDish(title, restaurant, price, photoUrl) {
       currentItem = title;
       currentRestaurant = restaurant;
-      unitPrice = price;
-      currentEmoji = emoji || '🍔';
+      unitPrice = typeof price === 'number' && !isNaN(price) ? price : 12.99;
+      currentPhoto = photoUrl || "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80";
       currentQty = 1;
 
       updateCart();
       goToScreen(5);
     }
 
-    function openDishDetailModal(title, restaurant, price, emoji, description, rating, time, delivery, whyText) {
+    function openDishDetailModal(title, restaurant, price, photoUrl, description, rating, time, delivery, whyText) {
       currentItem = title;
       currentRestaurant = restaurant;
-      unitPrice = price;
-      currentEmoji = emoji || '🍔';
+      unitPrice = typeof price === 'number' && !isNaN(price) ? price : 12.99;
+      currentPhoto = photoUrl || "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80";
 
       const titleEl = document.getElementById('modal-dish-title');
       const restEl = document.getElementById('modal-dish-restaurant');
       const priceEl = document.getElementById('modal-dish-price');
-      const emojiEl = document.getElementById('modal-dish-emoji');
+      const imgEl = document.getElementById('modal-dish-img');
       const ratingEl = document.getElementById('modal-dish-rating');
       const timeEl = document.getElementById('modal-dish-time');
       const delEl = document.getElementById('modal-dish-delivery');
@@ -982,8 +1057,8 @@
 
       if (titleEl) titleEl.innerText = title;
       if (restEl) restEl.innerText = restaurant;
-      if (priceEl) priceEl.innerText = '€' + price.toFixed(2);
-      if (emojiEl) emojiEl.innerText = emoji || '🍔';
+      if (priceEl) priceEl.innerText = '€' + unitPrice.toFixed(2);
+      if (imgEl) imgEl.src = currentPhoto;
       if (ratingEl) ratingEl.innerText = rating || '★ 4.8';
       if (timeEl) timeEl.innerText = '⏱ ' + (time || '18 min');
       if (delEl) delEl.innerText = delivery || '€0 delivery';
@@ -1001,7 +1076,7 @@
 
     function orderFromModal() {
       closeDishDetailModal();
-      selectDish(currentItem, currentRestaurant, unitPrice, currentEmoji);
+      selectDish(currentItem, currentRestaurant, unitPrice, currentPhoto);
     }
 
     function changeQty(d) {
@@ -1015,12 +1090,14 @@
       const unitEl = document.getElementById('cart-item-unit-price');
       const restEl = document.getElementById('cart-restaurant');
 
+      const safePrice = typeof unitPrice === 'number' && !isNaN(unitPrice) ? unitPrice : 12.99;
+
       if (nameEl) nameEl.innerText = currentItem;
       if (qtyEl) qtyEl.innerText = currentQty;
-      if (unitEl) unitEl.innerText = '€' + unitPrice.toFixed(2) + ' each';
+      if (unitEl) unitEl.innerText = '€' + safePrice.toFixed(2) + ' each';
       if (restEl) restEl.innerText = currentRestaurant;
 
-      const subtotal = unitPrice * currentQty;
+      const subtotal = safePrice * currentQty;
       const total = subtotal + 1.50;
 
       const subtotalEl = document.getElementById('breakdown-subtotal');
@@ -1033,13 +1110,15 @@
 
       const s6Name = document.getElementById('s6-item-name');
       const s6Sub = document.getElementById('s6-item-sub');
-      const s6Emoji = document.getElementById('s6-item-emoji');
+      const s6Img = document.getElementById('s6-item-img');
       if (s6Name) s6Name.innerText = currentItem;
       if (s6Sub) s6Sub.innerText = `${currentRestaurant} · €${total.toFixed(2)} total`;
-      if (s6Emoji) s6Emoji.innerText = currentEmoji;
+      if (s6Img) s6Img.src = currentPhoto;
 
       const s7Dish = document.getElementById('s7-dish-name');
+      const s7Img = document.getElementById('s7-img');
       if (s7Dish) s7Dish.innerText = currentItem;
+      if (s7Img) s7Img.src = currentPhoto;
 
       const badge = document.getElementById('nav-badge-cart');
       if (badge) {
@@ -1049,6 +1128,7 @@
     }
 
     function selectSurveyPill(btn) {
+      if (!btn || !btn.parentElement) return;
       btn.parentElement.querySelectorAll('.survey-pill').forEach(b => {
         b.className = "survey-pill py-2 px-1 rounded-lg border border-neutral-200 text-center text-[11px] font-semibold";
       });
@@ -1060,8 +1140,10 @@
         p.classList.remove('bg-neutral-900', 'text-white');
         p.classList.add('bg-neutral-100', 'text-neutral-800');
       });
-      btn.classList.add('bg-neutral-900', 'text-white');
-      btn.classList.remove('bg-neutral-100', 'text-neutral-800');
+      if (btn) {
+        btn.classList.add('bg-neutral-900', 'text-white');
+        btn.classList.remove('bg-neutral-100', 'text-neutral-800');
+      }
 
       const restaurants = document.querySelectorAll('.s1-restaurant-block');
       restaurants.forEach(block => {
@@ -1075,18 +1157,18 @@
 
     function submitToForm() {
       const durationSeconds = Math.floor((Date.now() - startTime) / 1000);
+      const safePrice = typeof unitPrice === 'number' && !isNaN(unitPrice) ? unitPrice.toFixed(2) : "12.99";
       const queryParams = new URLSearchParams({
         condition: 'B',
         dish: currentItem,
         restaurant: currentRestaurant,
-        price: unitPrice.toFixed(2),
+        price: safePrice,
         quantity: currentQty,
         timeToDecide: durationSeconds + 's'
       });
       window.location.href = `${SURVEY_FORM_BASE_URL}?${queryParams.toString()}`;
     }
 
-    // Scroll helper for independent rows in Condition B
     function scrollPopularRow(rowId, direction) {
       const row = document.getElementById(rowId);
       if (!row) return;
@@ -1094,13 +1176,13 @@
       row.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
 
-    // Enable desktop drag-to-scroll on each swipeable row independently
     window.addEventListener('DOMContentLoaded', () => {
       const rows = document.querySelectorAll('.popular-swipe-row');
       rows.forEach(slider => {
+        if (!slider) return;
         let isDown = false;
-        let startX;
-        let scrollLeft;
+        let startX = 0;
+        let scrollLeft = 0;
 
         slider.addEventListener('mousedown', (e) => {
           isDown = true;
