@@ -4,101 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Delivery Research Study — Participant Portal</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-    body { font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-[#121212] text-neutral-900 min-h-screen flex items-center justify-center p-3 sm:p-6">
 
-  <div class="max-w-xl w-full bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+  <!-- Main Card: Minimal Uber Eats Card Surface -->
+  <main class="max-w-[440px] w-full bg-white rounded-[32px] p-6 sm:p-7 shadow-[0_24px_64px_rgba(0,0,0,0.45)] border border-neutral-800/20">
     
-    <!-- Header -->
-    <div class="flex items-center gap-3 mb-6">
-      <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl">
-        <i class="fa-solid fa-utensils"></i>
-      </div>
+    <!-- Header: Uber Eats Logo + Study Badge -->
+    <div class="flex items-start justify-between mb-5">
       <div>
-        <span class="text-[11px] font-bold text-emerald-400 tracking-wider uppercase">Research Experiment</span>
-        <h1 class="text-xl sm:text-2xl font-black text-white">Food Choice Decision Study</h1>
+        <div class="flex items-center gap-1.5 text-black">
+          <span class="text-xl font-extrabold tracking-tight">Uber</span>
+          <span class="text-xl font-medium tracking-tight text-[#06C167]">Eats</span>
+        </div>
+        <p class="text-xs text-neutral-500 font-semibold mt-0.5">Decision-Making Research Study</p>
       </div>
+      
+      <!-- Minimal Live Session Pill -->
+      <span class="px-2.5 py-1 rounded-full bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold flex items-center gap-1.5 shadow-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#06C167] animate-pulse"></span>
+        <span>Active Study</span>
+      </span>
     </div>
 
-    <!-- Study Prompt Context for Students -->
-    <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 mb-6">
-      <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wide mb-1 flex items-center gap-2">
-        <i class="fa-solid fa-stopwatch text-amber-400"></i>
-        <span>Scenario Briefing</span>
-      </h3>
-      <p class="text-sm text-slate-300 leading-relaxed italic">
-        "Imagine you have just finished a demanding 7-hour study block. It is 20:15 in the evening, you are tired, hungry, and need dinner delivered to Linden Court. Open the app, explore your options, and place an order."
-      </p>
-    </div>
+    <!-- Step 1 & 2 Questionnaires -->
+    <div class="space-y-2 mb-5">
+      <div class="text-[11px] font-extrabold uppercase tracking-wider text-neutral-500 px-0.5 mb-1.5">
+        Initial Questionnaires
+      </div>
 
-    <!-- Condition Assignment Buttons -->
-    <div class="space-y-3">
-      <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Select Assigned Condition:</p>
-
-      <!-- Condition A -->
-      <a href="./condition-a.html" class="group block p-4 rounded-2xl border border-slate-800 bg-slate-800/40 hover:bg-slate-800 hover:border-emerald-500/50 transition duration-200">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-sm">A</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-emerald-400 transition">Condition A: "Picked for You" (AI Delegation)</h2>
-              <p class="text-xs text-slate-400 mt-0.5">Curated 3-item deck, continuous shuffle, transparent reasoning</p>
-            </div>
+      <!-- Pre Questionnaire Link -->
+      <a href="https://forms.gle/VAErCQbaHACFbKe28" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-2xl bg-[#F6F6F6] hover:bg-neutral-100 border border-neutral-200/80 transition active:scale-[0.99]">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl bg-white border border-neutral-200 flex items-center justify-center text-neutral-900 shadow-xs">
+            <span class="text-xs font-black">1</span>
           </div>
-          <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-1 transition"></i>
+          <div>
+            <div class="text-xs font-bold text-neutral-900 group-hover:text-black">Pre Questionnaire</div>
+            <div class="text-[11px] text-neutral-500 font-medium">Complete before starting the study</div>
+          </div>
         </div>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-neutral-400 group-hover:text-black"></i>
       </a>
 
-      <!-- Condition B -->
-      <a href="./condition-b.html" class="group block p-4 rounded-2xl border border-slate-800 bg-slate-800/40 hover:bg-slate-800 hover:border-amber-500/50 transition duration-200">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-black text-sm">B</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-amber-400 transition">Condition B: Popular Items (Social Proof)</h2>
-              <p class="text-xs text-slate-400 mt-0.5">6 top dishes with order counts ("10k+ ordered") directly on home feed</p>
-            </div>
+      <!-- Preferences Link -->
+      <a href="https://forms.gle/P5Xpa1bHQh6k3nfB8" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-between p-3.5 rounded-2xl bg-[#F6F6F6] hover:bg-neutral-100 border border-neutral-200/80 transition active:scale-[0.99]">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl bg-white border border-neutral-200 flex items-center justify-center text-[#0E622F] shadow-xs">
+            <span class="text-xs font-black">2</span>
           </div>
-          <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-amber-400 group-hover:translate-x-1 transition"></i>
-        </div>
-      </a>
-
-      <!-- Condition C -->
-      <a href="./condition-c.html" class="group block p-4 rounded-2xl border border-slate-800 bg-slate-800/40 hover:bg-slate-800 hover:border-blue-500/50 transition duration-200">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-black text-sm">C</span>
-            <div>
-              <h2 class="text-sm font-bold text-white group-hover:text-blue-400 transition">Condition C: Full Menu (Unassisted Baseline)</h2>
-              <p class="text-xs text-slate-400 mt-0.5">Neutral catalog search, cuisine filters, unbiased dishes</p>
-            </div>
+          <div>
+            <div class="text-xs font-bold text-neutral-900 group-hover:text-black">Preferences</div>
+            <div class="text-[11px] text-neutral-500 font-medium">Dietary &amp; food choices</div>
           </div>
-          <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-blue-400 group-hover:translate-x-1 transition"></i>
         </div>
+        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-neutral-400 group-hover:text-black"></i>
       </a>
     </div>
 
-    <!-- Random Auto-Assignment Button -->
-    <div class="mt-6 pt-5 border-t border-slate-800 text-center">
-      <button onclick="assignRandomCondition()" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-sm transition shadow-lg flex items-center justify-center gap-2">
-        <i class="fa-solid fa-dice text-base"></i>
-        <span>Auto-Assign Random Condition (For Testing)</span>
+    <!-- Section Heading -->
+    <div class="flex items-center justify-between mb-2.5 px-0.5">
+      <div>
+        <span class="text-[11px] font-extrabold uppercase tracking-wider text-neutral-500">Step 3: Assigned Condition</span>
+        <p class="text-[11px] text-neutral-500 font-medium mt-0.5">Select the condition assigned to you after completing your preferences</p>
+      </div>
+      <span class="text-[11px] font-semibold text-neutral-400 shrink-0 ml-2">3 Options</span>
+    </div>
+
+    <!-- Condition Options List -->
+    <div class="space-y-2.5">
+
+      <!-- Condition A: Curated Picks ("Only for you") -->
+      <a href="./condition-a.html" class="group block p-3.5 rounded-2xl bg-white border border-neutral-200 hover:border-black hover:shadow-md transition-all duration-150 active:scale-[0.99]">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-9 h-9 rounded-xl bg-[#EBF7EE] text-[#0E622F] font-black text-sm flex items-center justify-center shrink-0 border border-[#06C167]/30">
+              A
+            </span>
+            <div class="min-w-0">
+              <h2 class="text-xs font-bold text-neutral-900 group-hover:text-black tracking-tight truncate">
+                Condition A: "Only for you"
+              </h2>
+              <p class="text-[11px] text-neutral-500 font-medium truncate mt-0.5">
+                Curated 3-item meal picks under €15 &amp; shuffle
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right text-xs text-neutral-400 group-hover:text-black group-hover:translate-x-0.5 transition-transform shrink-0"></i>
+        </div>
+      </a>
+
+      <!-- Condition B: Social Proof ("Popular in your area") -->
+      <a href="./condition-b.html" class="group block p-3.5 rounded-2xl bg-white border border-neutral-200 hover:border-black hover:shadow-md transition-all duration-150 active:scale-[0.99]">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-9 h-9 rounded-xl bg-[#FEF3C7] text-[#92400E] font-black text-sm flex items-center justify-center shrink-0 border border-amber-300">
+              B
+            </span>
+            <div class="min-w-0">
+              <h2 class="text-xs font-bold text-neutral-900 group-hover:text-black tracking-tight truncate">
+                Condition B: Popular Items
+              </h2>
+              <p class="text-[11px] text-neutral-500 font-medium truncate mt-0.5">
+                Social Proof · Dual swipeable rows &amp; order volume pills
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right text-xs text-neutral-400 group-hover:text-black group-hover:translate-x-0.5 transition-transform shrink-0"></i>
+        </div>
+      </a>
+
+      <!-- Condition C: Full Menu (Unassisted Baseline) -->
+      <a href="./condition-c.html" class="group block p-3.5 rounded-2xl bg-white border border-neutral-200 hover:border-black hover:shadow-md transition-all duration-150 active:scale-[0.99]">
+        <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="w-9 h-9 rounded-xl bg-[#E0F2FE] text-[#075985] font-black text-sm flex items-center justify-center shrink-0 border border-sky-300">
+              C
+            </span>
+            <div class="min-w-0">
+              <h2 class="text-xs font-bold text-neutral-900 group-hover:text-black tracking-tight truncate">
+                Condition C: Full Menu
+              </h2>
+              <p class="text-[11px] text-neutral-500 font-medium truncate mt-0.5">
+                Baseline · Unassisted search &amp; 15-restaurant catalog
+              </p>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-right text-xs text-neutral-400 group-hover:text-black group-hover:translate-x-0.5 transition-transform shrink-0"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Random Auto-Assignment Button (Uber Black Pill) -->
+    <div class="mt-5 pt-4 border-t border-neutral-100">
+      <button type="button" onclick="assignRandomCondition()" class="w-full py-3.5 px-4 rounded-xl bg-black hover:bg-neutral-800 text-white font-extrabold text-xs flex items-center justify-center gap-2 transition shadow-md active:scale-[0.99]">
+        <i class="fa-solid fa-dice text-sm text-[#06C167]"></i>
+        <span>Auto-Assign Random Condition</span>
       </button>
-      <p class="text-[11px] text-slate-500 mt-2">
-        Or append <code class="text-slate-400 bg-slate-800 px-1 py-0.5 rounded">?cond=A</code>, <code class="text-slate-400 bg-slate-800 px-1 py-0.5 rounded">?cond=B</code>, or <code class="text-slate-400 bg-slate-800 px-1 py-0.5 rounded">?cond=C</code> to the URL.
+
+      <p class="text-[11px] text-center text-neutral-400 font-medium mt-2.5">
+        Or append <code class="text-neutral-700 bg-neutral-100 px-1 py-0.5 rounded font-mono text-[10px]">?cond=A</code>, <code class="text-neutral-700 bg-neutral-100 px-1 py-0.5 rounded font-mono text-[10px]">?cond=B</code>, or <code class="text-neutral-700 bg-neutral-100 px-1 py-0.5 rounded font-mono text-[10px]">?cond=C</code>
       </p>
     </div>
 
-  </div>
+  </main>
 
   <script>
-    // URL Parameter Auto-redirect
+    // URL Parameter Auto-redirect logic
     window.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const cond = urlParams.get('cond');
