@@ -111,42 +111,8 @@
           </button>
         </div>
 
-        <!-- Cuisine Category Icons -->
-        <div class="grid grid-cols-5 gap-1 px-3 py-3 text-center">
-          <div class="flex flex-col items-center gap-1 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FFE8D6] flex items-center justify-center relative shadow-sm">
-              <span class="text-2xl">🍕</span>
-            </div>
-            <span class="text-[11px] font-semibold text-neutral-700">Pizza</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FCE7F3] flex items-center justify-center relative shadow-sm">
-              <span class="text-2xl">🥡</span>
-            </div>
-            <span class="text-[11px] font-semibold text-neutral-700">Chinese</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#FEF3C7] flex items-center justify-center relative shadow-sm">
-              <span class="text-2xl">🍛</span>
-            </div>
-            <span class="text-[11px] font-semibold text-neutral-700">Indian</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#E0F2FE] flex items-center justify-center relative shadow-sm">
-              <span class="text-2xl">🍱</span>
-            </div>
-            <span class="text-[11px] font-semibold text-neutral-700">Sushi</span>
-          </div>
-          <div class="flex flex-col items-center gap-1 cursor-pointer">
-            <div class="w-[52px] h-[52px] rounded-full bg-[#EDE9FE] flex items-center justify-center relative shadow-sm">
-              <span class="text-2xl">🥙</span>
-            </div>
-            <span class="text-[11px] font-semibold text-neutral-700">Halal</span>
-          </div>
-        </div>
-
         <!-- Condition C Hero: Neutral Browse Search Card -->
-        <div class="mx-4 my-2 p-4 bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-[24px] text-white relative overflow-hidden shadow-sm">
+        <div class="mx-4 my-2.5 p-4 bg-gradient-to-r from-neutral-900 to-neutral-800 rounded-[24px] text-white relative overflow-hidden shadow-sm">
           <div class="flex items-center justify-between mb-3">
             <div>
               <h3 class="text-base font-black">Browse All Menus</h3>
@@ -180,11 +146,11 @@
             <button type="button" onclick="filterS1Catalog('halal', this)" class="s1-catalog-pill px-3 py-1.5 rounded-full bg-neutral-100 text-neutral-800 hover:bg-neutral-200 shrink-0">Halal</button>
           </div>
 
-          <!-- 15 Restaurant Cards -->
+          <!-- 15 Restaurant Cards (All 30–35 min, no delivery fees, no off tags) -->
           <div class="space-y-3.5" id="s1-restaurant-list">
             
             <!-- BURGERS (3 Restaurants) -->
-            <div data-cuisine="burgers" onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express', 12.99, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '18 min', '€1.50 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Supreme Double Smash Combo', 'Bun Box Express', 12.99, 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80', 'Two dry-aged beef patties, Irish cheddar, seasoned crinkle fries, and signature house sauce.', '★ 4.8', '30 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Bun Box Express" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -201,15 +167,15 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Bun Box Express</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (850+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · American · €1.50 Delivery Fee · 18 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · American · 30 min</p>
                 <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
                   <span class="bg-neutral-100 text-neutral-800 px-1.5 py-0.5 rounded font-bold">Standard Catalog</span>
-                  <span>• €0 Delivery with Uber One</span>
+                  <span>• Local Favorite</span>
                 </div>
               </div>
             </div>
 
-            <div data-cuisine="burgers" onclick="openDishDetailModal('Smoked Bacon Cheddar Smash', 'Smash Bros Burger', 13.50, 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80', 'Double crispy smashed patties, maple smoked bacon, American cheddar & house pickle mayo.', '★ 4.7', '20 min', '€1.90 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Smoked Bacon Cheddar Smash', 'Smash Bros Burger', 13.50, 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80', 'Double crispy smashed patties, maple smoked bacon, American cheddar & house pickle mayo.', '★ 4.7', '32 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="Smash Bros Burger" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -225,7 +191,7 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Smash Bros Burger</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (430+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · Handcrafted · €1.90 Delivery Fee · 20 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · Handcrafted · 32 min</p>
                 <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
                   <span class="bg-neutral-100 text-neutral-800 px-1.5 py-0.5 rounded font-bold">Standard Catalog</span>
                   <span>• Local Favorite</span>
@@ -233,7 +199,7 @@
               </div>
             </div>
 
-            <div data-cuisine="burgers" onclick="openDishDetailModal('Classic Truffle Burger', 'The Counter Kitchen', 14.20, 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80', 'Grass-fed Irish beef, black truffle aioli, Swiss cheese and caramelized onions.', '★ 4.6', '25 min', '€2.00 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="burgers" onclick="openDishDetailModal('Classic Truffle Burger', 'The Counter Kitchen', 13.90, 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80', 'Grass-fed Irish beef, black truffle aioli, Swiss cheese and caramelized onions.', '★ 4.6', '35 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="The Counter Kitchen" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -249,7 +215,7 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">The Counter Kitchen</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.6 (310+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · Gourmet · €2.00 Delivery Fee · 25 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Burgers · Gourmet · 35 min</p>
                 <div class="flex items-center gap-1.5 mt-2 text-[10px] text-neutral-600">
                   <span class="bg-neutral-100 text-neutral-800 px-1.5 py-0.5 rounded font-bold">Standard Catalog</span>
                   <span>• Hand-Cut Fries</span>
@@ -258,7 +224,7 @@
             </div>
 
             <!-- PIZZA (3 Restaurants) -->
-            <div data-cuisine="pizza" onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '15 min', '€0 Delivery Fee', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Artisanal Diavola Pizza', 'Mama Napoli Pizza', 13.50, 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80', 'Neapolitan sourdough crust, San Marzano sauce, spicy Calabrian salami, and fresh fior di latte.', '★ 4.7', '30 min', '', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80" alt="Mama Napoli Pizza" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -275,11 +241,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Mama Napoli Pizza</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (620+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Italian · €0 Delivery Fee · 15 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Italian · 30 min</p>
               </div>
             </div>
 
-            <div data-cuisine="pizza" onclick="openDishDetailModal('Margherita D.O.P.', 'Forno Antico Pizzeria', 11.50, 'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80', 'Buffalo mozzarella, San Marzano D.O.P. tomatoes, fresh basil, extra virgin olive oil.', '★ 4.8', '15 min', '€0 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Margherita D.O.P.', 'Forno Antico Pizzeria', 11.50, 'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80', 'Buffalo mozzarella, San Marzano D.O.P. tomatoes, fresh basil, extra virgin olive oil.', '★ 4.8', '32 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?auto=format&fit=crop&w=800&q=80" alt="Forno Antico Pizzeria" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -295,11 +261,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Forno Antico Pizzeria</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (640+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Neapolitan · €0 Delivery Fee · 15 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Neapolitan · 32 min</p>
               </div>
             </div>
 
-            <div data-cuisine="pizza" onclick="openDishDetailModal('Four Cheese Quattro Formaggi', 'Base Wood Fired Pizza', 13.90, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80', 'Mozzarella, gorgonzola dolce, fontina, parmesan, crushed walnuts & hot honey.', '★ 4.6', '20 min', '€1.50 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="pizza" onclick="openDishDetailModal('Four Cheese Quattro Formaggi', 'Base Wood Fired Pizza', 13.90, 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80', 'Mozzarella, gorgonzola dolce, fontina, parmesan, crushed walnuts & hot honey.', '★ 4.6', '35 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Base Wood Fired Pizza" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -315,12 +281,12 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Base Wood Fired Pizza</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.6 (510+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Artisan Woodfired · €1.50 Delivery Fee · 20 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Pizza · Artisan Woodfired · 35 min</p>
               </div>
             </div>
 
             <!-- INDIAN (3 Restaurants) -->
-            <div data-cuisine="indian" onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane', 11.90, 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80', 'Tender charred chicken breast simmered in rich creamy tomato curry with basmati rice.', '★ 4.7', '22 min', '€0 Delivery Fee', '🌶️🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="indian" onclick="openDishDetailModal('Chicken Tikka Masala', 'Spice Lane', 11.90, 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80', 'Tender charred chicken breast simmered in rich creamy tomato curry with basmati rice.', '★ 4.7', '30 min', '', '🌶️🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" alt="Spice Lane" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -337,11 +303,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Spice Lane (Indian Cuisine)</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (380+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · Curries · €0 Delivery Fee · 22 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · Curries · 30 min</p>
               </div>
             </div>
 
-            <div data-cuisine="indian" onclick="openDishDetailModal('Lamb Rogan Josh', 'Ananda Fine Indian', 13.80, 'https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=800&q=80', 'Slow-cooked Irish lamb shoulder in aromatic Kashmiri spices and saffron.', '★ 4.8', '25 min', '€2.50 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="indian" onclick="openDishDetailModal('Lamb Rogan Josh', 'Ananda Fine Indian', 13.80, 'https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=800&q=80', 'Slow-cooked Irish lamb shoulder in aromatic Kashmiri spices and saffron.', '★ 4.8', '34 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1545247181-516773cae754?auto=format&fit=crop&w=800&q=80" alt="Ananda Fine Indian" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -357,11 +323,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Ananda Fine Indian</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (560+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · Regional Curries · €2.50 Delivery Fee · 25 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · Regional Curries · 34 min</p>
               </div>
             </div>
 
-            <div data-cuisine="indian" onclick="openDishDetailModal('Butter Chicken & Garlic Naan', 'Pickle Dublin', 12.50, 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80', 'Tandoor chicken chunks in rich butter cream tomato gravy with hot garlic butter naan.', '★ 4.9', '20 min', '€1.80 Delivery Fee', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="indian" onclick="openDishDetailModal('Butter Chicken & Garlic Naan', 'Pickle Dublin', 12.50, 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80', 'Tandoor chicken chunks in rich butter cream tomato gravy with hot garlic butter naan.', '★ 4.9', '32 min', '', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80" alt="Pickle Dublin" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -377,12 +343,12 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Pickle Dublin</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.9 (720+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · North Indian Classics · €1.80 Delivery Fee · 20 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Indian · North Indian Classics · 32 min</p>
               </div>
             </div>
 
-            <!-- JAPANESE (3 Restaurants) -->
-            <div data-cuisine="japanese" onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, and edamame.', '★ 4.9', '20 min', '€2.00 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <!-- JAPANESE (3 Restaurants, No "20% off €20" badge) -->
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Crispy Karaage Bento Set', 'Tokyo Bowl', 12.20, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80', 'Crispy ginger-soy marinated chicken thigh, seasoned rice, and edamame.', '★ 4.9', '33 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Tokyo Bowl" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -399,16 +365,15 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Tokyo Bowl</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.9 (420+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Poké & Bento · €2.00 Delivery Fee · 20 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Poké & Bento · 33 min</p>
               </div>
             </div>
 
-            <div data-cuisine="japanese" onclick="openDishDetailModal('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80', 'Rich 16-hour pork bone broth, handmade noodles, chashu pork, seasoned soft egg & black garlic oil.', '★ 4.8', '25 min', '€3.50 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Tonkotsu Black Garlic Ramen', 'JJ Ramen Stillorgan', 13.90, 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80', 'Rich 16-hour pork bone broth, handmade noodles, chashu pork, seasoned soft egg & black garlic oil.', '★ 4.8', '35 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="JJ Ramen Stillorgan" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
                 <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
-                  <span class="bg-[#FDECE7] text-[#9E200C] text-[11px] font-bold px-2 py-0.5 rounded-lg shadow-sm">20% off €20</span>
                   <span class="bg-[#EBF7EE] text-[#0E622F] text-[11px] font-bold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
                     <span>#2 Japanese</span><span class="text-[10px] opacity-75">›</span>
                   </span>
@@ -420,11 +385,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">JJ Ramen Stillorgan</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (180+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Ramen & Gyoza · €3.50 Delivery Fee · 25 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Ramen & Gyoza · 35 min</p>
               </div>
             </div>
 
-            <div data-cuisine="japanese" onclick="openDishDetailModal('Salmon Teriyaki & Roll Combo', 'Michie Sushi Kitchen', 14.50, 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80', 'Fresh Scottish salmon sashimi, crispy prawn tempura rolls, and steamed edamame.', '★ 4.8', '22 min', '€1.90 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="japanese" onclick="openDishDetailModal('Salmon Teriyaki & Roll Combo', 'Michie Sushi Kitchen', 13.95, 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80', 'Fresh Scottish salmon sashimi, crispy prawn tempura rolls, and steamed edamame.', '★ 4.8', '32 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Michie Sushi Kitchen" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -440,12 +405,12 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Michie Sushi Kitchen</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (490+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Sushi & Sashimi · €1.90 Delivery Fee · 22 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Japanese · Sushi & Sashimi · 32 min</p>
               </div>
             </div>
 
             <!-- HALAL (3 Restaurants) -->
-            <div data-cuisine="halal" onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and flatbread.', '★ 4.6', '25 min', '€0 Delivery Fee', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="halal" onclick="openDishDetailModal('Mixed Doner Kebab Platter', 'Harbour Kebab', 11.50, 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80', 'Shaved spiced lamb & chicken, garlic sauce, chili sauce, salad, and flatbread.', '★ 4.6', '35 min', '', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80" alt="Harbour Kebab" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -462,11 +427,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Harbour Kebab</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.6 (890+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Kebabs · €0 Delivery Fee · 25 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Kebabs · 35 min</p>
               </div>
             </div>
 
-            <div data-cuisine="halal" onclick="openDishDetailModal('Charcoal Chicken Shawarma Plate', 'Passion4Food Shawarma', 12.00, 'https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=800&q=80', 'Charcoal flame grilled marinated chicken breast shawarma, spicy garlic whip, pickles and fresh khobz bread.', '★ 4.8', '20 min', '€1.50 Delivery Fee', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="halal" onclick="openDishDetailModal('Charcoal Chicken Shawarma Plate', 'Passion4Food Shawarma', 12.00, 'https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=800&q=80', 'Charcoal flame grilled marinated chicken breast shawarma, spicy garlic whip, pickles and fresh khobz bread.', '★ 4.8', '31 min', '', '🌶️')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=800&q=80" alt="Passion4Food Shawarma" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -482,11 +447,11 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Passion4Food Shawarma</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.8 (670+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Middle Eastern & Shawarma · €1.50 Delivery Fee · 20 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Middle Eastern & Shawarma · 31 min</p>
               </div>
             </div>
 
-            <div data-cuisine="halal" onclick="openDishDetailModal('Adana Lamb Kebab Skewer', 'Reyna Doner & Grill', 13.20, 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80', 'Hand-minced spiced lamb grilled over charcoal, roasted peppers, sumac onions and fresh flatbread.', '★ 4.7', '24 min', '€1.80 Delivery Fee', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
+            <div data-cuisine="halal" onclick="openDishDetailModal('Adana Lamb Kebab Skewer', 'Reyna Doner & Grill', 13.20, 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80', 'Hand-minced spiced lamb grilled over charcoal, roasted peppers, sumac onions and fresh flatbread.', '★ 4.7', '34 min', '', 'Mild')" class="s1-restaurant-block bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden cursor-pointer hover:border-neutral-400 transition active:scale-[0.99]">
               <div class="h-32 relative overflow-hidden bg-neutral-100">
                 <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Reyna Doner & Grill" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
@@ -502,7 +467,7 @@
                   <h4 class="font-extrabold text-sm text-neutral-900">Reyna Doner & Grill</h4>
                   <span class="text-xs font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md">★ 4.7 (410+)</span>
                 </div>
-                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Turkish Charcoal Grill · €1.80 Delivery Fee · 24 min</p>
+                <p class="text-[11px] text-neutral-500 mt-0.5">Halal · Turkish Charcoal Grill · 34 min</p>
               </div>
             </div>
 
@@ -529,7 +494,7 @@
           <div class="flex-1">
             <div class="flex items-center justify-between">
               <span class="font-bold text-xs text-neutral-900">Delivery to Linden Court</span>
-              <span class="text-[11px] font-bold text-emerald-700">18-24 min</span>
+              <span class="text-[11px] font-bold text-emerald-700">30–35 min</span>
             </div>
             <p class="text-[11px] text-neutral-500 mt-0.5" id="cart-restaurant">Bun Box Express · Fast Food</p>
           </div>
@@ -557,15 +522,11 @@
           </div>
         </div>
 
-        <!-- Total Breakdown -->
+        <!-- Total Breakdown (No Delivery Fee Shown) -->
         <div class="mt-4 pt-3 border-t border-neutral-100 space-y-1.5 text-xs text-neutral-600">
           <div class="flex justify-between">
             <span>Subtotal</span>
             <span id="breakdown-subtotal" class="font-bold text-neutral-900">€12.99</span>
-          </div>
-          <div class="flex justify-between">
-            <span>Delivery Fee</span>
-            <span class="font-bold text-emerald-700">€0.00 (Free)</span>
           </div>
           <div class="flex justify-between">
             <span>Service Fee</span>
@@ -799,7 +760,7 @@
   </div>
 
   <script>
-    const SURVEY_FORM_BASE_URL = "https://forms.gle/bBFPeGLuG9MubAnp7";
+    const SURVEY_FORM_BASE_URL = "https://forms.gle/tWgJRDZm5YkyKz1d6";
 
     let currentQty = 1;
     let unitPrice = 12.99;
