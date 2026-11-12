@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#ffffff">
   <title>Uber Eats - Condition A (Only for you)</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,21 +23,25 @@
     svg { max-width: 100%; height: auto; }
   </style>
 </head>
-<body class="bg-neutral-900 text-neutral-900 min-h-screen py-4 sm:py-8 px-2 sm:px-4 flex flex-col items-center justify-center">
+<body class="bg-white sm:bg-neutral-900 text-neutral-900 min-h-[100dvh] h-[100dvh] sm:h-auto p-0 sm:py-8 sm:px-4 flex flex-col items-center justify-center overflow-hidden sm:overflow-visible">
 
-  <!-- Experiment Header Tag -->
-  <div class="mb-3 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center gap-2">
-    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    <span>Condition A: "Only for you"</span>
-    <span class="text-neutral-500">|</span>
-    <span id="study-timer" class="font-mono text-neutral-300">00:00</span>
+  <!-- Experiment Header Tag (Compact on mobile, pill badge on desktop) -->
+  <div class="w-full sm:w-auto sm:mb-3 px-4 py-1.5 sm:px-3 sm:py-1 bg-neutral-950 sm:bg-emerald-500/10 border-b border-neutral-800 sm:border sm:border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center justify-between sm:justify-center gap-2 shrink-0">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Condition A: "Only for you"</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="hidden sm:inline text-neutral-500">|</span>
+      <span id="study-timer" class="font-mono text-neutral-300">00:00</span>
+    </div>
   </div>
 
-  <!-- Mobile Frame Container (Exact 393x820, rounded-[44px], border-4 border-neutral-800) -->
-  <div class="relative w-full max-w-[393px] h-[820px] bg-white rounded-[44px] overflow-hidden flex flex-col shadow-2xl border-4 border-neutral-800 select-none">
+  <!-- Mobile Frame Container (Edge-to-edge full screen on mobile, 393x820 phone chassis on desktop) -->
+  <div class="relative w-full flex-1 sm:flex-none sm:max-w-[393px] sm:h-[820px] bg-white rounded-none sm:rounded-[44px] overflow-hidden flex flex-col shadow-none sm:shadow-2xl border-0 sm:border-4 sm:border-neutral-800 select-none">
     
-    <!-- iOS Status Bar (Clean Minimal Notchless: 3:58 Silent Bell | Signal Wi-Fi Battery Charging) -->
-    <header class="h-11 w-full bg-white flex items-center justify-between px-6 shrink-0 z-50 pt-2">
+    <!-- iOS Status Bar (Hidden on real mobile screens so browser status bar doesn't double up, visible on desktop preview) -->
+    <header class="hidden sm:flex h-11 w-full bg-white items-center justify-between px-6 shrink-0 z-50 pt-2">
       <!-- Left: 3:58 + Silent Bell with diagonal strike -->
       <div class="flex items-center gap-1.5">
         <span class="text-[16px] font-bold text-neutral-950 tracking-tight font-sans">3:58</span>
