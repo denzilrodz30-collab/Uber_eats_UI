@@ -18,11 +18,12 @@
 </head>
 <body class="bg-[#121212] text-neutral-900 min-h-screen flex items-center justify-center p-3 sm:p-6">
 
-  <!-- Main Card: Minimal Uber Eats Card Surface -->
-  <main class="max-w-[440px] w-full bg-white rounded-[32px] p-6 sm:p-7 shadow-[0_24px_64px_rgba(0,0,0,0.45)] border border-neutral-800/20">
-    
-    <!-- Header: Uber Eats Logo + Study Badge -->
-  <div>
+    <!-- Main Card: Full screen on mobile, centered card on desktop -->
+  <main class="max-w-full sm:max-w-[440px] w-full min-h-[100dvh] sm:min-h-0 bg-white rounded-none sm:rounded-[32px] p-5 sm:p-7 shadow-none sm:shadow-[0_24px_64px_rgba(0,0,0,0.45)] border-0 sm:border sm:border-neutral-800/20 flex flex-col justify-between">
+    <div>
+    <!-- Header: Project Title & Course Info + Study Badge -->
+    <div class="flex items-start justify-between gap-3 mb-5">
+      <div>
         <div class="text-[11px] font-extrabold uppercase tracking-wider text-[#0E622F]">
           Group 1 · Consumer Behaviour
         </div>
